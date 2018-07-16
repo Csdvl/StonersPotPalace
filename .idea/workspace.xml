@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/csdvl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/frontEnd.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jest/cssTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jest/fileTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/polyfills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/webpack.config.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/webpack.config.prod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Guild/Guild.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Partners/Partners.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Story/Story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Welcome/Welcome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/UI/Input/input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/UI/Spinner/Spinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/UI/Spinner/Spinner.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Logout/Logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Signin/Signin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Signup/Signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/SocialAuth/SocialAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrder/UserOrder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangePassword/ChangePassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/UserSettings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/DropDownAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/NavigationItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/Toolbar/Toolbar.backup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/Toolbar/Toolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/DrawerToggle/DrawerToggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/DrawerToggle/DrawerToggle.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/SideDrawer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/SideDrawer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/Shop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/FilterLink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/ShopFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/hoc_FilterLink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/AccordionDescription.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/hoc_ShopItemList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/Cart/Cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/Cart/CartItem/CartItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartCheckout/CartCheckout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartModal/CartModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/hoc/ScrollToTop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/hoc/auxiliary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/cakes.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/pasties.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/pies.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/traybake.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registerServiceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/apikey.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/partials/_general.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/utility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/shop/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/shop/orders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/shop/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/orders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/shopFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="frontEnd" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Shop.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/Shop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShopItemCard.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>firestore</find>
+      <find>baseline</find>
+      <find>objectToArray</find>
+      <find>clicked</find>
+      <find>getState</find>
+      <find>.map</find>
+      <find>console.log</find>
+      <find>cartItem</find>
+      <find>&lt;Cart</find>
+      <find>firestoreConn</find>
+      <find>ordered.products</find>
+      <find>shopFilter</find>
+      <find>Spinner</find>
+      <find>align</find>
+    </findStrings>
+    <dirStrings>
+      <dir>S:\Coding\StonersPotPalace\frontEnd\src\App\containers</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/App/components/ShoppingCart/CartModal/CartModal.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/shop/shop.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/shop/cart.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/shop/shop.js" />
+        <option value="$PROJECT_DIR$/src/App/components/ShoppingCart/Cart/Cart.js" />
+        <option value="$PROJECT_DIR$/src/App/components/ShoppingCart/CartCheckout/CartCheckout.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/actionTypes.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/shop/products.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Sections/Shop/Shop.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/shop/orders.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/shop/orders.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/shop/products.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/shop/cart.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/firebase.json" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/functions/index.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Pages/Home/Guild/Guild.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Pages/Home/Partners/Partners.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Pages/Home/Story/Story.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Pages/Home/Welcome/Welcome.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Pages/Home/Home.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Auth/RegisterUserInfo/RegisterUserInfo.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Auth/Signin/Signin.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Auth/SocialAuth/SocialAuth.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Auth/Auth.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrders.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Layout/Navigation/Toolbar/Toolbar.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Layout/Layout.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/ShopFilter.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemList.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/Cart/CartItem/CartItem.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartModal/CartModal.js" />
+        <option value="$PROJECT_DIR$/src/App/App.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartCheckout/CartCheckout.js" />
+        <option value="$PROJECT_DIR$/src/shared/validation.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Auth/Signup/Signup.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/users.js" />
+        <option value="$PROJECT_DIR$/src/App/components/UI/Spinner/Spinner.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfo.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangePassword/ChangePassword.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/UserSettings.js" />
+        <option value="$PROJECT_DIR$/src/App/components/UI/Input/input.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrder/UserOrder.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/AccordionDescription.js" />
+        <option value="$PROJECT_DIR$/src/test.js" />
+        <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/functions/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="ShopItemList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="ShopItemList" type="462c0819:PsiDirectoryNode" />
+              <item name="ShopItemCard" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="nav&#9;FILE&#9;file://S:/Coding/StonersPotPalace/frontEnd/src/App/components/Sections/Shop/w_ShopNavItem/ShopNavItem.js&#10;cartInfo&#9;FILE&#9;file://S:/Coding/StonersPotPalace/frontEnd/src/shared/cartInfo.js&#10;authenticated&#9;null&#9;null&#10;token&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="S:\Coding\StonersPotPalace\frontEnd\src\App\containers\AuthUsers\User\UserInfo" />
+      <recent name="S:\Coding\StonersPotPalace\frontEnd\src\App\containers\Shop" />
+      <recent name="S:\Coding\StonersPotPalace\frontEnd\src\App\containers" />
+      <recent name="S:\Coding\StonersPotPalace\frontEnd\src\App\containers\Layout" />
+      <recent name="S:\Coding\StonersPotPalace\frontEnd\src\store\reducers\shop" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\Coding\StonersPotPalace\frontEnd\src\assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.eject">
+    <configuration name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <configuration name="eject" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <list>
+      <item itemvalue="npm.eject" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.build" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.eject" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="" />
+      <created>1523885078725</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523885078725</updated>
+      <workItem from="1523885080209" duration="11938000" />
+      <workItem from="1524155366051" duration="587000" />
+      <workItem from="1524410065308" duration="16198000" />
+      <workItem from="1524469574764" duration="9551000" />
+      <workItem from="1524592435795" duration="5156000" />
+      <workItem from="1524682178565" duration="6934000" />
+      <workItem from="1525024643658" duration="10655000" />
+      <workItem from="1525685418712" duration="200000" />
+      <workItem from="1526319879601" duration="6494000" />
+      <workItem from="1526407158874" duration="13894000" />
+      <workItem from="1526424327149" duration="12664000" />
+      <workItem from="1526540459523" duration="737000" />
+      <workItem from="1526543237836" duration="29557000" />
+      <workItem from="1526660313279" duration="15554000" />
+      <workItem from="1526747806164" duration="9902000" />
+      <workItem from="1526834690305" duration="14464000" />
+      <workItem from="1526856429754" duration="11455000" />
+      <workItem from="1527014695178" duration="581000" />
+      <workItem from="1527094087016" duration="14476000" />
+      <workItem from="1527349032488" duration="19321000" />
+      <workItem from="1527409175495" duration="860000" />
+      <workItem from="1527411400344" duration="5354000" />
+      <workItem from="1527417048676" duration="17979000" />
+      <workItem from="1527455318373" duration="5275000" />
+      <workItem from="1527503087242" duration="22365000" />
+      <workItem from="1527610158665" duration="7133000" />
+      <workItem from="1527788801224" duration="20275000" />
+      <workItem from="1528043482779" duration="12457000" />
+      <workItem from="1528101443344" duration="14957000" />
+      <workItem from="1528213774976" duration="12274000" />
+      <workItem from="1528297628265" duration="18773000" />
+      <workItem from="1528385353340" duration="10795000" />
+      <workItem from="1528561874534" duration="8073000" />
+      <workItem from="1528659437754" duration="579000" />
+      <workItem from="1528731751923" duration="4542000" />
+      <workItem from="1528824568641" duration="6464000" />
+      <workItem from="1528904854908" duration="10927000" />
+      <workItem from="1528992473595" duration="13617000" />
+      <workItem from="1529081324441" duration="6655000" />
+      <workItem from="1529240322458" duration="6234000" />
+      <workItem from="1529323029291" duration="15168000" />
+      <workItem from="1529343173532" duration="8224000" />
+      <workItem from="1529403489786" duration="23714000" />
+      <workItem from="1529445414838" duration="1035000" />
+      <workItem from="1529511760746" duration="19988000" />
+      <workItem from="1529600248104" duration="17760000" />
+      <workItem from="1529620943128" duration="836000" />
+      <workItem from="1529622344252" duration="10611000" />
+      <workItem from="1529772026235" duration="15259000" />
+      <workItem from="1529850189219" duration="6620000" />
+      <workItem from="1529861592863" duration="484000" />
+      <workItem from="1529866160305" duration="2083000" />
+      <workItem from="1529999520621" duration="5147000" />
+      <workItem from="1530026219965" duration="15187000" />
+      <workItem from="1530112961948" duration="12337000" />
+      <workItem from="1530204895529" duration="13171000" />
+      <workItem from="1530289252342" duration="8201000" />
+      <workItem from="1530633639053" duration="2762000" />
+      <workItem from="1530893329735" duration="6257000" />
+      <workItem from="1531044147703" duration="24591000" />
+      <workItem from="1531122427256" duration="20456000" />
+      <workItem from="1531239168736" duration="7653000" />
+      <workItem from="1531322186165" duration="11094000" />
+      <workItem from="1531412344715" duration="5922000" />
+      <workItem from="1531501360114" duration="1334000" />
+      <workItem from="1531588491749" duration="6733000" />
+      <workItem from="1531597854892" duration="1436000" />
+      <workItem from="1531645663420" duration="23353000" />
+      <workItem from="1531757675061" duration="7852000" />
+      <workItem from="1531772706206" duration="922000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="712096000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.37550202" visible="true" weight="0.171875" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32994923" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32994923" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32994923" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1573604" />
+      <window_info id="npm" order="2" sideWeight="0.624498" side_tool="true" weight="0.171875" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.7817259" />
+      <window_info anchor="bottom" id="Favorites" order="6" side_tool="true" weight="0.32994923" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32779622" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/Shop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/UserSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangePassword/ChangePassword.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Home/Partners/Partners.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Home/Story/Story.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Home/Welcome/Welcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Home/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Input/input.scss" />
+    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Spinner/Spinner.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-846" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Auth/Logout/Logout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Auth/Signin/Signin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-313">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Auth/SocialAuth/SocialAuth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Auth/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/w_NavigationItem/NavigationItem.js" />
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Layout/Navigation/Toolbar/Toolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Layout/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.backup.js" />
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartModal/CartModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/w_ShopNavItem/ShopNavItem.js" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2176" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testFile.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/App/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-957">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/ShopFilter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartCheckout/CartCheckout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/hoc_ShopItemList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Auth/Signup/Signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/shop/orders.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/shop/cart.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/shop/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Spinner/Spinner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="54" lean-forward="true" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangePassword/ChangePassword.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3082">
+          <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/UserSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Input/input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrder/UserOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/Cart/CartItem/CartItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/Shop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/AccordionDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

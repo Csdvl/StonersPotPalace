@@ -2,108 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/csdvl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/frontEnd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jest/cssTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jest/fileTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/polyfills.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack.config.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack.config.prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/start.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Guild/Guild.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Partners/Partners.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Story/Story.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Home/Welcome/Welcome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/UI/Input/input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/UI/Spinner/Spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/UI/Spinner/Spinner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Logout/Logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Signin/Signin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/Signup/Signup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Auth/SocialAuth/SocialAuth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrder/UserOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserOrders/UserOrders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangePassword/ChangePassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/UserSettings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/DropDownAuth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/NavigationItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/Toolbar/Toolbar.backup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/Toolbar/Toolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/DrawerToggle/DrawerToggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/DrawerToggle/DrawerToggle.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/SideDrawer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Layout/Navigation/w_SideDrawer/SideDrawer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/Shop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/FilterLink.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/ShopFilter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopFilter/hoc_FilterLink.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/AccordionDescription.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/hoc_ShopItemList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/Cart/Cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/Cart/CartItem/CartItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartCheckout/CartCheckout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/containers/Shop/ShoppingCart/CartModal/CartModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/hoc/ScrollToTop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/hoc/auxiliary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/cakes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/pasties.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/pies.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/shop/traybake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/registerServiceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/apikey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/partials/_general.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/utility.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/shop/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/shop/orders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/shop/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/orders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/shop/shopFilter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -120,22 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Shop.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/Shop.js">
+      <file leaf-file-name="Contact.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopItemCard.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+            <state relative-caret-position="299">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -172,7 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App/components/ShoppingCart/CartModal/CartModal.js" />
         <option value="$PROJECT_DIR$/src/store/actions/shop/shop.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/shop/cart.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/shop/shop.js" />
@@ -223,6 +111,7 @@
         <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/AccordionDescription.js" />
         <option value="$PROJECT_DIR$/src/test.js" />
         <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js" />
       </list>
     </option>
   </component>
@@ -280,34 +169,24 @@
               <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Shop" type="462c0819:PsiDirectoryNode" />
-              <item name="ShopItemList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Shop" type="462c0819:PsiDirectoryNode" />
-              <item name="ShopItemList" type="462c0819:PsiDirectoryNode" />
-              <item name="ShopItemCard" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Contact" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -471,12 +350,21 @@
       <workItem from="1531597854892" duration="1436000" />
       <workItem from="1531645663420" duration="23353000" />
       <workItem from="1531757675061" duration="7852000" />
-      <workItem from="1531772706206" duration="922000" />
+      <workItem from="1531772706206" duration="2382000" />
+      <workItem from="1531942034047" duration="2012000" />
     </task>
+    <task id="LOCAL-00001" summary="FIRST !!!1!">
+      <created>1531773730498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531773730498</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="712096000" />
+    <option name="totallyTimeSpent" value="715568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,15 +379,15 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.37550202" visible="true" weight="0.171875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.37394246" visible="true" weight="0.171875" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32994923" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32994923" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32994923" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.1573604" />
-      <window_info id="npm" order="2" sideWeight="0.624498" side_tool="true" weight="0.171875" />
+      <window_info id="npm" order="2" sideWeight="0.6260575" side_tool="true" weight="0.171875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.7817259" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3401015" />
       <window_info anchor="bottom" id="Favorites" order="6" side_tool="true" weight="0.32994923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
@@ -518,21 +406,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FIRST !!!1!" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIRST !!!1!" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/Shop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
@@ -674,6 +557,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-957">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -839,8 +725,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        <state relative-caret-position="157">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

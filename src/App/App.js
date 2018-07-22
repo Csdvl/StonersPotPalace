@@ -14,7 +14,7 @@ import UserSettings from './containers/AuthUsers/User/UserSettings/UserSettings'
 import UserInfo from './containers/AuthUsers/User/UserInfo/UserInfo';
 import UserOrders from './containers/AuthUsers/User/UserOrders/UserOrders';
 import CartCheckout from './containers/Shop/ShoppingCart/CartCheckout/CartCheckout';
-
+import Contact from './components/Pages/Contact/Contact';
 
 
 
@@ -37,7 +37,7 @@ class App extends Component {
        <Route exact path="/" component={Home}/>
        <Route path="/story" render={() => <h1>Story</h1>}/>
        <Route path="/shop" componenet={Shop}/>
-       <Route path="/contact" render={() => <h1>Contact</h1>}/>
+       <Route path="/contact" component={Contact}/>
        <Route path="/auth" component={Auth}/>
        <Redirect to="/"/>
      </Switch>
@@ -48,7 +48,7 @@ class App extends Component {
          <Route exact path="/" component={Home}/>
          <Route path="/story" render={() => <h1>Story</h1>}/>
          <Route path="/shop" component={Shop} />
-         <Route path="/contact" render={() => <h1>Contact</h1>}/>
+         <Route path="/contact" component={Contact}/>
          <Route path="/orders" component={UserOrders}/>
          <Route path="/user" component={UserInfo}/>
          <Route path="/account" component={UserSettings}/>

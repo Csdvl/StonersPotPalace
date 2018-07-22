@@ -15,6 +15,7 @@ import UserInfo from './containers/AuthUsers/User/UserInfo/UserInfo';
 import UserOrders from './containers/AuthUsers/User/UserOrders/UserOrders';
 import CartCheckout from './containers/Shop/ShoppingCart/CartCheckout/CartCheckout';
 import Contact from './components/Pages/Contact/Contact';
+import Story from './components/Pages/Story/Story';
 
 
 
@@ -35,7 +36,7 @@ class App extends Component {
     let routes = (
      <Switch>
        <Route exact path="/" component={Home}/>
-       <Route path="/story" render={() => <h1>Story</h1>}/>
+       <Route path="/story" component={Story}/>
        <Route path="/shop" componenet={Shop}/>
        <Route path="/contact" component={Contact}/>
        <Route path="/auth" component={Auth}/>
@@ -46,7 +47,7 @@ class App extends Component {
       routes = (
        <Switch>
          <Route exact path="/" component={Home}/>
-         <Route path="/story" render={() => <h1>Story</h1>}/>
+         <Route path="/story" component={Story}/>
          <Route path="/shop" component={Shop} />
          <Route path="/contact" component={Contact}/>
          <Route path="/orders" component={UserOrders}/>

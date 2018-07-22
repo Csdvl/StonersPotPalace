@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Contact/Locations/Location/Location.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Contact/Locations/Locations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/components/Pages/Story/Story.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/shop/cakes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/shop/productType/cakes.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/shop/pasties.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/shop/productType/pasties.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/shop/pies.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/shop/productType/pies.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/shop/traybake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/shop/productType/traybake.jpeg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,56 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Contact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js">
+      <file leaf-file-name="Story.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Story/Story.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/components/UI/Input/input.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1104">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterUserInfo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Locations.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/Locations/Locations.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="69">
+              <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -114,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App/components/ShoppingCart/Cart/Cart.js" />
         <option value="$PROJECT_DIR$/src/App/components/ShoppingCart/CartCheckout/CartCheckout.js" />
         <option value="$PROJECT_DIR$/src/store/actions/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
@@ -160,11 +107,12 @@
         <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/AccordionDescription.js" />
         <option value="$PROJECT_DIR$/src/test.js" />
         <option value="$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js" />
-        <option value="$PROJECT_DIR$/src/App/App.js" />
         <option value="$PROJECT_DIR$/src/App/components/Pages/Contact/Locations/Location/Location.js" />
         <option value="$PROJECT_DIR$/src/App/components/Pages/Contact/Contact.js" />
         <option value="$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js" />
         <option value="$PROJECT_DIR$/src/App/components/Pages/Contact/Locations/Locations.js" />
+        <option value="$PROJECT_DIR$/src/App/App.js" />
+        <option value="$PROJECT_DIR$/src/App/components/Pages/Story/Story.js" />
       </list>
     </option>
   </component>
@@ -238,72 +186,7 @@
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Contact" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Contact" type="462c0819:PsiDirectoryNode" />
-              <item name="ContactForm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Contact" type="462c0819:PsiDirectoryNode" />
-              <item name="Locations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthUsers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthUsers" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthUsers" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-              <item name="UserInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthUsers" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-              <item name="UserInfo" type="462c0819:PsiDirectoryNode" />
-              <item name="RegisterUserInfo" type="462c0819:PsiDirectoryNode" />
+              <item name="Story" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -473,7 +356,7 @@
       <workItem from="1532019989736" duration="669000" />
       <workItem from="1532114885853" duration="1189000" />
       <workItem from="1532258518360" duration="1357000" />
-      <workItem from="1532270388001" duration="10632000" />
+      <workItem from="1532270388001" duration="13802000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST !!!1!">
       <created>1531773730498</created>
@@ -489,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531944454698</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="* Contact.js:&#10;+ Store locations&#10;+ Contact Form">
+      <created>1532285942472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532285942472</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="729620000" />
+    <option name="totallyTimeSpent" value="732790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -539,7 +429,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FIRST !!!1!" />
     <MESSAGE value="* just created Contact.js..." />
-    <option name="LAST_COMMIT_MESSAGE" value="* just created Contact.js..." />
+    <MESSAGE value="* Contact.js:&#10;+ Store locations&#10;+ Contact Form" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Contact.js:&#10;+ Store locations&#10;+ Contact Form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -547,20 +438,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemCard/ShopItemCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/UserSettings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -798,16 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/containers/Shop/ShopItemList/ShopItemList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -839,6 +706,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/Locations/Locations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Input/input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1104">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -859,27 +753,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Input/input.js">
+    <entry file="file://$PROJECT_DIR$/src/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1104">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="115">
+          <caret line="47" column="15" lean-forward="true" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/Locations/Locations.js">
+    <entry file="file://$PROJECT_DIR$/src/assets/images/test.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Story/Story.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        <state relative-caret-position="69">
+          <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

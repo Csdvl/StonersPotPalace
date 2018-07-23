@@ -12,11 +12,11 @@ class Home extends Component {
     return (
        <Container fluid >
          <Welcome />
-         <Divider/>
+         <Divider style={{marginTop: '45px', marginBottom: '45px'}}/>
          <Story />
-         <Divider/>
+         <Divider style={{marginTop: '45px', marginBottom: '45px'}}/>
          <Partners />
-         <Divider/>
+         <Divider style={{marginTop: '45px', marginBottom: '45px'}}/>
          <Guild />
        </Container>
     );

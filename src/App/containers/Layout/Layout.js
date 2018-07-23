@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import Aux from '../../hoc/auxiliary';
@@ -42,6 +42,7 @@ class Layout extends Component {
            {this.props.children}
          </Grid.Column>
        </Grid>
+       <Divider hidden/>
        <footer>Footer Copyright @ pula mea || mangiare mi il cazzo</footer>
      </Aux>
     );

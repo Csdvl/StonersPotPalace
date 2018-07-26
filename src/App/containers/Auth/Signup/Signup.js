@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Form} from 'semantic-ui-react';
+import { Header, Button, Form, Segment, Grid, Item, Divider } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
@@ -13,40 +13,52 @@ class Signup extends Component {
   render() {
     const { invalid, submitting, pristine, handleSubmit, onRegister, onSocialAuth, error } = this.props;
     return (
-     <Form onSubmit={handleSubmit(onRegister)}>
-       <Field
-        name="email"
-        component={Input}
-        type="text"
-        label="E-mail"
-        inputtype="input"
-        validate={[ required, email ]}
-       />
-       
-       <Field
-        name="password"
-        component={Input}
-        type="password"
-        label="Password"
-        inputtype="input"
-        validate={[ required, passwordLenght ]}
-       />
-       
-       <Field
-        name="passwordConfirm"
-        component={Input}
-        type="password"
-        label="Confirm password"
-        inputtype="input"
-        validate={[ required, passwordLenght, matchPassword ]}
-       />
-       {error && <label>{error}</label>}
-       <Button btnType="Submit" disabled={invalid || submitting || pristine}>Submit</Button>
-       
-       
-       <SocialAuth login={false} socialAuth={onSocialAuth}/>
-     </Form>
-    
+     <Segment size='big' color='purple'>
+       <Header content='Register an account !'/>
+       <Item>
+         <Item.Meta>Register a new account with your E-mail</Item.Meta>
+         <Segment inverted>
+           <Grid centered>
+             <Form onSubmit={handleSubmit(onRegister)}>
+               <Field
+                name="email"
+                component={Input}
+                type="text"
+                label="E-mail"
+                inputtype="input"
+                validate={[ required, email ]}
+               />
+               
+               <Field
+                name="password"
+                component={Input}
+                type="password"
+                label="Password"
+                inputtype="input"
+                validate={[ required, passwordLenght ]}
+               />
+               
+               <Field
+                name="passwordConfirm"
+                component={Input}
+                type="password"
+                label="Confirm password"
+                inputtype="input"
+                validate={[ required, passwordLenght, matchPassword ]}
+               />
+               {error && <label>{error}</label>}
+               <Button color='teal'
+                       loading={submitting}
+                       disabled={invalid || submitting || pristine}
+               >Register account
+               </Button>
+               <Divider hidden/>
+               <SocialAuth login={false} socialAuth={onSocialAuth}/>
+             </Form>
+           </Grid>
+         </Segment>
+       </Item>
+     </Segment>
     );
   }
 }

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Form, Button, Item, Divider, Icon, Grid, Segment } from 'semantic-ui-react';
+import {connect} from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 
 
+import * as actions from '../../../../../store/actions/index';
 import guildImg from '../../../../../assets/images/shop/potStonersGuild.jpeg';
 import Input from '../../../UI/Input/input';
+import { email } from "../../../../../shared/validation";
 
 
-const guild = () => (
+const guild = ({handleSubmit, guildEmail, invalid, submitting, pristine}) => (
  <Item.Group>
    <Item>
      <Item.Image src={guildImg} size='large'/>
@@ -21,16 +24,18 @@ const guild = () => (
        <Divider hidden/>
        <Segment inverted>
          <Grid centered>
-           <Form>
+           <Form onSubmit={handleSubmit(guildEmail)}>
              <Field
-              name="newsletter"
+              name="guild"
               component={Input}
               type="text"
               label={<Icon name='pointing down'/>}
               inputtype="input"
+              validate={[ email]}
              />
              
              <Button
+              disabled={invalid || submitting || pristine}
               content='Count me in !'
               style={{ marginBottom: '10px' }}
               color='teal'
@@ -44,4 +49,10 @@ const guild = () => (
  </Item.Group>
 );
 
-export default reduxForm({ form: 'newsletter' })(guild);
+const mapDispatchToProps = dispatch => {
+  return {
+    guildEmail: (email) => dispatch(actions.guildEmail(email))
+  }
+};
+
+export default connect(null, mapDispatchToProps)(reduxForm({ form: 'guild' })(guild));

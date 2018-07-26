@@ -1,18 +1,22 @@
 import React from 'react';
-import {Button, Container} from 'semantic-ui-react';
+import { Button, Container, Divider, Icon } from 'semantic-ui-react';
 
 
 const socialAuth = ({ login, socialAuth }) => (
  
  <Container fluid>
-   <Button onClick={() => socialAuth('facebook')}>
-     <span name="facebook"/>
-     {login ? "Login" : "Register"} with Facebook
+   <Button color='facebook'
+           style={{ marginBottom: '15px', marginRight: '15px' }}
+           onClick={() => socialAuth('facebook')}>
+     <Icon name="facebook" />
+     Login with Facebook
    </Button>
    
-   <Button onClick={() => socialAuth('google')}>
-     <span name="google plus"/>
-     {login ? "Login" : "Register"} with Google
+   <Button color='google plus'
+           style={{ marginBottom: '15px' }}
+           onClick={() => socialAuth('google')}>
+     <Icon name="google plus" />
+     Login with Google
    </Button>
  </Container>
 

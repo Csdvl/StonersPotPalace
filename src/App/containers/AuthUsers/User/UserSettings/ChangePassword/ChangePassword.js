@@ -47,6 +47,7 @@ const changePassword = ({
               )}
               <Button
                disabled={invalid || submitting}
+               loading={submitting}
                children="Update Password"
                style={{ marginTop: '10px', marginBottom: '10px' }}
                color='teal'

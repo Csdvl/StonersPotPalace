@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Container, Button} from 'semantic-ui-react';
+import { Segment, Button, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ class Auth extends Component {
   
   
   render() {
-    const {isAuth, loading, error} = this.props;
+    const { isAuth, loading, error } = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
     
     let auth = this.state.isSignup
@@ -39,20 +39,21 @@ class Auth extends Component {
     }
     
     let authRedirect = null;
-    if ( authenticated) {
+    if ( authenticated ) {
       authRedirect = <Redirect to="/"/>;
     }
     
     return (
-     <Container fluid>
-       
+     <Segment size='big' color='olive'>
+       <Header content='Authentication'/>
+       <Button color={this.state.isSignup ? 'violet' : 'purple'}
+        onClick={this.switchAuthModeHandler}>Switch
+         to {this.state.isSignup ? "Signin" : "Signup"}
+       </Button>
        {authRedirect}
        {errorMessage}
        {auth}
-       
-       <Button onClick={this.switchAuthModeHandler}>Switch
-         to {this.state.isSignup ? "Signin" : "Signup"}</Button>
-     </Container>
+     </Segment>
     )
   }
 }

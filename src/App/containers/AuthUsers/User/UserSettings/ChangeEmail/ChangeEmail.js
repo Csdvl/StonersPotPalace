@@ -38,6 +38,7 @@ const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) 
              )}
              <Button
               disabled={invalid || submitting}
+              loading={submitting}
               children="Update Email"
               style={{ marginTop: '10px', marginBottom: '10px' }}
               color='teal'

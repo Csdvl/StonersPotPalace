@@ -61,7 +61,7 @@ const input = (props) => {
     case ('checkbox'):
       inputElement = <Checkbox
        {...rest}
-       // onChange={onChange}
+       onChange={(e, { checked }) => onChange(checked)}
        type={type}
        {...restInput}
       />;
@@ -73,7 +73,7 @@ const input = (props) => {
        type={type}
        {...restInput}/>;
   }
-  
+  console.log(props);
   return (
      <Form.Field style={{ marginTop: '10px' }} >
        <Label style={{ marginRight: '10px', marginBottom: '10px' }} color='orange' size='large'>{label}</Label>

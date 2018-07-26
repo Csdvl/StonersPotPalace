@@ -22,16 +22,13 @@ export const updatePassword = creds => {
 export const updateEmail = creds => {
   return async (dispatch, getState, {getFirebase, getFirestore}) => {
     const firebase = getFirebase();
-    const firestore = getFirestore();
     const user = firebase.auth().currentUser;
-    const userRef = firestore.collection('users').doc(user.uid);
     try {
       await user.updateEmail(creds.newEmail);
-      await dispatch(reset('changeEmail'));
-      await user.updateProfile({
+      await firebase.updateProfile({
         email: creds.newEmail
       });
-      await userRef.update({email: creds.newEmail});
+      await dispatch(reset('changeEmail'));
       toastr.success('Success !', 'Your E-mail has been updated')
     } catch (error) {
       throw new SubmissionError({
@@ -45,18 +42,19 @@ export const updateEmail = creds => {
 export const updateUserProfile = user => {
   return async (dispatch, getState, {getFirebase}) => {
     const firebase = getFirebase();
-    
-    if ( user.dob ) {
-      user.dob = moment(user.dob).toDate();
+    const {isLoaded, isEmpty, ...restUser} = user;
+    if ( restUser.dob ) {
+      restUser.dob = moment(restUser.dob).toDate();
     }
-    
-    user.displayName = [user.firstName, user.lastName].join(' ');
-    
+    restUser.displayName = [restUser.firstName, restUser.lastName].join(' ');
     try {
-     await firebase.updateProfile(user);
+     await firebase.updateProfile(restUser);
+     await dispatch(reset('userInfo'));
      toastr.success('Success', 'Profile updated');
     } catch (error) {
-      console.log(error)
+      throw new SubmissionError({
+        _error: error.message
+      })
     }
   }
 };

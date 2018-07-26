@@ -3,7 +3,7 @@ import {Segment, Header, Divider} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import {updateUserProfile} from '../../../../../store/actions';
-import RegisterUserInfo from './RegisterUserInfo/RegisterUserInfo';
+import RegisterUserInfo from './UserInfoForm/UserInfoForm';
 
 
 class UserInfo extends Component {
@@ -13,7 +13,9 @@ class UserInfo extends Component {
     return (
      <Segment color='olive'>
        <Header content='Personal Information' size='huge'/>
-       <RegisterUserInfo       />
+       <RegisterUserInfo
+       // initialValues={this.props.initialValues}
+       />
        <Divider/>
        <div>Personal Address</div>
      </Segment>
@@ -23,7 +25,7 @@ class UserInfo extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    initialValues: state.firebase.profile
+    // initialValues: state.firebase.profile
   }
 };
 

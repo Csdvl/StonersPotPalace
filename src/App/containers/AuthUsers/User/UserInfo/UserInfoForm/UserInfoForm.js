@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Button, Form, Segment, Header, Item, Grid } from 'semantic-ui-react';
-import { Field, reduxForm } from 'redux-form';
+import {compose} from 'redux';
+import { Field, reduxForm, initialize } from 'redux-form';
 import { connect } from 'react-redux';
 import capitalize from 'capitalize';
 import moment from 'moment';
 
-import { updateUserProfile } from "../../../../../../store/actions/index";
+import * as actions from "../../../../../../store/actions/index";
 import Input from '../../../../../components/UI/Input/input';
 import {
   required,
@@ -18,7 +19,11 @@ import {
 } from "../../../../../../shared/validation";
 
 
-class RegisterUserInfo extends Component {
+class UserInfoForm extends Component {
+  
+  componentWillMount() {
+    initialize('userInfo', this.props.initialValues)
+  }
   
   render() {
     const { invalid, submitting, pristine, handleSubmit, updateUserProfile } = this.props;
@@ -40,14 +45,14 @@ class RegisterUserInfo extends Component {
          <Item.Meta>Use this form to submit your information</Item.Meta>
          <Segment inverted>
            <Grid centered>
-             <Form onSubmit={handleSubmit(updateUserProfile)}>
+             <Form onSubmit={handleSubmit(updateUserProfile)} >
                <Field
                 name="firstName"
                 component={Input}
                 type="text"
                 label="First Name"
                 inputtype="input"
-                validate={[ required, nameLenght, isAlphabet ]}
+                // validate={[ required, nameLenght, isAlphabet ]}
                 normalize={capitalize}/>
                
                <Field
@@ -56,7 +61,7 @@ class RegisterUserInfo extends Component {
                 type="text"
                 label="Last Name"
                 inputtype="input"
-                validate={[ required, nameLenght, isAlphabet ]}
+                // validate={[ required, nameLenght, isAlphabet ]}
                 normalize={capitalize}/>
                
                <label>Gender: </label>
@@ -83,7 +88,7 @@ class RegisterUserInfo extends Component {
                 type="text"
                 label="Phone number"
                 inputtype="input"
-                validate={[ required, number, phoneNumber ]}
+                // validate={[ required, number, phoneNumber ]}
                />
                
                <Field
@@ -96,7 +101,7 @@ class RegisterUserInfo extends Component {
                 maxDate={moment().subtract(1, 'years')}
                 showYearDropdown
                 showMonthDropdown
-                validate={[ required ]}
+                // validate={[ required ]}
                />
                
                <Field
@@ -107,7 +112,7 @@ class RegisterUserInfo extends Component {
                 inputtype="select"
                 selection
                 options={options}
-                validate={[ required ]}
+                // validate={[ required ]}
                />
                
                <Field
@@ -116,7 +121,7 @@ class RegisterUserInfo extends Component {
                 type="text"
                 label="Postcode"
                 inputtype="input"
-                validate={[ required, postcodeLenght, isAlphaNumeric ]}
+                // validate={[ required, postcodeLenght, isAlphaNumeric ]}
                />
                
                <Field
@@ -126,7 +131,7 @@ class RegisterUserInfo extends Component {
                 label="Address"
                 inputtype="textarea"
                 rows={3}
-                validate={[ required ]}
+                // validate={[ required ]}
                />
                
                <Field
@@ -135,7 +140,7 @@ class RegisterUserInfo extends Component {
                 type="text"
                 label="Town/City"
                 inputtype="input"
-                validate={[ required ]}
+                // validate={[ required ]}
                />
                
                
@@ -145,7 +150,7 @@ class RegisterUserInfo extends Component {
                 type="text"
                 label="County"
                 inputtype="input"
-                validate={[ required ]}
+                // validate={[ required ]}
                />
                
                <Field
@@ -156,6 +161,7 @@ class RegisterUserInfo extends Component {
                
                <Button
                 disabled={invalid || submitting || pristine}
+                loading={submitting}
                 content='Submit Information'
                 style={{ marginTop: '10px', marginBottom: '10px' }}
                 color='teal'
@@ -173,16 +179,19 @@ class RegisterUserInfo extends Component {
 
 const mapStateToProps = state => {
   return {
-    // initialValues: state.firebase.profile
+    initialValues: state.firebase.profile
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateUserProfile: (user) => dispatch(updateUserProfile(user))
+    updateUserProfile: (user) => dispatch(actions.updateUserProfile(user))
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
-  form: 'register', enableReinitialize: true, destroyOnUnmount: false
-})(RegisterUserInfo));
+export default  connect(mapStateToProps, mapDispatchToProps)(
+ reduxForm({
+  form: 'userInfo',
+   enableReinitialize: true,
+   destroyOnUnmount: false
+})(UserInfoForm));

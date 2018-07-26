@@ -80,13 +80,7 @@ class ContactForm extends Component {
               options={options}
              />
              
-             <Button
-              // disabled={invalid || submitting || pristine}
-              content='Send Query'
-              style={{ marginTop: '10px', marginBottom: '10px' }}
-              color='teal'
-              size='large'
-             />
+             
            
            </Form>
          </Grid>

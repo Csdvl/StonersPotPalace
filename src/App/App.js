@@ -16,6 +16,7 @@ import UserOrders from './containers/AuthUsers/User/UserOrders/UserOrders';
 import CartCheckout from './containers/Shop/ShoppingCart/CartCheckout/CartCheckout';
 import Contact from './components/Pages/Contact/Contact';
 import Story from './components/Pages/Story/Story';
+import ResetPassword from './containers/Auth/PasswordResetEmail/PasswordResetEmail';
 
 
 
@@ -40,6 +41,7 @@ class App extends Component {
        <Route path="/shop" componenet={Shop}/>
        <Route path="/contact" component={Contact}/>
        <Route path="/auth" component={Auth}/>
+       <Route path="/reset" component={ResetPassword}/>
        <Redirect to="/"/>
      </Switch>
     );

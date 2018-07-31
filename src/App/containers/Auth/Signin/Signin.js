@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Header, Button, Form, Segment, Grid, Item, Divider } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
@@ -42,12 +43,13 @@ class Signin extends Component {
                <Button
                 disabled={invalid || submitting || pristine}
                loading={submitting}
-               color='teal'>Sign Me In !</Button>
+               color='teal'>Log Me In !</Button>
                <Divider hidden />
                <SocialAuth login={true} socialAuth={onSocialAuth} />
              </Form>
            </Grid>
          </Segment>
+         <Header sub>If you forgot your password click <Link to='/reset'>here...</Link></Header>
        </Item>
      </Segment>
     );

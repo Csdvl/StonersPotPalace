@@ -177,8 +177,9 @@ class UserInfoForm extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, {profile}) => {
   return {
+    profile,
     initialValues: state.firebase.profile
   }
 };
@@ -193,5 +194,6 @@ export default  connect(mapStateToProps, mapDispatchToProps)(
  reduxForm({
   form: 'userInfo',
    enableReinitialize: true,
-   destroyOnUnmount: false
+   destroyOnUnmount: false,
+   keepDirtyOnReinitialize: true,
 })(UserInfoForm));

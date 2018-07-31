@@ -58,3 +58,17 @@ export const updateUserProfile = user => {
     }
   }
 };
+
+export const resetPasswordEmail = email => {
+  return async (dispatch, getState, {getFirebase} )=> {
+  const firebase = getFirebase();
+  const auth = firebase.auth();
+  try {
+    await auth.sendPasswordResetEmail(email.email);
+  } catch (error) {
+    throw new SubmissionError({
+      _error: error.message
+    })
+  }
+  }
+};

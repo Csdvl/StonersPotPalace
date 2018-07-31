@@ -48,7 +48,7 @@ class Auth extends Component {
        <Header content='Authentication'/>
        <Button color={this.state.isSignup ? 'violet' : 'purple'}
         onClick={this.switchAuthModeHandler}>Switch
-         to {this.state.isSignup ? "Signin" : "Signup"}
+         to {this.state.isSignup ? "Log In" : "Register"}
        </Button>
        {authRedirect}
        {errorMessage}

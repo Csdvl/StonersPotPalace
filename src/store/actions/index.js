@@ -8,4 +8,4 @@ export {addToCart, removeFromCart, decrementQuantity, incrementQuantity, orderPl
 
 export {updatePassword, updateEmail, updateUserProfile, resetPasswordEmail} from  './users';
 
-export {guildEmail} from './guild';
+export {guildEmail, contactSubmit} from './forms';

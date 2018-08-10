@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/guild.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/UI/Input/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/UI/Input/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/forms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +26,8 @@
       <file leaf-file-name="ContactForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state relative-caret-position="258">
+              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -38,8 +38,26 @@
       <file leaf-file-name="forms.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/store/actions/forms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+            <state relative-caret-position="387">
+              <caret line="80" column="66" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DropDownAuth.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/DropDownAuth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="8" column="61" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actions/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-552">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -47,8 +65,8 @@
       <file leaf-file-name="products.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/actions/shop/products.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="529">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -56,8 +74,8 @@
       <file leaf-file-name="cart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/actions/shop/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="105" column="2" lean-forward="true" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
+            <state relative-caret-position="2392">
+              <caret line="105" column="2" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -65,7 +83,7 @@
       <file leaf-file-name="UserInfoForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfoForm/UserInfoForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="667">
               <caret line="47" column="62" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="62" />
             </state>
           </provider>
@@ -135,7 +153,6 @@
         <option value="$PROJECT_DIR$/src/store/actions/guild.js" />
         <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfo.js" />
         <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/RegisterUserInfo/RegisterUserInfo.js" />
-        <option value="$PROJECT_DIR$/src/App/components/UI/Input/input.js" />
         <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangeEmail/ChangeEmail.js" />
         <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserSettings/ChangePassword/ChangePassword.js" />
         <option value="$PROJECT_DIR$/src/App/containers/Auth/Signup/Signup.js" />
@@ -148,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/App/containers/Auth/PasswordResetEmail/PasswordResetEmail.js" />
         <option value="$PROJECT_DIR$/src/App/App.js" />
         <option value="$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfoForm/UserInfoForm.js" />
+        <option value="$PROJECT_DIR$/src/App/components/UI/Input/input.js" />
         <option value="$PROJECT_DIR$/src/store/actions/index.js" />
         <option value="$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js" />
         <option value="$PROJECT_DIR$/src/store/actions/forms.js" />
@@ -184,7 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,7 +284,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthUsers" type="462c0819:PsiDirectoryNode" />
+              <item name="Layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
@@ -275,8 +292,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthUsers" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="Layout" type="462c0819:PsiDirectoryNode" />
+              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
@@ -284,9 +301,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthUsers" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-              <item name="UserInfo" type="462c0819:PsiDirectoryNode" />
+              <item name="Layout" type="462c0819:PsiDirectoryNode" />
+              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="NavigationItems" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
@@ -319,6 +336,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,7 +510,8 @@
       <workItem from="1532965726082" duration="3065000" />
       <workItem from="1533053664487" duration="8091000" />
       <workItem from="1533745815054" duration="588000" />
-      <workItem from="1533828747993" duration="13202000" />
+      <workItem from="1533828747993" duration="14570000" />
+      <workItem from="1533924944037" duration="9251000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST !!!1!">
       <created>1531773730498</created>
@@ -543,11 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533070762022</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Contact.js:&#10;*added button and function&#10;*added check if auth and\or details&#10;*saving in db">
+      <created>1533847172042</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1533847172043</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="800748000" />
+    <option name="totallyTimeSpent" value="811367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -562,13 +588,13 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.35147393" visible="true" weight="0.171875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.35025382" visible="true" weight="0.171875" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32994923" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32994923" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32994923" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2538071" />
-      <window_info id="npm" order="2" sideWeight="0.6485261" side_tool="true" weight="0.171875" />
+      <window_info id="npm" order="2" sideWeight="0.6497462" side_tool="true" weight="0.171875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3401015" />
       <window_info anchor="bottom" id="Favorites" order="6" side_tool="true" weight="0.32994923" />
@@ -586,17 +612,17 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info id="npm" order="2" sideWeight="0.64625853" side_tool="true" weight="0.171875" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2538071" />
+      <window_info id="npm" order="2" sideWeight="0.6497462" side_tool="true" weight="0.171875" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3537415" visible="true" weight="0.171875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.35025382" visible="true" weight="0.171875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32994923" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2538071" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32779622" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3401015" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32994923" />
@@ -646,7 +672,8 @@
     <MESSAGE value="* finished Home.js&#10;* finished settling the website" />
     <MESSAGE value="Styled Auth, SignIn, SignUp, SocialAuth" />
     <MESSAGE value="added:&#10;* Verify Email&#10;* Reset password with email" />
-    <option name="LAST_COMMIT_MESSAGE" value="added:&#10;* Verify Email&#10;* Reset password with email" />
+    <MESSAGE value="Contact.js:&#10;*added button and function&#10;*added check if auth and\or details&#10;*saving in db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Contact.js:&#10;*added button and function&#10;*added check if auth and\or details&#10;*saving in db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -848,27 +875,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/DropDownAuth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/containers/Layout/Navigation/Toolbar/Toolbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,67 +940,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Input/input.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="71" column="16" lean-forward="true" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-418">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/actions/shop/orders.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/index.js">
+    <entry file="file://$PROJECT_DIR$/src/store/actions/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="111">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfoForm/UserInfoForm.js">
+    <entry file="file://$PROJECT_DIR$/src/App/components/UI/Input/input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="47" column="62" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="62" />
+        <state relative-caret-position="134">
+          <caret line="75" column="2" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="76" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/shop/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/actions/shop/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="105" column="2" lean-forward="true" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
+        <state relative-caret-position="2392">
+          <caret line="105" column="2" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/containers/AuthUsers/User/UserInfo/UserInfoForm/UserInfoForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="47" column="62" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/components/Pages/Contact/ContactForm/ContactForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        <state relative-caret-position="258">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/shop/products.js">
+    <entry file="file://$PROJECT_DIR$/src/App/containers/Layout/Navigation/NavigationItems/DropDownAuth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="138">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/actions/forms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        <state relative-caret-position="387">
+          <caret line="80" column="66" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
         </state>
       </provider>
     </entry>

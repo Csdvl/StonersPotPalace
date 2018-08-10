@@ -1,10 +1,9 @@
 import { SubmissionError } from 'redux-form';
-import {toastr} from 'react-redux-toastr';
-
+import { toastr } from 'react-redux-toastr';
 
 
 export const guildEmail = email => {
-  return async (dispatch, getState, {getFirestore}) => {
+  return async (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
     
     try {
@@ -22,27 +21,71 @@ export const guildEmail = email => {
   }
 };
 
-export const contactSubmit = values => {
-  return async (dispatch, getState, { getFirebase, getFirestore}) => {
+export const contactSubmitUnauthenticated = values => {
+  return async (dispatch, getState, { getFirestore }) => {
+    const firestore = getFirestore();
+    try {
+      
+      const contact = {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+        phoneNumber: values.phoneNumber,
+        subject: values.subject,
+        message: values.message,
+        contactMethod: values.contactMethod
+      };
+      
+      await firestore.add('contacts', contact);
+      
+    } catch (error) {
+      throw new SubmissionError({
+        _error: error.message
+      })
+    }
+  }
+};
+
+export const contactSubmitAuthenticated = values => {
+  return async (dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
     const firestore = getFirestore();
     const user = firebase.auth().currentUser;
     const userRef = firestore.collection('users').doc(user.uid);
     
     try {
-    const userQuerySnap = await userRef.get();
-
-    const contact = {
-      firstName:  values.firstName || userQuerySnap.data().firstName,
-      lastName: values.lastName || userQuerySnap.data().lastName,
-      email: values.email || userQuerySnap.data().email ,
-      phoneNumber: values.phoneNumber || userQuerySnap.data().phoneNumber,
-      subject: values.subject,
-      message: values.message,
-      contactMethod: values.contactMethod
-    };
-    
-    await firestore.add('contacts', contact)
+      const userQuerySnap = await userRef.get();
+      
+      const firstName = userQuerySnap.data().firstName;
+      const lastName = userQuerySnap.data().lastName;
+      const phoneNumber = userQuerySnap.data().phoneNumber;
+      let updatedUser;
+      
+      const contact = {
+        firstName: values.firstName || firstName,
+        lastName: values.lastName || lastName,
+        phoneNumber: values.phoneNumber || phoneNumber,
+        subject: values.subject,
+        message: values.message,
+        contactMethod: values.contactMethod
+      };
+      
+      await firestore.add('contacts', contact);
+      
+      console.log(firstName);
+      
+      if ( !firstName && !lastName && !phoneNumber) {
+        updatedUser = {
+          firstName: values.firstName,
+          lastName: values.lastName,
+          displayName: [values.firstName, values.lastName].join(' '),
+          phoneNumber: values.phoneNumber
+        };
+        console.log('im in the if statetement');
+        console.log(updatedUser);
+        return await firebase.updateProfile(updatedUser);
+      }
+      
     } catch (error) {
       throw new SubmissionError({
         _error: error.message

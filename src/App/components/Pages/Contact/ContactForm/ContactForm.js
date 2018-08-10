@@ -12,7 +12,7 @@ import capitalize from "capitalize";
 class ContactForm extends Component {
   render() {
     
-    const { invalid, submitting, pristine, handleSubmit, contactSubmit, profile: { isEmpty, isLoaded, firstName, lastName, email, phoneNumber } } = this.props;
+    const { invalid, submitting, pristine, handleSubmit, contactSubmitUnauthenticated, contactSubmitAuthenticated, profile: { isEmpty, isLoaded, firstName, lastName, email, phoneNumber } } = this.props;
     
     const options = [
       { key: 'email', text: 'E-mail', value: 'email' },
@@ -20,13 +20,15 @@ class ContactForm extends Component {
       { key: 'post', text: 'Post', value: 'post' },
     ];
     
+    const submit = (isLoaded && !isEmpty) ? contactSubmitAuthenticated : contactSubmitUnauthenticated;
+    
     return (
      <Segment size='huge'>
        <Header content='Contact Form' size='large'/>
        <Header content="Send us your thoughts on anything and we'll do our best to answer"/>
        <Segment inverted>
          <Grid centered>
-           <Form onSubmit={handleSubmit(contactSubmit)} >
+           <Form onSubmit={handleSubmit(submit)}>
              {!((!isEmpty && isLoaded) && (firstName)) &&
              <Field
               name="firstName"
@@ -113,7 +115,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-  contactSubmit: (values) => dispatch(actions.contactSubmit(values))
+    contactSubmitUnauthenticated: (values) => dispatch(actions.contactSubmitUnauthenticated(values)),
+    contactSubmitAuthenticated: (values) => dispatch(actions.contactSubmitAuthenticated(values))
   }
 };
 

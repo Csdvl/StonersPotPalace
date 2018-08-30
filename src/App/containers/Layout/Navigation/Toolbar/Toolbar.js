@@ -19,7 +19,7 @@ const toolbar = (props) => (
      <Menu.Item as={NavigationItems} isAuth={props.isAuth}/>
      
      <Menu.Menu position='right'>
-       <Menu.Item as={CartModal}  />
+       <Menu.Item as={CartModal} isAuth={props.isAuth} />
        <Menu.Item as={DropDownAuth} isAuth={props.isAuth} profile={props.profile} />
      </Menu.Menu>
    

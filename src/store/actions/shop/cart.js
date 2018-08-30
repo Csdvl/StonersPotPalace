@@ -96,7 +96,12 @@ export const orderPlaced = (cartItems, totalPrice) => {
       })
     };
     
+    console.log(user);
+    
     try {
+      
+      // if ( firebase.auth().currentUser )
+      
       await firestore.add('orders', newOrder);
       dispatch(orderNow());
     } catch (e) {

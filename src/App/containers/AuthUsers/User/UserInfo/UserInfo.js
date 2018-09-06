@@ -8,7 +8,6 @@ import RegisterUserInfo from './UserInfoForm/UserInfoForm';
 
 class UserInfo extends Component {
   render() {
-  const {} = this.props;
   
     return (
      <Segment color='olive'>

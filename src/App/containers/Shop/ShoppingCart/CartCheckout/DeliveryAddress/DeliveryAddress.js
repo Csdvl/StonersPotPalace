@@ -19,33 +19,33 @@ class DeliveryAddress extends Component {
   
   render() {
     const { activeIndex } = this.state;
-    const { profile } = this.props;
+    const { profile, handleSubmit, onSubmit } = this.props;
     
     return (
      <Segment size='big'>
        <Header content='Delivery Address'/>
        
-       <Card>
-         <Card.Content>
-           <Card.Header>{profile.displayName}</Card.Header>
-           <Card.Description>Country: {profile.country}</Card.Description>
-           <Card.Description>City: {profile.city}</Card.Description>
-           <Card.Description>Address: {profile.address}</Card.Description>
-           <Card.Description>Post Code: {profile.postcode}</Card.Description>
-         </Card.Content>
-       </Card>
+       {/*<Card>*/}
+         {/*<Card.Content>*/}
+           {/*<Card.Header>{profile.displayName}</Card.Header>*/}
+           {/*<Card.Description>Country: {profile.country}</Card.Description>*/}
+           {/*<Card.Description>City: {profile.city}</Card.Description>*/}
+           {/*<Card.Description>Address: {profile.address}</Card.Description>*/}
+           {/*<Card.Description>Post Code: {profile.postcode}</Card.Description>*/}
+         {/*</Card.Content>*/}
+       {/*</Card>*/}
        
-       <Divider horizontal>OR</Divider>
+       {/*<Divider horizontal>OR</Divider>*/}
        
-       <Accordion>
-         <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
-           <Icon name='dropdown'/>
-           Add a New Address
-         </Accordion.Title>
-         <Accordion.Content active={activeIndex === 0}>
+       {/*<Accordion>*/}
+         {/*<Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>*/}
+           {/*<Icon name='dropdown'/>*/}
+           {/*Add a New Address*/}
+         {/*</Accordion.Title>*/}
+         {/*<Accordion.Content active={activeIndex === 0}>*/}
            <Segment inverted>
              <Grid centered>
-               <Form>
+               <Form onSubmit={handleSubmit}>
                  <Field
                   name="country"
                   component={Input}
@@ -78,7 +78,8 @@ class DeliveryAddress extends Component {
                  <Button
                   // disabled={invalid || submitting || pristine}
                   // loading={submitting}
-                  content='Submit Information'
+                  type='submit'
+                  content='Next'
                   style={{ marginTop: '10px', marginBottom: '10px' }}
                   color='teal'
                   size='large'
@@ -86,8 +87,8 @@ class DeliveryAddress extends Component {
                </Form>
              </Grid>
            </Segment>
-         </Accordion.Content>
-       </Accordion>
+         {/*</Accordion.Content>*/}
+       {/*</Accordion>*/}
      
      </Segment>
     );
@@ -104,4 +105,4 @@ const mapDispatchToProps = dispatch => {
   return {}
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'deliveryAddress' })(DeliveryAddress));
+export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'checkout', destroyOnUnmount: false })(DeliveryAddress));

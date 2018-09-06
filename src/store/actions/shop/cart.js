@@ -76,15 +76,20 @@ const orderNow = () => ({
   type: actionTypes.ORDER_PLACED,
 });
 
-export const orderPlaced = (cartItems, totalPrice) => {
+export const orderPlaced = ( values, cartItems, totalPrice) => {
   return async (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore();
     const user = getFirebase().auth().currentUser;
     
     const newOrder = {
+      deliveryInstructions: values.deliveryInstructions,
+      city: values.city,
+      country: values.country,
+      address: values.address,
+      postcode: values.postcode,
       userId: user.uid,
       orderDate: Date.now(),
-      totalPrice,
+      totalPrice: totalPrice,
       products: cartItems.map(cartItem => {
         return {
           id: cartItem.id,
@@ -96,12 +101,8 @@ export const orderPlaced = (cartItems, totalPrice) => {
       })
     };
     
-    console.log(user);
     
     try {
-      
-      // if ( firebase.auth().currentUser )
-      
       await firestore.add('orders', newOrder);
       dispatch(orderNow());
     } catch (e) {

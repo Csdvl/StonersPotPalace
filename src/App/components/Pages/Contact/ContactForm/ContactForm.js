@@ -35,7 +35,7 @@ class ContactForm extends Component {
               component={Input}
               type="text"
               label="First Name"
-              inputtype="input"
+              inputtype="text"
               normalize={capitalize}/>
              }
              {!((!isEmpty && isLoaded) && (lastName)) &&
@@ -44,7 +44,7 @@ class ContactForm extends Component {
               component={Input}
               type="text"
               label="Last Name"
-              inputtype="input"
+              inputtype="text"
               normalize={capitalize}/>
              }
              {!((!isEmpty && isLoaded) && (email)) &&
@@ -53,7 +53,7 @@ class ContactForm extends Component {
               component={Input}
               type="text"
               label="E-mail address"
-              inputtype="input"
+              inputtype="text"
              />
              }
              {!((!isEmpty && isLoaded) && (phoneNumber)) &&
@@ -62,7 +62,7 @@ class ContactForm extends Component {
               component={Input}
               type="text"
               label="Phone Number"
-              inputtype="input"
+              inputtype="text"
              />
              }
              <Field
@@ -70,7 +70,7 @@ class ContactForm extends Component {
               component={Input}
               type="text"
               label="Subject"
-              inputtype="input"
+              inputtype="text"
              />
              
              <Field

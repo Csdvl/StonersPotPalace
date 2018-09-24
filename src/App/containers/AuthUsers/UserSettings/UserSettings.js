@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Item, Segment, Header, Divider} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
-import * as actions from '../../../../../store/actions'
+import * as actions from '../../../../store/actions/index'
 import ChangePassword from './ChangePassword/ChangePassword';
 import ChangeEmail from './ChangeEmail/ChangeEmail';
 

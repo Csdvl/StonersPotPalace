@@ -24,7 +24,7 @@ class PasswordResetEmail extends Component {
                 component={Input}
                 type="text"
                 label="E-mail"
-                inputtype="input"
+                inputtype="text"
                 validate={[ email ]}
                />
                

@@ -27,7 +27,7 @@ class Signin extends Component {
                 component={Input}
                 type="text"
                 label="E-mail"
-                inputtype="input"
+                inputtype="text"
                 validate={[ required, email ]}
                />
                
@@ -36,7 +36,7 @@ class Signin extends Component {
                 component={Input}
                 type="password"
                 label="Password"
-                inputtype="input"
+                inputtype="text"
                 validate={[ required, passwordLenght ]}
                />
                {error && <label>{error}</label>}

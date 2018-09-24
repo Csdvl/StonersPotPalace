@@ -10,9 +10,9 @@ import Home from './components/Pages/Home/Home';
 import Shop from './containers/Shop/Shop';
 import Auth from './containers/Auth/Auth';
 import Logout from './containers/Auth/Logout/Logout';
-import UserSettings from './containers/AuthUsers/User/UserSettings/UserSettings';
-import UserInfo from './containers/AuthUsers/User/UserInfo/UserInfo';
-import UserOrders from './containers/AuthUsers/User/UserOrders/UserOrders';
+import UserSettings from './containers/AuthUsers/UserSettings/UserSettings';
+import UserInfo from './containers/AuthUsers/UserInfo/UserInfo';
+import UserOrders from './containers/AuthUsers/UserOrders/UserOrders';
 import CartCheckout from './containers/Shop/ShoppingCart/CartCheckout/CartCheckout';
 import Contact from './components/Pages/Contact/Contact';
 import Story from './components/Pages/Story/Story';
@@ -31,7 +31,7 @@ class App extends Component {
   
   render() {
     
-    const {isAuth} = this.props;
+    const {isAuth, updateUserProfile, profile} = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
     
     let routes = (
@@ -53,7 +53,7 @@ class App extends Component {
          <Route path="/shop" component={Shop} />
          <Route path="/contact" component={Contact}/>
          <Route path="/orders" component={UserOrders}/>
-         <Route path="/user" component={UserInfo}/>
+         <Route path="/user" render={() => <UserInfo updateUserProfile={updateUserProfile} initialValues={profile} />}/>
          <Route path="/account" component={UserSettings}/>
          <Route path="/logout" component={Logout}/>
          <Route path="/checkout" render={() => <CartCheckout/>} />
@@ -77,13 +77,15 @@ const mapStateToProps = state => {
   return {
     isAuth: state.firebase.auth,
     products: state.firestore.ordered.products,
-    cartItems: state.cart.cartItems
+    cartItems: state.cart.cartItems,
+    profile: state.firebase.profile
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     initProducts: (products) => dispatch(actions.initProducts(products)),
+    updateUserProfile: (user) => dispatch(actions.updateUserProfile(user)),
   }
 };
 

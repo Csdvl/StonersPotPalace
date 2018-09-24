@@ -12,9 +12,10 @@ const input = (props) => {
   let inputElement = null;
   
   switch (props.inputtype) {
-    case ('input'):
+    case ('text'):
       inputElement = <Input
        {...rest}
+       // value={value}
        type={type}
        {...restInput}/>;
       break;
@@ -22,6 +23,7 @@ const input = (props) => {
     case ('textarea'):
       inputElement = <TextArea
        {...rest}
+       value={value || ''}
        rows={rows}
        {...restInput}/>;
       break;
@@ -52,6 +54,7 @@ const input = (props) => {
       inputElement = <Radio
        {...rest}
        onChange={onChange}
+       value={value || ''}
        type={type}
        {...restInput}
       />;
@@ -63,6 +66,7 @@ const input = (props) => {
        {...rest}
        onChange={(e, { checked }) => onChange(checked)}
        type={type}
+       value={value || ''}
        {...restInput}
       />;
       break;
@@ -71,6 +75,7 @@ const input = (props) => {
       inputElement = <Input
        {...rest}
        type={type}
+       value={value || ''}
        {...restInput}/>;
   }
   

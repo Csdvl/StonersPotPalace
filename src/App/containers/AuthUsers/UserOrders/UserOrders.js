@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Item } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
-import * as actions from '../../../../../store/actions/index';
+import * as actions from '../../../../store/actions/index';
 import UserOrder from './UserOrder/UserOrder';
-import Spinner from '../../../../components/UI/Spinner/Spinner';
+import Spinner from '../../../components/UI/Spinner/Spinner';
 
 
 class UserOrders extends Component {

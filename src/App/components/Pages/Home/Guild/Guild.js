@@ -30,7 +30,7 @@ const guild = ({handleSubmit, guildEmail, invalid, submitting, pristine}) => (
               component={Input}
               type="text"
               label={<Icon name='pointing down'/>}
-              inputtype="input"
+              inputtype="text"
               validate={[ email]}
              />
              

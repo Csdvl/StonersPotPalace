@@ -2,8 +2,8 @@ import React from 'react';
 import { Button, Item, Label, Header, Form, Segment, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 
-import Input from '../../../../../components/UI/Input/input';
-import { passwordLenght, matchPassword } from '../../../../../../shared/validation';
+import Input from '../../../../components/UI/Input/input';
+import { passwordLenght, matchPassword } from '../../../../../shared/validation';
 
 
 const changePassword = ({
@@ -29,7 +29,7 @@ const changePassword = ({
                type="password"
                component={Input}
                label="New Password"
-               inputtype="input"
+               inputtype="text"
                // validate={[passwordLenght ]}
               />
               <Field
@@ -37,7 +37,7 @@ const changePassword = ({
                type="password"
                component={Input}
                label="Confirm New Password"
-               inputtype="input"
+               inputtype="text"
                // validate={[passwordLenght, matchPassword]}
               />
               {error && (

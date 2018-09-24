@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Button, Item, Label, Form, Segment, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 
-import Input from "../../../../../components/UI/Input/input";
+import Input from "../../../../components/UI/Input/input";
 
 
 const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) => {
@@ -19,7 +19,7 @@ const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) 
               type="text"
               component={Input}
               label="New Email"
-              inputtype="input"
+              inputtype="text"
               // validate={[passwordLenght ]}
              />
              <Field
@@ -27,7 +27,7 @@ const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) 
               type="text"
               component={Input}
               label="Confirm New Email"
-              inputtype="input"
+              inputtype="text"
               // validate={[passwordLenght ]}
              />
              

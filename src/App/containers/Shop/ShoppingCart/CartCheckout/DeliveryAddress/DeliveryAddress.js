@@ -51,14 +51,14 @@ class DeliveryAddress extends Component {
                   component={Input}
                   type="text"
                   label="Country"
-                  inputtype="input"
+                  inputtype="text"
                  />
                  <Field
                   name="city"
                   component={Input}
                   type="text"
                   label="City"
-                  inputtype="input"
+                  inputtype="text"
                  />
                  <Field
                   name="address"
@@ -72,7 +72,7 @@ class DeliveryAddress extends Component {
                   component={Input}
                   type="text"
                   label="Post Code"
-                  inputtype="input"
+                  inputtype="text"
                  />
                  
                  <Button

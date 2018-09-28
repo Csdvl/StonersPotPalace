@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import { Item } from 'semantic-ui-react';
-import { connect } from 'react-redux';
+import { Item, Label } from 'semantic-ui-react';
 
-import * as actions from '../../../../store/actions/index';
 import UserOrder from './UserOrder/UserOrder';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 
 
-class UserOrders extends Component {
+class userOrders extends Component {
   
-  async componentWillMount() {
+  async componentDidMount() {
     const { fetchOrdersInit } = this.props;
     
     fetchOrdersInit();
   }
   
   render() {
-    
     const { orders } = this.props;
     
     let userOrders = <Spinner/>;
@@ -27,24 +24,16 @@ class UserOrders extends Component {
       );
     }
     
+    // if (  !Array.isArray(orders) || !orders.length) {
+    //   userOrders = <Label content='You didint place any orders yet'/>
+    // }
+
     return (
      <Item.Group>
        {userOrders}
      </Item.Group>
     );
   }
-}
-
-const mapStateToProps = (state) => {
-  return {
-    orders: state.orders
-  }
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchOrdersInit: () => dispatch(actions.fetchOrdersInit())
-  }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(UserOrders);
+export default userOrders;

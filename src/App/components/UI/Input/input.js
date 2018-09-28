@@ -15,7 +15,8 @@ const input = (props) => {
     case ('text'):
       inputElement = <Input
        {...rest}
-       // value={value}
+       value={value }
+       onChange={(e, { value }) => onChange(value)}
        type={type}
        {...restInput}/>;
       break;
@@ -23,7 +24,8 @@ const input = (props) => {
     case ('textarea'):
       inputElement = <TextArea
        {...rest}
-       value={value || ''}
+       value={value }
+       onChange={(e, { value }) => onChange(value)}
        rows={rows}
        {...restInput}/>;
       break;
@@ -32,7 +34,7 @@ const input = (props) => {
       inputElement = <Select
        {...rest}
        value={value || ''}
-       onChange={(e, data) => onChange(data.value)}
+       onChange={(e, { value }) => onChange(value)}
        multiple={multiple}
        options={options}
        {...restInput}
@@ -53,8 +55,8 @@ const input = (props) => {
     case ('radio'):
       inputElement = <Radio
        {...rest}
-       onChange={onChange}
-       value={value || ''}
+       onChange={(e, { value }) => onChange(value)}
+       value={value}
        type={type}
        {...restInput}
       />;
@@ -65,8 +67,8 @@ const input = (props) => {
       inputElement = <Checkbox
        {...rest}
        onChange={(e, { checked }) => onChange(checked)}
+       checked={value}
        type={type}
-       value={value || ''}
        {...restInput}
       />;
       break;
@@ -75,7 +77,8 @@ const input = (props) => {
       inputElement = <Input
        {...rest}
        type={type}
-       value={value || ''}
+       value={value }
+       onChange={(e, { value }) => onChange(value)}
        {...restInput}/>;
   }
   

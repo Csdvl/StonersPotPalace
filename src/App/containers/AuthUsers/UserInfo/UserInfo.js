@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Segment, Header, Divider } from 'semantic-ui-react';
 
 import UserInfoForm from './UserInfoForm/UserInfoForm';
 
 
-const UserInfo = ({updateUserProfile, initialValues}) => {
+const userInfo = ({updateUserProfile, initialValues}) => {
     return (
      <Segment color='olive'>
        <Header content='Personal Information' size='huge'/>
@@ -18,4 +18,4 @@ const UserInfo = ({updateUserProfile, initialValues}) => {
     );
 };
 
-export default UserInfo;
+export default userInfo;

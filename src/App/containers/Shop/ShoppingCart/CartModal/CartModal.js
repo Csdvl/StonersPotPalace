@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Modal, Segment, Label, Divider } from 'semantic-ui-react'
+import { Button, Modal, Segment, Label, Divider,Container } from 'semantic-ui-react'
 import { NavLink, Link } from 'react-router-dom';
 
-import Cart from '../Cart/Cart';
+import Cart from '../Cart';
 
 
 class CartModal extends Component {
@@ -13,16 +13,20 @@ class CartModal extends Component {
   handleClose = () => this.setState({ modalOpen: false });
   
   render() {
-    const {} = this.props;
+    const {modalOpen} = this.state;
+    const {isAuth, cartItems} = this.props;
+    
+    const content = cartItems.length === 0 ? null : cartItems.length ;
+    
     return (
-     <Modal trigger={<Button onClick={this.handleOpen} icon="shopping basket"/>}
-            open={this.state.modalOpen}
+     <Modal trigger={<Button onClick={this.handleOpen} icon="shopping basket" content={content}/>}
+            open={modalOpen}
             onClose={this.handleClose}>
        <Modal.Header><Segment textAlign='center'>Shopping Basket</Segment></Modal.Header>
        
        <Cart/>
        <Divider hidden/>
-       {this.props.isAuth
+       {isAuth
         ? <Button as={NavLink}
                   to="/checkout"
                   floated='right'

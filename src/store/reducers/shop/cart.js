@@ -21,7 +21,6 @@ const addToCart = (state, action) => {
     cartItems: [
       ...state.cartItems,
       {
-        // ...state.cartItems[cartItemIndex],
         id: action.id,
         quantity: 1,
         label: action.label,
@@ -83,6 +82,13 @@ const decrementQuantity = (state, action) => {
   
 };
 
+const logout = (state, action) => {
+  return {
+    cartItems: [],
+    totalPrice: 0
+  }
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
@@ -93,6 +99,8 @@ const reducer = (state = initialState, action) => {
       return decrementQuantity(state, action);
     case actionTypes.INCREMENT_QUANTITY:
       return incrementQuantity(state, action);
+    case actionTypes.AUTH_LOGOUT:
+      return logout(state, action);
     default:
       return state
   }

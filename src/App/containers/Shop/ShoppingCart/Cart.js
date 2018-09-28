@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { Label, Container, Item, Segment, Icon } from 'semantic-ui-react';
-import * as actions from "../../../../../store/actions/index";
+import * as actions from "../../../../store/actions/index";
 import CartItem from './CartItem/CartItem';
 
 
@@ -10,7 +10,6 @@ class Cart extends Component {
   render() {
     
     const { cartItems, decrementQuantity, incrementQuantity, removeFromCart, totalPrice } = this.props;
-
     
     const shoppingCartItems = (cartItems.map(cartItem =>
      <CartItem

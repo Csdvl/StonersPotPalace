@@ -3,7 +3,7 @@ import {Menu} from 'semantic-ui-react';
 import {NavLink} from 'react-router-dom';
 
 
-const navigationItems = (props) => (
+const navigationItems = () => (
  <Menu inverted color='olive' >
      <Menu.Item as={NavLink} to='/' exact name='Home' />
    <Menu.Item as={NavLink} to='/story' name='Story' />

@@ -7,6 +7,7 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 
 const ShopItemList = ({ products, addToCart }) => {
   let shopItems = <Spinner/>;
+  
   if ( products ) {
     shopItems = products.map(product => (
      <ShopItemCard

@@ -23,20 +23,14 @@ class Auth extends Component {
   
   
   render() {
-    const { isAuth, loading, error } = this.props;
+    const {isSignup} =this.state;
+    const { isAuth} = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
     
-    let auth = this.state.isSignup
+    let auth = isSignup
      ? <Signup/>
      : <Signin/>;
-    if ( loading ) {
-      auth = <Spinner/>;
-    }
-    
-    let errorMessage = null;
-    if ( error ) {
-      errorMessage = <p>{error.message}</p>
-    }
+     
     
     let authRedirect = null;
     if ( authenticated ) {
@@ -46,12 +40,11 @@ class Auth extends Component {
     return (
      <Segment size='big' color='olive'>
        <Header content='Authentication'/>
-       <Button color={this.state.isSignup ? 'violet' : 'purple'}
+       <Button color={isSignup ? 'violet' : 'purple'}
         onClick={this.switchAuthModeHandler}>Switch
-         to {this.state.isSignup ? "Log In" : "Register"}
+         to {isSignup ? "Log In" : "Register"}
        </Button>
        {authRedirect}
-       {errorMessage}
        {auth}
      </Segment>
     )
@@ -60,8 +53,6 @@ class Auth extends Component {
 
 const mapStateToProps = state => {
   return {
-    loading: state.auth.loading,
-    error: state.auth.error,
     isAuth: state.firebase.auth
   }
 };

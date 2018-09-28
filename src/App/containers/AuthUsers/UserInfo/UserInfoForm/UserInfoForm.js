@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Form, Segment, Header, Item, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import capitalize from 'capitalize';
@@ -16,11 +16,8 @@ import {
 } from "../../../../../shared/validation";
 
 
-class UserInfoForm extends Component {
+const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserProfile }) => {
   
-  render() {
-    const { invalid, submitting, pristine, handleSubmit, updateUserProfile } = this.props;
-    
     const options = [
       { key: 'unitedKingdom', text: 'United Kingdom', value: 'unitedKingdom' },
       { key: 'germany', text: 'Germany', value: 'germany' },
@@ -74,6 +71,14 @@ class UserInfoForm extends Component {
                 type="radio"
                 value="female"
                 label="Female"
+               />
+               <Field
+                name="gender"
+                component={Input}
+                inputtype="radio"
+                type="radio"
+                value="other"
+                label="Other"
                />
                
                <Field
@@ -168,12 +173,11 @@ class UserInfoForm extends Component {
      </Segment>
     
     );
-  }
-}
+};
 
 export default
  reduxForm({
   form: 'userInfo',
    enableReinitialize: true,
    destroyOnUnmount: false,
-})(UserInfoForm);
+ })(userInfoForm);

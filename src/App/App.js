@@ -19,44 +19,43 @@ import Story from './components/Pages/Story/Story';
 import ResetPassword from './containers/Auth/PasswordResetEmail/PasswordResetEmail';
 
 
-
 class App extends Component {
   
   async componentDidMount() {
-    const { firestore, initProducts } = this.props;
-   await firestore.get('products');
-   
-    initProducts(this.props.products);
+    const { initProducts } = this.props;
+    
+    initProducts();
   }
   
   render() {
     
-    const {isAuth, updateUserProfile, profile} = this.props;
+    const { isAuth, updateUserProfile, profile, orders, fetchOrdersInit, providerId, updatePassword, updateEmail, products, addToCart, resetPasswordEmail } = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
     
     let routes = (
      <Switch>
        <Route exact path="/" component={Home}/>
        <Route path="/story" component={Story}/>
-       <Route path="/shop" component={Shop}/>
+       <Route path="/shop" render={() => <Shop products={products} addToCart={addToCart}/>}/>
        <Route path="/contact" component={Contact}/>
        <Route path="/auth" component={Auth}/>
-       <Route path="/reset" component={ResetPassword}/>
+       <Route path="/reset" render={() => <ResetPassword resetPasswordEmail={resetPasswordEmail}/>}/>
        <Redirect to="/"/>
      </Switch>
     );
-    if ( authenticated) {
+    if ( authenticated ) {
       routes = (
        <Switch>
          <Route exact path="/" component={Home}/>
          <Route path="/story" component={Story}/>
-         <Route path="/shop" component={Shop} />
+         <Route path="/shop" render={() => <Shop products={products} addToCart={addToCart}/>}/>
          <Route path="/contact" component={Contact}/>
-         <Route path="/orders" component={UserOrders}/>
-         <Route path="/user" render={() => <UserInfo updateUserProfile={updateUserProfile} initialValues={profile} />}/>
-         <Route path="/account" component={UserSettings}/>
+         <Route path="/orders" render={() => <UserOrders orders={orders} fetchOrdersInit={fetchOrdersInit}/>}/>
+         <Route path="/user" render={() => <UserInfo updateUserProfile={updateUserProfile} initialValues={profile}/>}/>
+         <Route path="/account" render={() => <UserSettings providerId={providerId} updatePassword={updatePassword}
+                                                            updateEmail={updateEmail}/>}/>
          <Route path="/logout" component={Logout}/>
-         <Route path="/checkout" render={() => <CartCheckout/>} />
+         <Route path="/checkout" render={() => <CartCheckout/>}/>
          <Redirect to="/"/>
        </Switch>
       )
@@ -76,9 +75,9 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     isAuth: state.firebase.auth,
-    products: state.firestore.ordered.products,
-    cartItems: state.cart.cartItems,
-    profile: state.firebase.profile
+    products: state.products,
+    profile: state.firebase.profile,
+    orders: state.orders,
   }
 };
 
@@ -86,6 +85,9 @@ const mapDispatchToProps = dispatch => {
   return {
     initProducts: (products) => dispatch(actions.initProducts(products)),
     updateUserProfile: (user) => dispatch(actions.updateUserProfile(user)),
+    fetchOrdersInit: () => dispatch(actions.fetchOrdersInit()),
+    addToCart: (productId, photoURL, label, price, onStock) => dispatch(actions.addToCart(productId, photoURL, label, price, onStock)),
+    resetPasswordEmail: (email) => dispatch(actions.resetPasswordEmail(email)),
   }
 };
 

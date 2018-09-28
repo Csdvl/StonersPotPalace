@@ -3,40 +3,23 @@ import { Grid, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import Aux from '../../hoc/auxiliary';
-import Toolbar from './Navigation/Toolbar/Toolbar';
-// import SideDrawer from '../../components/Navigation/w_SideDrawer/SideDrawer';
+import Toolbar from './Toolbar/Toolbar';
 
 
 class Layout extends Component {
-  // state = {
-  //   showSideDrawer: false
-  // };
-  //
-  // sideDrawerClosedHandler = () => {
-  //   this.setState({ showSideDrawer: false });
-  // };
-  //
-  // sideDrawerToggleHandler = () => {
-  //   this.setState((prevState) => {
-  //     return { showSideDrawer: !prevState.showSideDrawer }
-  //   });
-  // };
   
   render() {
-    const { isAuth, profile } = this.props;
+    const { isAuth, profile, cartItems } = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
     
     return (
      <Aux>
        <Toolbar
         isAuth={authenticated}
-        // sideDrawerToggle={this.sideDrawerToggleHandler}
         profile={profile}
+        cartItems={cartItems}
        />
-       {/*<SideDrawer*/}
-        {/*isAuth={authenticated}*/}
-        {/*closed={this.sideDrawerClosedHandler}*/}
-        {/*show={this.state.showSideDrawer}/>*/}
+     
        <Grid  textAlign='center'>
          <Grid.Column width={10} textAlign='center' style={{marginTop: '72px'}}>
            {this.props.children}
@@ -53,6 +36,7 @@ const mapStateToProps = state => {
   return {
     isAuth: state.firebase.auth,
     profile: state.firebase.profile,
+    cartItems: state.cart.cartItems,
   }
 };
 

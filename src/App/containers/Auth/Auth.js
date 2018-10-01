@@ -3,9 +3,9 @@ import { Segment, Button, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
+import * as actions  from '../../../store/actions/index';
 import Signup from './Signup/Signup';
 import Signin from './Signin/Signin';
-import Spinner from '../../components/UI/Spinner/Spinner';
 
 
 class Auth extends Component {
@@ -24,12 +24,12 @@ class Auth extends Component {
   
   render() {
     const {isSignup} =this.state;
-    const { isAuth} = this.props;
+    const { isAuth, onRegister, onSocialAuth, onLogin} = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
     
     let auth = isSignup
-     ? <Signup/>
-     : <Signin/>;
+     ? <Signup onRegister={onRegister} onSocialAuth={onSocialAuth}/>
+     : <Signin onLogin={onLogin} onSocialAuth={onSocialAuth}/>;
      
     
     let authRedirect = null;
@@ -57,4 +57,12 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps)(Auth);
+const mapDispatchToProps = dispatch => {
+  return {
+    onRegister: (user) => dispatch(actions.authRegister(user)),
+    onSocialAuth: (selectedProvider) => dispatch(actions.socialAuth(selectedProvider)),
+    onLogin: (creds) => dispatch(actions.authLogin(creds)),
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Auth);

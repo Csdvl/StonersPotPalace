@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Header, Segment, Grid, Form, Button } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import Input from "../../../../../components/UI/Input/input";
+import Input from "../../../components/UI/Input/input";
 
 
 class DeliveryInstructions extends Component {

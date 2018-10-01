@@ -3,7 +3,7 @@ import { Divider, Segment, Header, Card, Accordion, Icon, Button, Form, Grid } f
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
-import Input from "../../../../../components/UI/Input/input";
+import Input from "../../../components/UI/Input/input";
 
 
 class DeliveryAddress extends Component {

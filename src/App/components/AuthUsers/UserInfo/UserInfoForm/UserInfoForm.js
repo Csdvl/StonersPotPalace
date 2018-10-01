@@ -3,8 +3,9 @@ import { Button, Form, Segment, Header, Item, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import capitalize from 'capitalize';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
-import Input from '../../../../components/UI/Input/input';
+import Input from '../../../UI/Input/input';
 import {
   required,
   nameLenght,
@@ -174,6 +175,8 @@ const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserP
     
     );
 };
+
+
 
 export default
  reduxForm({

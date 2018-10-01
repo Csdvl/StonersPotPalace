@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Item, Label } from 'semantic-ui-react';
 
 import UserOrder from './UserOrder/UserOrder';
-import Spinner from '../../../components/UI/Spinner/Spinner';
+import Spinner from '../../UI/Spinner/Spinner';
 
 
 class userOrders extends Component {

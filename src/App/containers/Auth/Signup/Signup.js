@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Header, Button, Form, Segment, Grid, Item, Divider } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
-import { connect } from 'react-redux';
 
-import { authRegister, socialAuth } from '../../../../store/actions/auth';
 import { passwordLenght, required, matchPassword, email } from "../../../../shared/validation";
 import Input from "../../../components/UI/Input/input";
 import SocialAuth from '../SocialAuth/SocialAuth';
@@ -63,16 +61,6 @@ class Signup extends Component {
   }
 }
 
-Signup = reduxForm({
+export default reduxForm({
   form: 'signup',
-  asyncBlurFields: [ 'email' ]
 })(Signup);
-
-const mapDispatchToProps = dispatch => {
-  return {
-    onRegister: (user) => dispatch(authRegister(user)),
-    onSocialAuth: (selectedProvider) => dispatch(socialAuth(selectedProvider))
-  }
-};
-
-export default connect(null, mapDispatchToProps)(Signup);

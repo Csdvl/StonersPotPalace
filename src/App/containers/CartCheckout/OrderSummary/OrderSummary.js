@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 
 
-import Cart from '../../Cart';
+import Cart from '../../../components/Shop/ShoppingCart/Cart';
 
 
 class OrderSummary extends Component {

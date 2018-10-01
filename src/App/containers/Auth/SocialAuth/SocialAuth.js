@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Divider, Icon } from 'semantic-ui-react';
+import { Button, Container, Icon } from 'semantic-ui-react';
 
 
 const socialAuth = ({ login, socialAuth }) => (

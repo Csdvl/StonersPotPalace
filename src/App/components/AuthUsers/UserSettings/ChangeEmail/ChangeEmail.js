@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Button, Item, Label, Form, Segment, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 
-import Input from "../../../../components/UI/Input/input";
+import Input from "../../../UI/Input/input";
 
 
 const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Item, Label, Header, Form, Segment, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 
-import Input from '../../../../components/UI/Input/input';
+import Input from '../../../UI/Input/input';
 import { passwordLenght, matchPassword } from '../../../../../shared/validation';
 
 

@@ -4,7 +4,7 @@ import { Menu, Container, Image } from 'semantic-ui-react';
 import bakeryLogo from '../../../../assets/images/logo.png';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import DropDownAuth from '../NavigationItems/DropDownAuth';
-import CartModal from '../../Shop/ShoppingCart/CartModal/CartModal';
+import CartModal from '../../../components/Shop/ShoppingCart/CartModal/CartModal';
 
 
 const toolbar = ({isAuth, profile, cartItems}) => (

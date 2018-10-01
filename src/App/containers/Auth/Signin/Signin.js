@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Header, Button, Form, Segment, Grid, Item, Divider } from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
-import { connect } from 'react-redux';
 
-import { authLogin, socialAuth } from '../../../../store/actions/auth';
 import { email, passwordLenght, required } from "../../../../shared/validation";
 import Input from "../../../components/UI/Input/input";
 import SocialAuth from '../SocialAuth/SocialAuth';
@@ -56,11 +54,4 @@ class Signin extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onLogin: (creds) => dispatch(authLogin(creds)),
-    onSocialAuth: (selectedProvider) => dispatch(socialAuth(selectedProvider))
-  }
-};
-
-export default connect(null, mapDispatchToProps)(reduxForm({ form: 'signin' })(Signin));
+export default reduxForm({ form: 'signin' })(Signin);

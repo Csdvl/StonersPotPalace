@@ -7,13 +7,13 @@ import { hot } from 'react-hot-loader';
 import * as actions from "../store/actions";
 import Layout from './containers/Layout/Layout';
 import Home from './components/Pages/Home/Home';
-import Shop from './containers/Shop/Shop';
+import Shop from './components/Shop/Shop';
 import Auth from './containers/Auth/Auth';
 import Logout from './containers/Auth/Logout/Logout';
-import UserSettings from './containers/AuthUsers/UserSettings/UserSettings';
-import UserInfo from './containers/AuthUsers/UserInfo/UserInfo';
-import UserOrders from './containers/AuthUsers/UserOrders/UserOrders';
-import CartCheckout from './containers/Shop/ShoppingCart/CartCheckout/CartCheckout';
+import UserSettings from './components/AuthUsers/UserSettings/UserSettings';
+import UserInfo from './components/AuthUsers/UserInfo/UserInfo';
+import UserOrders from './components/AuthUsers/UserOrders/UserOrders';
+import CartCheckout from './containers/CartCheckout/CartCheckout';
 import Contact from './components/Pages/Contact/Contact';
 import Story from './components/Pages/Story/Story';
 import ResetPassword from './containers/Auth/PasswordResetEmail/PasswordResetEmail';
@@ -31,7 +31,7 @@ class App extends Component {
     
     const { isAuth, updateUserProfile, profile, orders, fetchOrdersInit, providerId, updatePassword, updateEmail, products, addToCart, resetPasswordEmail } = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
-    
+    console.log('isAuth:', isAuth);
     let routes = (
      <Switch>
        <Route exact path="/" component={Home}/>

@@ -1,13 +1,20 @@
+// @flow
 import React, { Component } from 'react';
 import { Header, Button, Form, Segment, Grid, Item, Divider } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form/lib/types';
 
 import { passwordLenght, required, matchPassword, email } from "../../../../shared/validation";
 import Input from "../../../components/UI/Input/input";
 import SocialAuth from '../SocialAuth/SocialAuth';
 
 
-class Signup extends Component {
+type Props = {
+  onRegister: Event => void,
+  onSocialAuth: string => void
+} & FormProps;
+
+class Signup extends Component<Props> {
   render() {
     const { invalid, submitting, pristine, handleSubmit, onRegister, onSocialAuth, error } = this.props;
     return (

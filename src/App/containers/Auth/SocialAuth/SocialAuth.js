@@ -1,8 +1,13 @@
+// @flow
 import React from 'react';
 import { Button, Container, Icon } from 'semantic-ui-react';
 
 
-const socialAuth = ({ login, socialAuth }) => (
+type Props = {
+  socialAuth: string => void
+};
+
+const socialAuth = ({ login, socialAuth }: Props) => (
  
  <Container fluid>
    <Button color='facebook'

@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import {Card} from 'semantic-ui-react';
 
@@ -5,7 +6,12 @@ import ShopItemCard from './ShopItemCard/ShopItemCard';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 
 
-const ShopItemList = ({ products, addToCart }) => {
+type ShopItemListTypes = {
+  products: Array<Object>,
+  addToCart: Function
+};
+
+const ShopItemList = ({ products, addToCart }: ShopItemListTypes) => {
   let shopItems = <Spinner/>;
   
   if ( products ) {

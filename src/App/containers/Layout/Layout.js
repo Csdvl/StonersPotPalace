@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
+import  { Component } from 'react';
 import { Grid, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
@@ -6,7 +8,17 @@ import Aux from '../../hoc/auxiliary';
 import Toolbar from './Toolbar/Toolbar';
 
 
-class Layout extends Component {
+type Props = {
+  children: React.Node,
+  isAuth: {
+    isLoaded: boolean,
+    isEmpty: boolean
+  },
+  profile: Object,
+  cartItems: Array<Object>
+};
+
+class Layout extends Component<Props> {
   
   render() {
     const { isAuth, profile, cartItems } = this.props;

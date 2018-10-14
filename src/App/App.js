@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import { withFirebase, withFirestore } from 'react-redux-firebase';
@@ -19,7 +20,25 @@ import Story from './components/Pages/Story/Story';
 import ResetPassword from './containers/Auth/PasswordResetEmail/PasswordResetEmail';
 
 
-class App extends Component {
+type Props = {
+  initProducts: () => void,
+  isAuth: {
+    isLoaded: boolean,
+    isEmpty: boolean
+  },
+  updateUserProfile: SyntheticEvent<HTMLButtonElement> => void,
+  profile: Array<Object>,
+  orders: Object,
+  fetchOrdersInit: Event => void,
+  providerId: string,
+  updatePassword: Event => void,
+  updateEmail: Event => void,
+  addToCart: Event => void,
+  resetPasswordEmail: Event => void,
+  products: Array<Object>
+};
+
+class App extends Component<Props> {
   
   async componentDidMount() {
     const { initProducts } = this.props;
@@ -83,7 +102,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    initProducts: (products) => dispatch(actions.initProducts(products)),
+    initProducts: () => dispatch(actions.initProducts()),
     updateUserProfile: (user) => dispatch(actions.updateUserProfile(user)),
     fetchOrdersInit: () => dispatch(actions.fetchOrdersInit()),
     addToCart: (productId, photoURL, label, price, onStock) => dispatch(actions.addToCart(productId, photoURL, label, price, onStock)),
@@ -92,5 +111,5 @@ const mapDispatchToProps = dispatch => {
 };
 
 const app = hot(module)(App);
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default withRouter(withFirebase(withFirestore(connect(mapStateToProps, mapDispatchToProps)(app))));

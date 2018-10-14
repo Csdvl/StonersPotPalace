@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { Segment, Label } from 'semantic-ui-react';
 
@@ -5,7 +6,9 @@ import FilterLink from './hoc_FilterLink';
 import {ShopFilters} from '../../../../store/actions/shop/products';
 
 
-class ShopFilter extends Component {
+type Props = {};
+
+class ShopFilter extends Component<Props> {
   render() {
     return (
      <Segment text>

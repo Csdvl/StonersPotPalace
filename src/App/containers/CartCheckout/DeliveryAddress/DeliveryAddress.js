@@ -1,12 +1,23 @@
+// @flow
 import React, { Component } from 'react';
 import { Divider, Segment, Header, Card, Accordion, Icon, Button, Form, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps} from 'redux-form/lib/types';
 import { connect } from 'react-redux';
 
 import Input from "../../../components/UI/Input/input";
 
 
-class DeliveryAddress extends Component {
+type State = {
+  activeIndex: number
+};
+
+type Props = {
+  profile: Object,
+  onSubmit: Event => void
+} & FormProps;
+
+class DeliveryAddress extends Component<Props, State> {
   state = { activeIndex: -1 };
   
   handleClick = (e, titleProps) => {
@@ -104,5 +115,5 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {}
 };
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'checkout', destroyOnUnmount: false })(DeliveryAddress));

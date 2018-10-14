@@ -1,16 +1,22 @@
+// @flow
 import React from 'react';
 import { Form, Button, Item, Divider, Icon, Grid, Segment } from 'semantic-ui-react';
 import {connect} from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
-
+import type { FormProps } from 'redux-form/lib/types';
 
 import * as actions from '../../../../../store/actions/index';
+// $FlowFixMe: suppressing this error until further refactor
 import guildImg from '../../../../../assets/images/shop/potStonersGuild.jpeg';
 import Input from '../../../UI/Input/input';
 import { email } from "../../../../../shared/validation";
 
 
-const guild = ({handleSubmit, guildEmail, invalid, submitting, pristine}) => (
+type Guild = {
+  guildEmail: Event => void
+} & FormProps;
+
+const guild = ({handleSubmit, guildEmail, invalid, submitting, pristine}: Guild) => (
  <Item.Group>
    <Item>
      <Item.Image src={guildImg} size='large'/>
@@ -54,5 +60,5 @@ const mapDispatchToProps = dispatch => {
     guildEmail: (email) => dispatch(actions.guildEmail(email))
   }
 };
-
+// $FlowFixMe: suppressing this error until react-redux fixes type annotations
 export default connect(null, mapDispatchToProps)(reduxForm({ form: 'guild' })(guild));

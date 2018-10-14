@@ -1,9 +1,10 @@
+// @flow
 import React from 'react';
 import { Button, Form, Segment, Header, Item, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form/lib/types'
 import capitalize from 'capitalize';
 import moment from 'moment';
-import PropTypes from 'prop-types';
 
 import Input from '../../../UI/Input/input';
 import {
@@ -17,8 +18,11 @@ import {
 } from "../../../../../shared/validation";
 
 
-const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserProfile }) => {
-  
+type Props = {
+  updateUserProfile: SyntheticEvent<HTMLButtonElement> => void
+} & FormProps;
+
+const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserProfile }:Props) => {
     const options = [
       { key: 'unitedKingdom', text: 'United Kingdom', value: 'unitedKingdom' },
       { key: 'germany', text: 'Germany', value: 'germany' },
@@ -175,8 +179,6 @@ const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserP
     
     );
 };
-
-
 
 export default
  reduxForm({

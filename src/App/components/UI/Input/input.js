@@ -1,17 +1,37 @@
+// @flow
 import React from 'react';
 import { Label, Input, TextArea, Select, Radio, Checkbox, Form, Grid } from 'semantic-ui-react';
 
 import moment from "moment/moment";
 import DatePicker from 'react-datepicker';
+// $FlowFixMe: suppressing this error until we can refactor
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import type {FormProps} from 'redux-form/lib/types';
 
 
-const input = (props) => {
+
+type InputProps = {
+  meta: {
+    error: boolean,
+    active: boolean,
+    touched: boolean
+  },
+  inputtype: string,
+  label: string,
+  input: Object,
+  type: string,
+  rows: number,
+  multiple: number,
+  options: Array<Object>,
+  maxDate: number,
+  minDate: number
+} & FormProps;
+
+const input = ({ meta, inputtype, label, input: { onChange, value, ...restInput }, type, rows, multiple, options, maxDate, minDate, ...rest }: InputProps) => {
   
-  const { meta, label, input: { onChange, value, ...restInput }, type, rows, multiple, options, maxDate, minDate, ...rest } = props;
   let inputElement = null;
   
-  switch (props.inputtype) {
+  switch (inputtype) {
     case ('text'):
       inputElement = <Input
        {...rest}

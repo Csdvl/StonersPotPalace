@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Menu, Container, Image } from 'semantic-ui-react';
 
@@ -7,7 +8,13 @@ import DropDownAuth from '../NavigationItems/DropDownAuth';
 import CartModal from '../../../components/Shop/ShoppingCart/CartModal/CartModal';
 
 
-const toolbar = ({isAuth, profile, cartItems}) => (
+type Props = {
+  isAuth: boolean,
+  profile: Object,
+  cartItems: Array<Object>
+};
+
+const toolbar = ({isAuth, profile, cartItems}: Props) => (
  <Menu inverted fixed='top'>
    <Container>
      <Menu.Item position='left'>

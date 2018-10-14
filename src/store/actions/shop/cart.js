@@ -1,3 +1,4 @@
+// @flow
 import * as actionTypes from "../actionTypes";
 import { toastr } from 'react-redux-toastr';
 
@@ -11,8 +12,8 @@ const addToCartUnsafe = (id, photoURL, label, price, onStock) => ({
   onStock
 });
 
-export const addToCart = (id, photoURL, label, price, onStock) => {
-  return async (dispatch) => {
+export const addToCart = (id: string, photoURL: string, label: string, price: number, onStock:number) => {
+  return async (dispatch: Function) => {
     try {
       await dispatch(addToCartUnsafe(id, photoURL, label, price, onStock));
       // toastr.success('Success !', 'You\'ve added an item :)')
@@ -29,8 +30,8 @@ const removeFromCartUnsafe = (id, price, quantity) => ({
   quantity
 });
 
-export const removeFromCart = (id, price, quantity) => {
-  return async dispatch => {
+export const removeFromCart = (id: string, price: number, quantity: number) => {
+  return async (dispatch: Function)=> {
     try {
       dispatch(removeFromCartUnsafe(id, price, quantity));
     } catch (e) {
@@ -45,8 +46,8 @@ const incrementQuantityUnsafe = (id, price) => ({
   price
 });
 
-export const incrementQuantity = (id, price) => {
-  return async (dispatch) => {
+export const incrementQuantity = (id: string, price: number) => {
+  return async (dispatch: Function) => {
     try {
       await dispatch(incrementQuantityUnsafe(id, price));
     } catch (e) {
@@ -61,8 +62,8 @@ const decrementQuantityUnsafe = (id, price) => ({
   price
 });
 
-export const decrementQuantity = (id, price) => {
-  return async (dispatch) => {
+export const decrementQuantity = (id: string, price: number) => {
+  return async (dispatch: Function) => {
     try {
       await dispatch(decrementQuantityUnsafe(id, price));
       // toastr.success('Success !', 'You\'ve removed an item...');
@@ -76,8 +77,8 @@ const orderNow = () => ({
   type: actionTypes.ORDER_PLACED,
 });
 
-export const orderPlaced = ( values, cartItems, totalPrice) => {
-  return async (dispatch, getState, { getFirebase, getFirestore }) => {
+export const orderPlaced = ( values: Object, cartItems: Array<Object>, totalPrice: number) => {
+  return async (dispatch: Function, getState: Function, { getFirebase, getFirestore }: Function) => {
     const firestore = getFirestore();
     const user = getFirebase().auth().currentUser;
     

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react": "^16.4.16",
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "babel-core": "6.26.0",
@@ -67,6 +68,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "flow": "flow check src",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
@@ -107,17 +109,21 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      "flow"
     ]
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
+    "@babel/preset-flow": "^7.0.0",
+    "babel-cli": "^6.26.0",
     "firebase-admin": "^5.12.1",
+    "flow-bin": "^0.82.0",
+    "flow-typed": "^2.5.1",
     "json-server": "^0.12.2",
     "node-sass": "^4.8.3",
-    "prop-types": "^15.6.2",
     "react-hot-loader": "^4.2.0",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^7.0.1",

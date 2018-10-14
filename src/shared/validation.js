@@ -10,6 +10,8 @@ export const number = value => value && isNaN(Number(value)) ? 'Must be a number
 
 export const matchPassword = (value, allValues) => value === (allValues.password || allValues.newPassword1) ? undefined : 'Passwords must match';
 
+export const matchEmail = (value, allValues) => value === allValues.newEmail ? undefined : 'E-mails must match';
+
 export const email = value => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email address' : undefined;
 
 export const phoneNumber = value => value && !/^(0|[1-9][0-9]{10})$/i.test(value) ? undefined : 'Invalid phone number, must be 11 digits and start with 0';

@@ -1,3 +1,4 @@
+// @flow
 export const AUTH_START = "AUTH_START";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const AUTH_FAIL = "AUTH_FAIL";
@@ -14,3 +15,5 @@ export const INCREMENT_QUANTITY = "INCREMENT_QUANTITY";
 
 export const ORDER_PLACED = 'ORDER_PLACED';
 export const FETCH_ORDERS = 'FETCH_ORDERS';
+
+export const UPDATE_PASSWORD = 'UPDATE_PASSWORD';

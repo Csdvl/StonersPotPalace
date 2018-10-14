@@ -1,9 +1,17 @@
+// @flow
 import React from 'react';
 import { Menu, Dropdown } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 
-const DropDownAuth = ({ isAuth, profile }) => {
+type Props = {
+  isAuth: boolean,
+  profile: {
+    displayName: string
+  }
+};
+
+const DropDownAuth = ({ isAuth, profile }: Props) => {
   const dda = (
    <Menu.Item position="right">
      <Dropdown pointing="top right" text={profile.displayName || 'Tell us about you'}>

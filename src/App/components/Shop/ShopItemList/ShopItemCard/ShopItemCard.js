@@ -1,10 +1,21 @@
+// @flow
 import React from 'react';
 import { Card, Image, Button, Label, Divider } from 'semantic-ui-react';
 
 import AccordionDescription from './AccordionDescription';
 
 
-const shopItemCard = ({ label, onStock, delivery, price, photoURL, description, addToCartClicked }) => {
+type ShopItemCard = {
+  label: string,
+  onStock: number,
+  delivery: boolean,
+  price: number,
+  photoURL: string,
+  description: string,
+  addToCartClicked: SyntheticEvent<HTMLButtonElement> => void
+};
+
+const shopItemCard = ({ label, onStock, delivery, price, photoURL, description, addToCartClicked }: ShopItemCard) => {
   let color = 'green';
   if ( onStock < 11 ) {
     color = 'yellow'

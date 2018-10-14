@@ -1,10 +1,11 @@
+// @flow
 import { SubmissionError } from 'redux-form';
 
 import * as actionTypes from './actionTypes';
 
 
-export const authLogin = creds => {
-  return async (dispatch, getState, { getFirebase }) => {
+export const authLogin = (creds: Object )=> {
+  return async (dispatch: Function, getState: Function, { getFirebase }: Function) => {
     const firebase = getFirebase();
     
     try {
@@ -19,8 +20,8 @@ export const authLogin = creds => {
   }
 };
 
-export const authRegister = user =>
- async (dispatch, getState, {getFirebase, getFirestore}) => {
+export const authRegister = (user: Object) =>
+ async (dispatch: Function, getState: Function, {getFirebase, getFirestore}: Function) => {
   const firebase = getFirebase();
   const firestore = getFirestore();
   
@@ -46,8 +47,8 @@ export const authRegister = user =>
   }
  };
 
-export const socialAuth = selectedProvider => {
- return async (dispatch, getState, {getFirebase, getFirestore}) => {
+export const socialAuth = (selectedProvider: string)=> {
+ return async (dispatch: Function, getState: Function, {getFirebase, getFirestore}: Function) => {
    const firebase = getFirebase();
    const firestore = getFirestore();
    

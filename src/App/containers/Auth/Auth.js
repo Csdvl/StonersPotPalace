@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { Segment, Button, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
@@ -8,7 +9,21 @@ import Signup from './Signup/Signup';
 import Signin from './Signin/Signin';
 
 
-class Auth extends Component {
+type State = {
+  isSignup: boolean
+};
+
+type Props = {
+  isAuth: {
+    isLoaded: boolean,
+    isEmpty: boolean
+  },
+  onRegister: Array<string> => void,
+  onSocialAuth: string => void,
+  onLogin: Array<string> => void
+};
+
+class Auth extends Component<Props, State> {
   state = {
     isSignup: true
   };
@@ -64,5 +79,5 @@ const mapDispatchToProps = dispatch => {
     onLogin: (creds) => dispatch(actions.authLogin(creds)),
   }
 };
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default connect(mapStateToProps, mapDispatchToProps)(Auth);

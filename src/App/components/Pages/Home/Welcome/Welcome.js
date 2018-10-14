@@ -1,7 +1,11 @@
+// @flow
 import React, { Component } from 'react';
 import { Label } from 'semantic-ui-react';
 import posed from "react-pose";
 
+type State = {
+  hovering: boolean
+};
 
 const config = {
   hovered: { scale: 1.75 },
@@ -10,7 +14,7 @@ const config = {
 
 const Text = posed.div(config);
 
-class Welcome extends Component {
+class Welcome extends Component<{}, State> {
   state = { hovering: false };
   
   render() {

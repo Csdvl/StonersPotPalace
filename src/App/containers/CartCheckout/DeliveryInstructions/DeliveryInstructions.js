@@ -1,11 +1,17 @@
+// @flow
 import React, { Component } from 'react';
 import { Header, Segment, Grid, Form, Button } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form/lib/types';
 import { connect } from 'react-redux';
 import Input from "../../../components/UI/Input/input";
 
 
-class DeliveryInstructions extends Component {
+type Props = {
+  previousPage: Event => void
+} & FormProps;
+
+class DeliveryInstructions extends Component<Props> {
   render() {
     const { handleSubmit, previousPage } = this.props;
     
@@ -53,5 +59,5 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {}
 };
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'checkout', destroyOnUnmount: false })(DeliveryInstructions));

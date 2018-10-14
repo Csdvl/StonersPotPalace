@@ -1,3 +1,4 @@
+// @flow
 export {authLogin, authLogout, socialAuth, authRegister} from './auth';
 
 export {initProducts, setShopFilter, ShopFilters} from './shop/products';

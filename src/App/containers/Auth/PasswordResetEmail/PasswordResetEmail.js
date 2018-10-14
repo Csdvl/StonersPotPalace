@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Form, Grid, Button, Header, Segment, Item } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';

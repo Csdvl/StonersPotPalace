@@ -1,11 +1,21 @@
+// @flow
 import React, {Component} from 'react';
 import { Accordion, Icon } from 'semantic-ui-react';
 
 
-class AccordionDescription extends Component {
+type AccordionDescriptionState = {
+  activeIndex: number
+};
+
+type AccordionDescriptionProps = {
+  title: string,
+  description: string
+};
+
+class AccordionDescription extends Component<AccordionDescriptionProps, AccordionDescriptionState> {
   state = { activeIndex: -1 };
   
-  handleClick = (e, titleProps) => {
+  handleClick = (e: SyntheticEvent<HTMLButtonElement>, titleProps: any) => {
     const { index } = titleProps;
     const { activeIndex } = this.state;
     const newIndex = activeIndex === index ? -1 : index;

@@ -1,5 +1,6 @@
+// @flow
 import React, { Component } from 'react';
-import {Item, Segment, Header, Divider} from 'semantic-ui-react';
+import { Segment, Header, Divider} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../../../store/actions/index'
@@ -7,7 +8,13 @@ import ChangePassword from './ChangePassword/ChangePassword';
 import ChangeEmail from './ChangeEmail/ChangeEmail';
 
 
-class UserSettings extends Component {
+type Props = {
+  providerId: string,
+  updatePassword: SyntheticEvent<HTMLButtonElement> => void,
+  updateEmail: SyntheticEvent<HTMLButtonElement> => void
+};
+
+class UserSettings extends Component<Props> {
   render() {
     const {providerId, updatePassword, updateEmail} =this.props;
     return (
@@ -27,11 +34,11 @@ const mapStateToProps = (state) => {
   }
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch ) => {
   return {
-    updatePassword: (creds) => dispatch(actions.updatePassword(creds)),
-    updateEmail: (creds) => dispatch(actions.updateEmail(creds)),
+    updatePassword: (creds: Object) => dispatch(actions.updatePassword(creds)),
+    updateEmail: (creds: Object) => dispatch(actions.updateEmail(creds)),
   }
 };
-
+// $FlowFixMe: suppressing this error until react-redux fixes type annotations
 export default connect(mapStateToProps, mapDispatchToProps)(UserSettings);

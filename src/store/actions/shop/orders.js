@@ -1,3 +1,4 @@
+// @flow
 import * as actionTypes from '../actionTypes';
 import firebase from '../../../firebase';
 
@@ -7,7 +8,7 @@ const fetchOrders = orders => ({
 });
 
 export const fetchOrdersInit = () => {
-  return async (dispatch) => {
+  return async (dispatch: Function) => {
     
     const user = firebase.auth().currentUser;
     const firestore = firebase.firestore();

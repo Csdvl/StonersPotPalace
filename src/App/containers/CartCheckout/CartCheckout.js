@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { Container, Button, Header, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
@@ -8,7 +9,17 @@ import DeliveryAddress from './DeliveryAddress/DeliveryAddress';
 import DeliveryInstructions from './DeliveryInstructions/DeliveryInstructions';
 
 
-class CartCheckout extends Component {
+type State = {
+  page: number
+};
+
+type Props = {
+  orderPlaced: (Array<string>, Array<Object>, number) => void,
+  cartItems: Array<Object>,
+  totalPrice: number
+};
+
+class CartCheckout extends Component<Props, State> {
   
   state = {
     page: 1
@@ -51,5 +62,5 @@ const mapDispatchToProps = dispatch => {
     orderPlaced: (values, cartItems, totalPrice) => dispatch(actions.orderPlaced(values,cartItems, totalPrice))
   }
 };
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default connect(mapStateToProps, mapDispatchToProps)(CartCheckout);

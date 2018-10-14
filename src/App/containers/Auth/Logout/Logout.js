@@ -1,19 +1,28 @@
-import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {withFirebase} from 'react-redux-firebase';
+// @flow
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { withFirebase } from 'react-redux-firebase';
 
 import * as actions from '../../../../store/actions/index';
 
 
-class Logout extends Component {
+type Props = {
+  onLogout: Function,
+  firebase: {
+    logout: Function
+  }
+};
+
+class Logout extends Component<Props> {
   componentDidMount() {
-    this.props.onLogout();
-    this.props.firebase.logout();
+    const { onLogout, firebase } = this.props;
+    onLogout();
+    firebase.logout();
   }
   
   render() {
-    return <Redirect to="/" />;
+    return <Redirect to="/"/>;
   }
 }
 
@@ -22,5 +31,5 @@ const mapDispatchToProps = dispatch => {
     onLogout: () => dispatch(actions.authLogout())
   };
 };
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default withFirebase(connect(null, mapDispatchToProps)(Logout));

@@ -1,11 +1,21 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
+import {Component} from 'react';
 import { Item, Label } from 'semantic-ui-react';
 
 import UserOrder from './UserOrder/UserOrder';
 import Spinner from '../../UI/Spinner/Spinner';
 
 
-class userOrders extends Component {
+type Props = {
+  fetchOrdersInit: Function,
+  orders: {
+    map: Function,
+    length: number
+  }
+};
+
+class userOrders extends Component <Props> {
   
   async componentDidMount() {
     const { fetchOrdersInit } = this.props;
@@ -15,7 +25,7 @@ class userOrders extends Component {
   
   render() {
     const { orders } = this.props;
-    
+    console.log(orders);
     let userOrders = <Spinner/>;
     
     if ( orders.length > 0 ) {
@@ -24,7 +34,7 @@ class userOrders extends Component {
       );
     }
     
-    // if (  !Array.isArray(orders) || !orders.length) {
+    // if (  !Array.isArray(orders) && !orders.length) {
     //   userOrders = <Label content='You didint place any orders yet'/>
     // }
 

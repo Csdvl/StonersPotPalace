@@ -1,15 +1,37 @@
+// @flow
 import React, { Component } from 'react';
 import { Form, Segment, Button, Grid, Header } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form/lib/types';
 import { connect } from 'react-redux';
 
 import * as actions from '../../../../../store/actions/index';
 import Input from '../../../UI/Input/input';
-import { isAlphabet, nameLenght, required } from "../../../../../shared/validation";
+import {
+  isAlphabet,
+  nameLenght,
+  required,
+  email as emailVal,
+  number,
+  phoneNumber as phoneNumberVal
+} from "../../../../../shared/validation";
 import capitalize from "capitalize";
 
 
-class ContactForm extends Component {
+type Props = {
+  contactSubmitUnauthenticated: SyntheticEvent<HTMLButtonElement> => void,
+  contactSubmitAuthenticated: SyntheticEvent<HTMLButtonElement> => void,
+  profile: {
+    isEmpty: boolean,
+    isLoaded: boolean,
+    firstName: string,
+    lastName: string,
+    email: string,
+    phoneNumber: number
+  }
+} & FormProps;
+
+class ContactForm extends Component<Props> {
   render() {
     
     const { invalid, submitting, pristine, handleSubmit, contactSubmitUnauthenticated, contactSubmitAuthenticated, profile: { isEmpty, isLoaded, firstName, lastName, email, phoneNumber } } = this.props;
@@ -36,7 +58,8 @@ class ContactForm extends Component {
               type="text"
               label="First Name"
               inputtype="text"
-              normalize={capitalize}/>
+              normalize={capitalize}
+              validate={[ required, nameLenght, isAlphabet ]}/>
              }
              {!((!isEmpty && isLoaded) && (lastName)) &&
              < Field
@@ -45,7 +68,8 @@ class ContactForm extends Component {
               type="text"
               label="Last Name"
               inputtype="text"
-              normalize={capitalize}/>
+              normalize={capitalize}
+              validate={[ required, nameLenght, isAlphabet ]}/>
              }
              {!((!isEmpty && isLoaded) && (email)) &&
              <Field
@@ -54,6 +78,7 @@ class ContactForm extends Component {
               type="text"
               label="E-mail address"
               inputtype="text"
+              validate={[ required, emailVal ]}
              />
              }
              {!((!isEmpty && isLoaded) && (phoneNumber)) &&
@@ -63,6 +88,7 @@ class ContactForm extends Component {
               type="text"
               label="Phone Number"
               inputtype="text"
+              validate={[ required, number, phoneNumberVal ]}
              />
              }
              <Field
@@ -71,6 +97,7 @@ class ContactForm extends Component {
               type="text"
               label="Subject"
               inputtype="text"
+              validate={[ required ]}
              />
              
              <Field
@@ -79,6 +106,7 @@ class ContactForm extends Component {
               type="text"
               label="Message"
               inputtype="textarea"
+              validate={[ required ]}
              />
              
              <Field
@@ -88,10 +116,11 @@ class ContactForm extends Component {
               label="Preferred method of contact"
               inputtype="select"
               options={options}
+              validate={[ required ]}
              />
              
              <Button
-              // disabled={invalid || submitting || pristine}
+              disabled={invalid || submitting || pristine}
               loading={submitting}
               content='Submit Information'
               style={{ marginTop: '10px', marginBottom: '10px' }}
@@ -119,5 +148,5 @@ const mapDispatchToProps = dispatch => {
     contactSubmitAuthenticated: (values) => dispatch(actions.contactSubmitAuthenticated(values))
   }
 };
-
+// $FlowFixMe: suppressing this error until react-redux fixes type annotations
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'contactForm' })(ContactForm));

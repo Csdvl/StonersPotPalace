@@ -1,6 +1,6 @@
+// @flow
 import React from 'react';
 import { Item, List, Divider, Grid } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
 
 
 const partners = () => (

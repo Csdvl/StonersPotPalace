@@ -1,10 +1,16 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { Segment, Header, Divider } from 'semantic-ui-react';
 
 import UserInfoForm from './UserInfoForm/UserInfoForm';
 
 
-const userInfo = ({updateUserProfile, initialValues}) => {
+type Props = {
+  updateUserProfile: SyntheticEvent<HTMLButtonElement> => void,
+  initialValues: Array<Object>
+};
+
+const userInfo = ({updateUserProfile, initialValues}: Props) => {
     return (
      <Segment color='olive'>
        <Header content='Personal Information' size='huge'/>

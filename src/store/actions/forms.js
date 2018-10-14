@@ -1,9 +1,10 @@
+// @flow
 import { SubmissionError } from 'redux-form';
 import { toastr } from 'react-redux-toastr';
 
 
-export const guildEmail = email => {
-  return async (dispatch, getState, { getFirestore }) => {
+export const guildEmail = (email: Object) => {
+  return async (dispatch: Function, getState: Function, { getFirestore }: Function) => {
     const firestore = getFirestore();
     
     try {
@@ -21,8 +22,8 @@ export const guildEmail = email => {
   }
 };
 
-export const contactSubmitUnauthenticated = values => {
-  return async (dispatch, getState, { getFirestore }) => {
+export const contactSubmitUnauthenticated = (values: Object) => {
+  return async (dispatch: Function, getState: Function, { getFirestore }: Function) => {
     const firestore = getFirestore();
     try {
       
@@ -46,8 +47,8 @@ export const contactSubmitUnauthenticated = values => {
   }
 };
 
-export const contactSubmitAuthenticated = values => {
-  return async (dispatch, getState, { getFirebase, getFirestore }) => {
+export const contactSubmitAuthenticated = (values: Object )=> {
+  return async (dispatch: Function, getState: Function, { getFirebase, getFirestore }: Function) => {
     const firebase = getFirebase();
     const firestore = getFirestore();
     const user = firebase.auth().currentUser;

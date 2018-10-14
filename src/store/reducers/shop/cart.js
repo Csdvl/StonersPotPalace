@@ -1,9 +1,26 @@
+// @flow
 import * as actionTypes from '../../actions/actionTypes';
-import { updateObject } from '../../../shared/utility';
 
 
+type State = {
+  cartItems: Array<{
+    id: string,
+    quantity: number
+  }>,
+  totalPrice: number
+};
 
-const initialState = {
+type Action = {
+  type: string,
+  id: string,
+  label: string,
+  price: number,
+  photoURL: string,
+  onStock: number,
+  quantity: number
+};
+
+const initialState: State = {
   cartItems: [],
   totalPrice: 0
 };
@@ -89,7 +106,7 @@ const logout = (state, action) => {
   }
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (state: State = initialState, action: Action): State => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
       return addToCart(state, action);

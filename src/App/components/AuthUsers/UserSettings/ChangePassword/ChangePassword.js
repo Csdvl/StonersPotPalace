@@ -1,10 +1,17 @@
+// @flow
 import React from 'react';
 import { Button, Item, Label, Header, Form, Segment, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form/lib/types'
 
 import Input from '../../../UI/Input/input';
-import { passwordLenght, matchPassword } from '../../../../../shared/validation';
+import { required, matchPassword } from '../../../../../shared/validation';
 
+
+type Props = {
+  updatePassword: SyntheticEvent<HTMLButtonElement> => void,
+  providerId: string,
+} & FormProps;
 
 const changePassword = ({
                           error,
@@ -13,7 +20,7 @@ const changePassword = ({
                           handleSubmit,
                           updatePassword,
                           providerId
-                        }) => {
+                        }: Props) => {
   return (
    <Segment size='big'>
      <Header>Change password</Header>
@@ -30,7 +37,7 @@ const changePassword = ({
                component={Input}
                label="New Password"
                inputtype="text"
-               // validate={[passwordLenght ]}
+               validate={[required ]}
               />
               <Field
                name="newPassword2"
@@ -38,7 +45,7 @@ const changePassword = ({
                component={Input}
                label="Confirm New Password"
                inputtype="text"
-               // validate={[passwordLenght, matchPassword]}
+               validate={[ required, matchPassword]}
               />
               {error && (
                <Label>
@@ -48,7 +55,7 @@ const changePassword = ({
               <Button
                disabled={invalid || submitting}
                loading={submitting}
-               children="Update Password"
+               content="Update Password"
                style={{ marginTop: '10px', marginBottom: '10px' }}
                color='teal'
                size='large'

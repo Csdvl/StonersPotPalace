@@ -13,7 +13,7 @@ import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
 import firebase from './firebase';
 
-import './index.scss';
+import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import App from './App/App';
 import reducer from './store/reducers/index';

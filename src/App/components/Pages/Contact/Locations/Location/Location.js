@@ -1,8 +1,17 @@
+// @flow
 import React from 'react';
 import { Card, Image, Label, Divider } from 'semantic-ui-react';
 
 
-const location = ({ img, name, address, timetable, contactNumber }) => (
+type Props = {
+  img: string,
+  name: string,
+  address: string,
+  timetable: string,
+  contactNumber: string
+};
+
+const location = ({ img, name, address, timetable, contactNumber }: Props) => (
  <Card>
    <Image src={img}/>
    <Card.Content>

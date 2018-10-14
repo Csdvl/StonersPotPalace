@@ -1,3 +1,4 @@
+// @flow
 import * as actionTypes from '../actionTypes';
 import firebase from '../../../firebase';
 import { toastr } from 'react-redux-toastr';
@@ -18,7 +19,7 @@ const fetchProductsFailed = (error) => {
 };
 
 export const initProducts = () => {
-  return async dispatch => {
+  return async (dispatch: Function )=> {
     
     const firestore = firebase.firestore();
     const productsRef = firestore.collection('products');
@@ -38,7 +39,7 @@ export const initProducts = () => {
   }
 };
 
-export const setShopFilter = filter => ({
+export const setShopFilter = (filter: string )=> ({
   type: actionTypes.SET_SHOP_FILTER,
   filter
 });

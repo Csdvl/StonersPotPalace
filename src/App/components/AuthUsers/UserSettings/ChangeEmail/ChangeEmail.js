@@ -1,11 +1,19 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { Header, Button, Item, Label, Form, Segment, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form/lib/types';
 
 import Input from "../../../UI/Input/input";
+import {required, email, matchEmail} from '../../../../../shared/validation';
 
 
-const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) => {
+
+type Props = {
+  updateEmail: SyntheticEvent<HTMLButtonElement> => void,
+} & FormProps;
+
+const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }: Props) => {
   return (
    <Segment size='big'>
      <Header>Change Email</Header>
@@ -20,7 +28,7 @@ const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) 
               component={Input}
               label="New Email"
               inputtype="text"
-              // validate={[passwordLenght ]}
+              validate={[required ,email ]}
              />
              <Field
               name="newEmail1"
@@ -28,7 +36,7 @@ const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }) 
               component={Input}
               label="Confirm New Email"
               inputtype="text"
-              // validate={[passwordLenght ]}
+              validate={[required ,email, matchEmail ]}
              />
              
              {error && (

@@ -1,3 +1,4 @@
+// @flow
 import { connect } from 'react-redux';
 import { addToCart, ShopFilters } from '../../../../store/actions/index';
 import ShopItemList from './ShopItemList';
@@ -26,7 +27,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   addToCart: (id, photoURL, label, price, onStock) => dispatch(addToCart(id, photoURL, label, price, onStock))
 });
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default connect(
  mapStateToProps,
  mapDispatchToProps

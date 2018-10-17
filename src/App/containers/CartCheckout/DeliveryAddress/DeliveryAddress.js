@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { Divider, Segment, Header, Card, Accordion, Icon, Button, Form, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps} from 'redux-form/lib/types';
-import { connect } from 'react-redux';
 
+import * as types from '../../../../Types/index';
 import Input from "../../../components/UI/Input/input";
 
 
@@ -13,8 +13,8 @@ type State = {
 };
 
 type Props = {
-  profile: Object,
-  onSubmit: Event => void
+  profile: types.Profile,
+  onSubmit: SyntheticEvent<HTMLElement> => void
 } & FormProps;
 
 class DeliveryAddress extends Component<Props, State> {
@@ -106,14 +106,5 @@ class DeliveryAddress extends Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    profile: state.firebase.profile
-  }
-};
-
-const mapDispatchToProps = dispatch => {
-  return {}
-};
 // $FlowFixMe: suppressing this error until we can refactor
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'checkout', destroyOnUnmount: false })(DeliveryAddress));
+export default reduxForm({ form: 'checkout', destroyOnUnmount: false })(DeliveryAddress);

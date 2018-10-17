@@ -2,12 +2,13 @@
 import * as React from 'react';
 import { Segment, Header, Divider } from 'semantic-ui-react';
 
+import * as types from '../../../../Types/index';
 import UserInfoForm from './UserInfoForm/UserInfoForm';
 
 
 type Props = {
-  updateUserProfile: SyntheticEvent<HTMLButtonElement> => void,
-  initialValues: Array<Object>
+  updateUserProfile: types.UpdateUserProfile,
+  initialValues: types.Profile
 };
 
 const userInfo = ({updateUserProfile, initialValues}: Props) => {

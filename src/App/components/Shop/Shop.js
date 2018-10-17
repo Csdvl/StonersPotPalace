@@ -2,13 +2,14 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react';
 
+import * as types from '../../../Types/index';
 import ShopItemList from './ShopItemList/hoc_ShopItemList';
 import ShopFilter from './ShopFilter/ShopFilter';
 
 
 type Shop = {
-  products: Array<Object>,
-  addToCart: Event => void
+  products: Array<types.ShopItemCard>,
+  addToCart: types.AddToCart
 };
 
 const shop = ({ products, addToCart }: Shop) => {

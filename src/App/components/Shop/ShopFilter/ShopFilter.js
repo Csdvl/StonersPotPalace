@@ -1,15 +1,12 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import { Segment, Label } from 'semantic-ui-react';
 
 import FilterLink from './hoc_FilterLink';
 import {ShopFilters} from '../../../../store/actions/shop/products';
 
 
-type Props = {};
-
-class ShopFilter extends Component<Props> {
-  render() {
+const shopFilter = () => {
     return (
      <Segment text>
        <Label content="Show:"/>
@@ -30,8 +27,7 @@ class ShopFilter extends Component<Props> {
        </FilterLink>
      </Segment>
     );
-  }
-}
+};
 
 
-export default ShopFilter;
+export default shopFilter;

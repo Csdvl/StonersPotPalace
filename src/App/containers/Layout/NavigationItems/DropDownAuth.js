@@ -3,12 +3,12 @@ import React from 'react';
 import { Menu, Dropdown } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
+import * as types from '../../../../Types/index';
+
 
 type Props = {
-  isAuth: boolean,
-  profile: {
-    displayName: string
-  }
+  isAuth: types.IsAuth,
+  profile: types.Profile
 };
 
 const DropDownAuth = ({ isAuth, profile }: Props) => {

@@ -3,16 +3,14 @@ import * as React from 'react';
 import {Component} from 'react';
 import { Item, Label } from 'semantic-ui-react';
 
+import * as types from '../../../../Types/index';
 import UserOrder from './UserOrder/UserOrder';
 import Spinner from '../../UI/Spinner/Spinner';
 
 
 type Props = {
-  fetchOrdersInit: Function,
-  orders: {
-    map: Function,
-    length: number
-  }
+  fetchOrdersInit: types.FetchOrdersInit,
+  orders: types.Orders,
 };
 
 class userOrders extends Component <Props> {
@@ -25,7 +23,6 @@ class userOrders extends Component <Props> {
   
   render() {
     const { orders } = this.props;
-    console.log(orders);
     let userOrders = <Spinner/>;
     
     if ( orders.length > 0 ) {
@@ -33,7 +30,7 @@ class userOrders extends Component <Props> {
        <UserOrder order={order}/>
       );
     }
-    
+    // find a solution if there are no orders
     // if (  !Array.isArray(orders) && !orders.length) {
     //   userOrders = <Label content='You didint place any orders yet'/>
     // }

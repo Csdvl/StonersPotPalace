@@ -1,29 +1,43 @@
+// @flow
 import React, { Component } from 'react';
+import { Label, Container, Item, Segment, Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
-import { Label, Container, Item, Segment, Icon } from 'semantic-ui-react';
 import * as actions from "../../../../store/actions/index";
+import * as types from '../../../../Types/index';
 import CartItem from './CartItem/CartItem';
 
 
-class Cart extends Component {
+type Props = {
+  cartItems: Array<types.OrderProduct>,
+  decrementQuantity: types.DecrementQuantity,
+  incrementQuantity: types.IncrementQuantity,
+  removeFromCart: types.RemoveFromCart,
+  totalPrice: number
+};
+
+class Cart extends Component<Props> {
   render() {
     
     const { cartItems, decrementQuantity, incrementQuantity, removeFromCart, totalPrice } = this.props;
     
-    const shoppingCartItems = (cartItems.map(cartItem =>
-     <CartItem
-      key={cartItem.id}
-      label={cartItem.label}
-      price={cartItem.price}
-      photoURL={cartItem.photoURL}
-      quantity={cartItem.quantity}
-      onStock={cartItem.onStock}
-      
-      removeFromCart={() => removeFromCart(cartItem.id, cartItem.price, cartItem.quantity)}
-      onClickPlus={() => incrementQuantity(cartItem.id, cartItem.price)}
-      onClickMinus={() => decrementQuantity(cartItem.id, cartItem.price)}
-     />
+    const shoppingCartItems = (cartItems.map(cartItem => {
+       const { id, label, price, onStock, quantity, photoURL } = cartItem;
+       return (
+        <CartItem
+         key={id}
+         id={id}
+         label={label}
+         price={price}
+         photoURL={photoURL}
+         quantity={quantity}
+         onStock={onStock}
+         
+         removeFromCart={() => removeFromCart(id, price, quantity)}
+         onClickPlus={() => incrementQuantity(id, price)}
+         onClickMinus={() => decrementQuantity(id, price)}
+        />)
+     }
     ));
     
     return (
@@ -56,6 +70,6 @@ const mapDispatchToProps = dispatch => {
     removeFromCart: (id, price, quantity) => dispatch(actions.removeFromCart(id, price, quantity))
   }
 };
-
+// $FlowFixMe: suppressing this error until we can refactor
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
 

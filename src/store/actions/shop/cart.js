@@ -1,6 +1,8 @@
 // @flow
-import * as actionTypes from "../actionTypes";
 import { toastr } from 'react-redux-toastr';
+import * as actionTypes from "../actionTypes";
+import * as types from '../../../Types/index';
+import type { AddToCart } from "../../../Types";
 
 
 const addToCartUnsafe = (id, photoURL, label, price, onStock) => ({
@@ -12,11 +14,11 @@ const addToCartUnsafe = (id, photoURL, label, price, onStock) => ({
   onStock
 });
 
-export const addToCart = (id: string, photoURL: string, label: string, price: number, onStock:number) => {
+export const addToCart: AddToCart = (id: string, photoURL: string, label: string, price: number, onStock:number) => {
   return async (dispatch: Function) => {
     try {
       await dispatch(addToCartUnsafe(id, photoURL, label, price, onStock));
-      // toastr.success('Success !', 'You\'ve added an item :)')
+      toastr.success('Success !', 'You\'ve added an item :)')
     } catch (e) {
       console.log(e)
     }

@@ -4,13 +4,14 @@ import { Header, Button, Item, Label, Form, Segment, Grid } from 'semantic-ui-re
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps } from 'redux-form/lib/types';
 
+import * as types from '../../../../../Types/index';
 import Input from "../../../UI/Input/input";
 import {required, email, matchEmail} from '../../../../../shared/validation';
 
 
 
 type Props = {
-  updateEmail: SyntheticEvent<HTMLButtonElement> => void,
+  updateEmail: types.UpdateEmail,
 } & FormProps;
 
 const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }: Props) => {

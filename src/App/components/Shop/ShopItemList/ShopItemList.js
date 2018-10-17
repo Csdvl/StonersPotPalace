@@ -2,13 +2,14 @@
 import React from 'react';
 import {Card} from 'semantic-ui-react';
 
+import * as types from '../../../../Types/index';
 import ShopItemCard from './ShopItemCard/ShopItemCard';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 
 
 type ShopItemListTypes = {
-  products: Array<Object>,
-  addToCart: Function
+  addToCart: types.AddToCart,
+  products: Array<types.Product>
 };
 
 const ShopItemList = ({ products, addToCart }: ShopItemListTypes) => {

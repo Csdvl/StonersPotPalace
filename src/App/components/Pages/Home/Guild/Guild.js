@@ -13,7 +13,7 @@ import { email } from "../../../../../shared/validation";
 
 
 type Guild = {
-  guildEmail: Event => void
+  guildEmail: SyntheticEvent<HTMLElement> => void
 } & FormProps;
 
 const guild = ({handleSubmit, guildEmail, invalid, submitting, pristine}: Guild) => (

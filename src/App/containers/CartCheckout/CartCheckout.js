@@ -2,8 +2,9 @@
 import React, { Component } from 'react';
 import { Container, Button, Header, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import * as actions from '../../../store/actions/index';
 
+import * as actions from '../../../store/actions/index';
+import * as types from '../../../Types/index';
 import OrderSumary from './OrderSummary/OrderSummary';
 import DeliveryAddress from './DeliveryAddress/DeliveryAddress';
 import DeliveryInstructions from './DeliveryInstructions/DeliveryInstructions';
@@ -14,8 +15,9 @@ type State = {
 };
 
 type Props = {
-  orderPlaced: (Array<string>, Array<Object>, number) => void,
-  cartItems: Array<Object>,
+  orderPlaced: types.OrderPlaced,
+  profile: types.Profile,
+  cartItems: Array<types.OrderProduct>,
   totalPrice: number
 };
 
@@ -34,14 +36,14 @@ class CartCheckout extends Component<Props, State> {
   }
   
   render() {
-    const { orderPlaced, cartItems, totalPrice } = this.props;
+    const { orderPlaced, cartItems, totalPrice, profile } = this.props;
     const { page } = this.state;
     
     return (
      <Container>
        <Header size='large' content='Checkout'/>
        <Divider/>
-       {page === 1 && <DeliveryAddress onSubmit={() => this.nextPage()}/>}
+       {page === 1 && <DeliveryAddress onSubmit={() => this.nextPage()} profile={profile}/>}
        {page === 2 && <DeliveryInstructions previousPage={() => this.previousPage()} onSubmit={() => this.nextPage()}/>}
        {page === 3 &&
        <OrderSumary previousPage={() => this.previousPage()} onSubmit={values => orderPlaced(values, cartItems, totalPrice)}/>}
@@ -52,6 +54,7 @@ class CartCheckout extends Component<Props, State> {
 
 const mapStateToProps = state => {
   return {
+    profile: state.firebase.profile,
     cartItems: state.cart.cartItems,
     totalPrice: state.cart.totalPrice
   }

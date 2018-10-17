@@ -4,14 +4,15 @@ import { Header, Button, Form, Segment, Grid, Item, Divider } from 'semantic-ui-
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps } from 'redux-form/lib/types';
 
+import * as types from '../../../../Types/index';
 import { passwordLenght, required, matchPassword, email } from "../../../../shared/validation";
 import Input from "../../../components/UI/Input/input";
 import SocialAuth from '../SocialAuth/SocialAuth';
 
 
 type Props = {
-  onRegister: Event => void,
-  onSocialAuth: string => void
+  onRegister: types.AuthRegister,
+  onSocialAuth: types.SocialAuth
 } & FormProps;
 
 class Signup extends Component<Props> {

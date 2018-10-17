@@ -9,7 +9,7 @@ import { email } from "../../../../shared/validation";
 
 const PasswordResetEmail = ({ handleSubmit, error, invalid, submitting, pristine, resetPasswordEmail }) => {
   return (
-   <Segment size='big' color0='olive'>
+   <Segment size='big' color='olive'>
      <Header content='Reset password'/>
      <Item>
        <Item.Meta>Please provide your e-mail, so that we can send you the reset password link</Item.Meta>

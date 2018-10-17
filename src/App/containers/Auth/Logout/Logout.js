@@ -5,10 +5,11 @@ import { connect } from 'react-redux';
 import { withFirebase } from 'react-redux-firebase';
 
 import * as actions from '../../../../store/actions/index';
+import * as types from '../../../../Types/index';
 
 
 type Props = {
-  onLogout: Function,
+  onLogout: types.AuthLogout,
   firebase: {
     logout: Function
   }

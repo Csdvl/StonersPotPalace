@@ -1,8 +1,17 @@
+// @flow
 import React from 'react';
 import { Segment, Button, Item, Label } from 'semantic-ui-react';
 
+import * as types from '../../../../../Types/index';
 
-const cartItem = ({ photoURL, label, price, quantity, onStock, onClickMinus, onClickPlus, removeFromCart }) => {
+
+type Props = {
+  onClickMinus: types.DecrementQuantity,
+  onClickPlus: types.IncrementQuantity,
+  removeFromCart: types.RemoveFromCart,
+} & types.OrderProduct;
+
+const cartItem = ({ photoURL, label, price, quantity, onStock, onClickMinus, onClickPlus, removeFromCart }: Props) => {
   return (
    <Segment size="small" textAlign='center'>
      <Item.Group>

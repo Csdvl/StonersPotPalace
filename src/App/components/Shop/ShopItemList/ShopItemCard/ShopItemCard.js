@@ -2,20 +2,15 @@
 import React from 'react';
 import { Card, Image, Button, Label, Divider } from 'semantic-ui-react';
 
+import * as types from '../../../../../Types/index';
 import AccordionDescription from './AccordionDescription';
 
 
-type ShopItemCard = {
-  label: string,
-  onStock: number,
-  delivery: boolean,
-  price: number,
-  photoURL: string,
-  description: string,
-  addToCartClicked: SyntheticEvent<HTMLButtonElement> => void
-};
+type Props = {
+  addToCartClicked: types.AddToCart
+} & types.ShopItemCard ;
 
-const shopItemCard = ({ label, onStock, delivery, price, photoURL, description, addToCartClicked }: ShopItemCard) => {
+const shopItemCard = ({ label, onStock, delivery, price, photoURL, description, addToCartClicked }: Props) => {
   let color = 'green';
   if ( onStock < 11 ) {
     color = 'yellow'

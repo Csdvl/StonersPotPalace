@@ -2,18 +2,12 @@
 import * as React from 'react';
 import { Item, Label, Segment } from 'semantic-ui-react';
 
+import * as types from '../../../../../Types/index';
+
 
 type Props = {
-  order: {
-    id: string,
-    orderDate: number,
-    totalPrice: number,
-    products: {
-      map: Function
-    }
-    
-  }
-};
+  order: any
+} & types.Order;
 
 const userOrder = ({ order }: Props) => {
   

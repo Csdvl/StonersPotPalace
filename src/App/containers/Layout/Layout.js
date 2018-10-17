@@ -4,18 +4,16 @@ import  { Component } from 'react';
 import { Grid, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
+import * as types from '../../../Types/index';
 import Aux from '../../hoc/auxiliary';
 import Toolbar from './Toolbar/Toolbar';
 
 
 type Props = {
   children: React.Node,
-  isAuth: {
-    isLoaded: boolean,
-    isEmpty: boolean
-  },
-  profile: Object,
-  cartItems: Array<Object>
+  isAuth: types.IsAuth,
+  profile: types.Profile,
+  cartItems: Array<types.OrderProduct>
 };
 
 class Layout extends Component<Props> {
@@ -27,7 +25,8 @@ class Layout extends Component<Props> {
     return (
      <Aux>
        <Toolbar
-        isAuth={authenticated}
+        {/*isAuth={authenticated} in case this does not work*/}
+        isAuth={isAuth}
         profile={profile}
         cartItems={cartItems}
        />

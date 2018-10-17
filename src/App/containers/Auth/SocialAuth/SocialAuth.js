@@ -2,9 +2,11 @@
 import React from 'react';
 import { Button, Container, Icon } from 'semantic-ui-react';
 
+import * as types from '../../../../Types/index';
+
 
 type Props = {
-  socialAuth: string => void
+  socialAuth: types.SocialAuth
 };
 
 const socialAuth = ({ login, socialAuth }: Props) => (

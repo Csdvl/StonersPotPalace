@@ -1,11 +1,11 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import {Button} from 'semantic-ui-react';
 
 
 type FilterLinkProps = {
   active: boolean,
-  children: Object,
+  children: React.Node,
   onClick: Function
 };
 

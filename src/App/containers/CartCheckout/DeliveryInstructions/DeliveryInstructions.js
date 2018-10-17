@@ -3,12 +3,11 @@ import React, { Component } from 'react';
 import { Header, Segment, Grid, Form, Button } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps } from 'redux-form/lib/types';
-import { connect } from 'react-redux';
 import Input from "../../../components/UI/Input/input";
 
 
 type Props = {
-  previousPage: Event => void
+  previousPage: SyntheticEvent<HTMLElement> => void
 } & FormProps;
 
 class DeliveryInstructions extends Component<Props> {
@@ -52,12 +51,5 @@ class DeliveryInstructions extends Component<Props> {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {}
-};
-
-const mapDispatchToProps = dispatch => {
-  return {}
-};
 // $FlowFixMe: suppressing this error until we can refactor
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({ form: 'checkout', destroyOnUnmount: false })(DeliveryInstructions));
+export default reduxForm({ form: 'checkout', destroyOnUnmount: false })(DeliveryInstructions);

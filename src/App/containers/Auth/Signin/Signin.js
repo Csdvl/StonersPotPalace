@@ -5,14 +5,15 @@ import {Link} from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps } from 'redux-form/lib/types';
 
+import * as types from '../../../../Types/index';
 import { email, passwordLenght, required } from "../../../../shared/validation";
 import Input from "../../../components/UI/Input/input";
 import SocialAuth from '../SocialAuth/SocialAuth';
 
 
 type Props = {
-  onLogin: Event => void,
-  onSocialAuth: string => void
+  onLogin: types.AuthLogin,
+  onSocialAuth: types.SocialAuth
 } & FormProps;
 
 class Signin extends Component<Props> {

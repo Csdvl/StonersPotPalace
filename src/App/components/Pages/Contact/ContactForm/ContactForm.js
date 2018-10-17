@@ -6,6 +6,7 @@ import type { FormProps } from 'redux-form/lib/types';
 import { connect } from 'react-redux';
 
 import * as actions from '../../../../../store/actions/index';
+import * as types from '../../../../../Types/index';
 import Input from '../../../UI/Input/input';
 import {
   isAlphabet,
@@ -19,16 +20,9 @@ import capitalize from "capitalize";
 
 
 type Props = {
-  contactSubmitUnauthenticated: SyntheticEvent<HTMLButtonElement> => void,
-  contactSubmitAuthenticated: SyntheticEvent<HTMLButtonElement> => void,
-  profile: {
-    isEmpty: boolean,
-    isLoaded: boolean,
-    firstName: string,
-    lastName: string,
-    email: string,
-    phoneNumber: number
-  }
+  contactSubmitUnauthenticated: types.ContactSubmitUnauthenticated,
+  contactSubmitAuthenticated: types.ContactSubmitAuthenticated,
+  profile: types.Profile
 } & FormProps;
 
 class ContactForm extends Component<Props> {

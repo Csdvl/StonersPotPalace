@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import * as actions  from '../../../store/actions/index';
+import * as types from '../../../Types/index';
 import Signup from './Signup/Signup';
 import Signin from './Signin/Signin';
 
@@ -18,9 +19,9 @@ type Props = {
     isLoaded: boolean,
     isEmpty: boolean
   },
-  onRegister: Array<string> => void,
-  onSocialAuth: string => void,
-  onLogin: Array<string> => void
+  onRegister: types.AuthRegister,
+  onSocialAuth: types.SocialAuth,
+  onLogin: types.AuthLogin
 };
 
 class Auth extends Component<Props, State> {

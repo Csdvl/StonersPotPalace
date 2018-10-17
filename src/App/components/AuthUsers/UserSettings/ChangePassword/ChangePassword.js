@@ -4,12 +4,13 @@ import { Button, Item, Label, Header, Form, Segment, Grid } from 'semantic-ui-re
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps } from 'redux-form/lib/types'
 
+import * as types from '../../../../../Types/index';
 import Input from '../../../UI/Input/input';
 import { required, matchPassword } from '../../../../../shared/validation';
 
 
 type Props = {
-  updatePassword: SyntheticEvent<HTMLButtonElement> => void,
+  updatePassword: types.UpdatePassword,
   providerId: string,
 } & FormProps;
 

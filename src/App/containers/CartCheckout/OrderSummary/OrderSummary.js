@@ -1,16 +1,14 @@
 // @flow
 import React, { Component } from 'react';
 import { Container, Button, Form } from 'semantic-ui-react';
-import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import type { FormProps } from 'redux-form/lib/types';
-
 
 import Cart from '../../../components/Shop/ShoppingCart/Cart';
 
 
 type Props = {
-  previousPage: Event => void
+  previousPage: SyntheticEvent<HTMLElement> => void
 } & FormProps;
 
 class OrderSummary extends Component<Props> {
@@ -37,15 +35,8 @@ class OrderSummary extends Component<Props> {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {}
-};
-
-const mapDispatchToProps = dispatch => {
-  return {}
-};
 // $FlowFixMe: suppressing this error until we can refactor
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
+export default reduxForm({
   form: 'checkout',
   destroyOnUnmount: false
-})(OrderSummary));
+})(OrderSummary);

@@ -4,14 +4,15 @@ import { Segment, Header, Divider} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../../../store/actions/index'
+import * as types from '../../../../Types/index';
 import ChangePassword from './ChangePassword/ChangePassword';
 import ChangeEmail from './ChangeEmail/ChangeEmail';
 
 
 type Props = {
   providerId: string,
-  updatePassword: SyntheticEvent<HTMLButtonElement> => void,
-  updateEmail: SyntheticEvent<HTMLButtonElement> => void
+  updatePassword: types.UpdatePassword,
+  updateEmail: types.UpdateEmail
 };
 
 class UserSettings extends Component<Props> {

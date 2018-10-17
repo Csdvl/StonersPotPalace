@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { hot } from 'react-hot-loader';
 
 import * as actions from "../store/actions";
+import * as types from '../Types/index';
 import Layout from './containers/Layout/Layout';
 import Home from './components/Pages/Home/Home';
 import Shop from './components/Shop/Shop';
@@ -21,20 +22,17 @@ import ResetPassword from './containers/Auth/PasswordResetEmail/PasswordResetEma
 
 
 type Props = {
-  initProducts: () => void,
-  isAuth: {
-    isLoaded: boolean,
-    isEmpty: boolean
-  },
-  updateUserProfile: SyntheticEvent<HTMLButtonElement> => void,
-  profile: Array<Object>,
-  orders: Object,
-  fetchOrdersInit: Event => void,
+  initProducts: types.InitProducts,
+  isAuth: types.IsAuth,
+  updateUserProfile: types.UpdateUserProfile,
+  profile: types.Profile,
+  orders: types.Orders,
+  fetchOrdersInit: types.FetchOrdersInit,
   providerId: string,
-  updatePassword: Event => void,
-  updateEmail: Event => void,
-  addToCart: Event => void,
-  resetPasswordEmail: Event => void,
+  updatePassword: types.UpdatePassword,
+  updateEmail: types.UpdateEmail,
+  addToCart: types.AddToCart,
+  resetPasswordEmail: types.ResetPasswordEmail,
   products: Array<Object>
 };
 
@@ -50,7 +48,9 @@ class App extends Component<Props> {
     
     const { isAuth, updateUserProfile, profile, orders, fetchOrdersInit, providerId, updatePassword, updateEmail, products, addToCart, resetPasswordEmail } = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
-    console.log('isAuth:', isAuth);
+    
+    console.log('isA ME:', orders);
+    
     let routes = (
      <Switch>
        <Route exact path="/" component={Home}/>

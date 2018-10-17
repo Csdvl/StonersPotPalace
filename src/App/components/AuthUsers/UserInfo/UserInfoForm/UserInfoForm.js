@@ -6,6 +6,7 @@ import type { FormProps } from 'redux-form/lib/types'
 import capitalize from 'capitalize';
 import moment from 'moment';
 
+import * as types from '../../../../../Types/index';
 import Input from '../../../UI/Input/input';
 import {
   required,
@@ -19,7 +20,7 @@ import {
 
 
 type Props = {
-  updateUserProfile: SyntheticEvent<HTMLButtonElement> => void
+  updateUserProfile: types.UpdateUserProfile
 } & FormProps;
 
 const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserProfile }:Props) => {

@@ -20,8 +20,8 @@ import capitalize from "capitalize";
 
 
 type Props = {
-  contactSubmitUnauthenticated: types.ContactSubmitUnauthenticated,
-  contactSubmitAuthenticated: types.ContactSubmitAuthenticated,
+  contactSubmitUnauthenticated: SyntheticEvent<HTMLElement> => void,
+  contactSubmitAuthenticated: SyntheticEvent<HTMLElement> => void,
   profile: types.Profile
 } & FormProps;
 

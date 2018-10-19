@@ -1,25 +1,19 @@
 // @flow
 import * as actionTypes from '../actionTypes';
+import * as types from '../../../Types/index';
 import firebase from '../../../firebase';
 import { toastr } from 'react-redux-toastr';
 
 
-const fetchProducts = products => {
+const fetchProducts = (products: Array<types.Product> ): types.InitProducts=> {
   return {
     type: actionTypes.FETCH_PRODUCTS,
     products
   }
 };
 
-const fetchProductsFailed = (error) => {
-  return {
-    type: actionTypes.FETCH_PRODUCTS_FAILED,
-    error
-  }
-};
-
-export const initProducts = () => {
-  return async (dispatch: Function )=> {
+export const initProducts = ():types.ProductsThunkAction => {
+  return async (dispatch )=> {
     
     const firestore = firebase.firestore();
     const productsRef = firestore.collection('products');
@@ -34,7 +28,7 @@ export const initProducts = () => {
       }
       dispatch(fetchProducts(products))
     } catch (error) {
-      dispatch(fetchProductsFailed(error));
+      console.log(error);
     }
   }
 };

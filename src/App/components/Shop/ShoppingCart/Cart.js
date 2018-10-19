@@ -9,10 +9,10 @@ import CartItem from './CartItem/CartItem';
 
 
 type Props = {
-  cartItems: Array<types.OrderProduct>,
-  decrementQuantity: types.DecrementQuantity,
-  incrementQuantity: types.IncrementQuantity,
-  removeFromCart: types.RemoveFromCart,
+  cartItems: Array<types.CartItem>,
+  decrementQuantity: (string, number) => types.DecrementQuantity,
+  incrementQuantity: (string, number) => types.IncrementQuantity,
+  removeFromCart: (string, number, number) => types.RemoveFromCart,
   totalPrice: number
 };
 

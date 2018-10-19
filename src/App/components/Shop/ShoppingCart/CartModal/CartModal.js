@@ -10,8 +10,8 @@ import Cart from '../Cart';
 type State = { modalOpen: boolean };
 
 type Props = {
-  isAuth: types.IsAuth,
-  cartItems: Array<types.OrderProduct>
+  authenticated: boolean,
+  cartItems: Array<types.CartItem>
 };
 
 class CartModal extends Component<Props, State> {
@@ -23,7 +23,7 @@ class CartModal extends Component<Props, State> {
   
   render() {
     const { modalOpen } = this.state;
-    const { isAuth, cartItems } = this.props;
+    const { authenticated, cartItems } = this.props;
     
     const content = cartItems.length === 0 ? null : cartItems.length;
     
@@ -35,7 +35,7 @@ class CartModal extends Component<Props, State> {
        
        <Cart/>
        <Divider hidden/>
-       {isAuth
+       {authenticated
         ? <Button as={NavLink}
                   to="/checkout"
                   floated='right'

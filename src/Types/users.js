@@ -1,6 +1,4 @@
 // @flow
-
-//AUTH
 export type IsAuth = { isLoaded: boolean, isEmpty: boolean };
 
 export type Profile = {
@@ -20,26 +18,32 @@ export type Profile = {
   isLoaded: boolean
 };
 
+export type ContactFormValues = {
+  firstName: string,
+  lastName: string,
+  email: string,
+  phoneNumber: string,
+  subject: string,
+  message: string,
+  contactMethod: string
+};
+
+
+type GetState = () => Object;
+export type AuthThunkAction = (dispatch: Dispatch, getState: GetState, getFirestore: Function, getFirebase: Function) => any;
+type Dispatch = (action: AuthThunkAction | any) => any;
+
 //USERS
 
-export type UpdatePassword = SyntheticEvent<HTMLElement> => void;
-
-export type UpdateEmail = SyntheticEvent<HTMLElement> => void;
-
-export type ResetPasswordEmail = SyntheticEvent<HTMLElement> => void;
-
-export type UpdateUserProfile = SyntheticEvent<HTMLElement> => void;
-
-export type ContactSubmitUnauthenticated = SyntheticEvent<HTMLElement> => void;
-
-export type ContactSubmitAuthenticated = SyntheticEvent<HTMLElement> => void;
-
-export type AuthLogout = () => void;
-
-export type AuthRegister = SyntheticEvent<HTMLElement> => void;
+export type UpdateUserProfileValues = {
+  isLoaded: boolean,
+  isEmpty: boolean,
+  dob: number,
+  displayName: string,
+  firstName: string,
+  lastName: string
+};
 
 export type SocialAuth = (string) => void;
 
-export type AuthLogin = SyntheticEvent<HTMLElement> => void;
-
-
+export type AuthLogout = {type: 'AUTH_LOGOUT'};

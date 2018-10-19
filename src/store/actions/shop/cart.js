@@ -2,10 +2,9 @@
 import { toastr } from 'react-redux-toastr';
 import * as actionTypes from "../actionTypes";
 import * as types from '../../../Types/index';
-import type { AddToCart } from "../../../Types";
 
 
-const addToCartUnsafe = (id, photoURL, label, price, onStock) => ({
+const addToCartUnsafe = (id: string, photoURL: string, label: string, price: number, onStock:number): types.AddToCart => ({
   type: actionTypes.ADD_TO_CART,
   id,
   photoURL,
@@ -14,8 +13,8 @@ const addToCartUnsafe = (id, photoURL, label, price, onStock) => ({
   onStock
 });
 
-export const addToCart: AddToCart = (id: string, photoURL: string, label: string, price: number, onStock:number) => {
-  return async (dispatch: Function) => {
+export const addToCart = (id: string, photoURL: string, label: string, price: number, onStock:number): types.CartThunkAction => {
+  return async (dispatch) => {
     try {
       await dispatch(addToCartUnsafe(id, photoURL, label, price, onStock));
       toastr.success('Success !', 'You\'ve added an item :)')
@@ -25,15 +24,15 @@ export const addToCart: AddToCart = (id: string, photoURL: string, label: string
   }
 };
 
-const removeFromCartUnsafe = (id, price, quantity) => ({
+const removeFromCartUnsafe = (id: string, price: number, quantity: number): types.RemoveFromCart => ({
   type: actionTypes.REMOVE_FROM_CART,
   id,
   price,
   quantity
 });
 
-export const removeFromCart = (id: string, price: number, quantity: number) => {
-  return async (dispatch: Function)=> {
+export const removeFromCart = (id: string, price: number, quantity: number): types.CartThunkAction => {
+  return async (dispatch)=> {
     try {
       dispatch(removeFromCartUnsafe(id, price, quantity));
     } catch (e) {
@@ -42,14 +41,14 @@ export const removeFromCart = (id: string, price: number, quantity: number) => {
   }
 };
 
-const incrementQuantityUnsafe = (id, price) => ({
+const incrementQuantityUnsafe = (id: string, price: number): types.IncrementQuantity => ({
   type: actionTypes.INCREMENT_QUANTITY,
   id,
   price
 });
 
-export const incrementQuantity = (id: string, price: number) => {
-  return async (dispatch: Function) => {
+export const incrementQuantity = (id: string, price: number): types.CartThunkAction => {
+  return async (dispatch) => {
     try {
       await dispatch(incrementQuantityUnsafe(id, price));
     } catch (e) {
@@ -58,32 +57,34 @@ export const incrementQuantity = (id: string, price: number) => {
   }
 };
 
-const decrementQuantityUnsafe = (id, price) => ({
+const decrementQuantityUnsafe = (id: string, price: number): types.DecrementQuantity=> ({
   type: actionTypes.DECREMENT_QUANTITY,
   id,
   price
 });
 
-export const decrementQuantity = (id: string, price: number) => {
-  return async (dispatch: Function) => {
+export const decrementQuantity = (id: string, price: number): types.CartThunkAction => {
+  return async (dispatch) => {
     try {
       await dispatch(decrementQuantityUnsafe(id, price));
-      // toastr.success('Success !', 'You\'ve removed an item...');
     } catch (e) {
       console.log(e);
     }
   }
 };
 
-const orderNow = () => ({
+const orderNow = (values: Object, cartItems: Array<types.CartItem>, totalPrice: number): types.OrderPlaced => ({
   type: actionTypes.ORDER_PLACED,
+  values,
+  cartItems,
+  totalPrice
 });
 
-export const orderPlaced = ( values: Object, cartItems: Array<Object>, totalPrice: number) => {
-  return async (dispatch: Function, getState: Function, { getFirebase, getFirestore }: Function) => {
+export const orderPlaced = ( values: types.OrderPlacedDetail, cartItems: Array<types.CartItem>, totalPrice: number): types.CartThunkAction => {
+  return async (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore();
     const user = getFirebase().auth().currentUser;
-    
+    console.log('Values:', values);
     const newOrder = {
       deliveryInstructions: values.deliveryInstructions,
       city: values.city,
@@ -106,8 +107,8 @@ export const orderPlaced = ( values: Object, cartItems: Array<Object>, totalPric
     
     
     try {
+      dispatch(orderNow(values, cartItems, totalPrice));
       await firestore.add('orders', newOrder);
-      dispatch(orderNow());
     } catch (e) {
       console.log(e)
     }

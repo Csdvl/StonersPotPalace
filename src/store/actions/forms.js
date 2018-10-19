@@ -2,9 +2,11 @@
 import { SubmissionError } from 'redux-form';
 import { toastr } from 'react-redux-toastr';
 
+import * as types from '../../Types/index';
 
-export const guildEmail = (email: Object) => {
-  return async (dispatch: Function, getState: Function, { getFirestore }: Function) => {
+
+export const guildEmail = (email: {guild: string}): types.AuthThunkAction => {
+  return async (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
     
     try {
@@ -22,8 +24,8 @@ export const guildEmail = (email: Object) => {
   }
 };
 
-export const contactSubmitUnauthenticated = (values: Object) => {
-  return async (dispatch: Function, getState: Function, { getFirestore }: Function) => {
+export const contactSubmitUnauthenticated = (values: types.ContactFormValues): types.AuthThunkAction => {
+  return async (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
     try {
       
@@ -47,8 +49,8 @@ export const contactSubmitUnauthenticated = (values: Object) => {
   }
 };
 
-export const contactSubmitAuthenticated = (values: Object )=> {
-  return async (dispatch: Function, getState: Function, { getFirebase, getFirestore }: Function) => {
+export const contactSubmitAuthenticated = (values: types.ContactFormValues ): types.AuthThunkAction => {
+  return async (dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
     const firestore = getFirestore();
     const user = firebase.auth().currentUser;
@@ -73,8 +75,6 @@ export const contactSubmitAuthenticated = (values: Object )=> {
       
       await firestore.add('contacts', contact);
       
-      console.log(firstName);
-      
       if ( !firstName && !lastName && !phoneNumber) {
         updatedUser = {
           firstName: values.firstName,
@@ -82,8 +82,7 @@ export const contactSubmitAuthenticated = (values: Object )=> {
           displayName: [values.firstName, values.lastName].join(' '),
           phoneNumber: values.phoneNumber
         };
-        console.log('im in the if statetement');
-        console.log(updatedUser);
+ 
         return await firebase.updateProfile(updatedUser);
       }
       

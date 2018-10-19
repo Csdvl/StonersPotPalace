@@ -20,7 +20,7 @@ import {
 
 
 type Props = {
-  updateUserProfile: types.UpdateUserProfile
+  updateUserProfile: SyntheticEvent<HTMLElement> => void
 } & FormProps;
 
 const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserProfile }:Props) => {

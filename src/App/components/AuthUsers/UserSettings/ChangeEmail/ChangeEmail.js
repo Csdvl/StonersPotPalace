@@ -11,7 +11,7 @@ import {required, email, matchEmail} from '../../../../../shared/validation';
 
 
 type Props = {
-  updateEmail: types.UpdateEmail,
+  updateEmail: SyntheticEvent<HTMLElement> => void,
 } & FormProps;
 
 const changeEmail = ({ error, invalid, submitting, handleSubmit, updateEmail }: Props) => {

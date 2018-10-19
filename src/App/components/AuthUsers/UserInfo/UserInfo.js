@@ -7,7 +7,7 @@ import UserInfoForm from './UserInfoForm/UserInfoForm';
 
 
 type Props = {
-  updateUserProfile: types.UpdateUserProfile,
+  updateUserProfile: SyntheticEvent<HTMLElement> => void,
   initialValues: types.Profile
 };
 

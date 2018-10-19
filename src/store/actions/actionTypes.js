@@ -1,8 +1,8 @@
 // @flow
-export const AUTH_START = "AUTH_START";
-export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
-export const AUTH_FAIL = "AUTH_FAIL";
-export const AUTH_LOGOUT = "AUTH_LOGOUT";
+export const AUTH_START: string = "AUTH_START";
+export const LOGIN_SUCCESS: string = "LOGIN_SUCCESS";
+export const AUTH_FAIL: string = "AUTH_FAIL";
+export const AUTH_LOGOUT: string = "AUTH_LOGOUT";
 
 export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
 export const FETCH_PRODUCTS_FAILED = "FETCH_PRODUCTS_FAILED";

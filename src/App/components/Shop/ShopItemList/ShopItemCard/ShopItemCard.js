@@ -7,7 +7,7 @@ import AccordionDescription from './AccordionDescription';
 
 
 type Props = {
-  addToCartClicked: types.AddToCart
+  addToCartClicked: (string, string, string, number, number) => types.AddToCart
 } & types.ShopItemCard ;
 
 const shopItemCard = ({ label, onStock, delivery, price, photoURL, description, addToCartClicked }: Props) => {

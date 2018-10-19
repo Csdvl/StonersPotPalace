@@ -13,7 +13,7 @@ type Props = {
   children: React.Node,
   isAuth: types.IsAuth,
   profile: types.Profile,
-  cartItems: Array<types.OrderProduct>
+  cartItems: Array<types.CartItem>
 };
 
 class Layout extends Component<Props> {
@@ -25,8 +25,7 @@ class Layout extends Component<Props> {
     return (
      <Aux>
        <Toolbar
-        {/*isAuth={authenticated} in case this does not work*/}
-        isAuth={isAuth}
+        authenticated={authenticated}
         profile={profile}
         cartItems={cartItems}
        />

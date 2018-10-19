@@ -19,9 +19,9 @@ type Props = {
     isLoaded: boolean,
     isEmpty: boolean
   },
-  onRegister: types.AuthRegister,
+  onRegister: SyntheticEvent<HTMLElement> => void,
   onSocialAuth: types.SocialAuth,
-  onLogin: types.AuthLogin
+  onLogin: SyntheticEvent<HTMLElement> => void
 };
 
 class Auth extends Component<Props, State> {

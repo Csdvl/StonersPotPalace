@@ -1,23 +1,16 @@
 // @flow
 import * as actionTypes from '../../actions/actionTypes';
+import * as types from '../../../Types/index';
 
-
-type State = [];
-
-type Action = {
-  type: string,
-  orders: Object
-};
-
-const fetchOrders = (state, action) => {
+const fetchOrders = (state: types.OrdersState, action: types.FetchOrdersInit): types.OrdersState => {
   return  action.orders
 };
 
-const logout = (state, action) => {
+const logout = (state: types.OrdersState, action): types.OrdersState => {
   return []
 };
 
-const reducer = (state: State = [], action: Action) => {
+const reducer = (state: types.OrdersState = [], action: types.OrdersAction): types.OrdersState => {
   switch (action.type) {
     case actionTypes.FETCH_ORDERS:
       return fetchOrders(state, action);

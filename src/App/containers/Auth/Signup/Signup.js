@@ -11,7 +11,7 @@ import SocialAuth from '../SocialAuth/SocialAuth';
 
 
 type Props = {
-  onRegister: types.AuthRegister,
+  onRegister: SyntheticEvent<HTMLElement> => void,
   onSocialAuth: types.SocialAuth
 } & FormProps;
 

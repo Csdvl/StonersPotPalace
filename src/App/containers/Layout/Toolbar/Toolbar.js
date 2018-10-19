@@ -10,23 +10,23 @@ import CartModal from '../../../components/Shop/ShoppingCart/CartModal/CartModal
 
 
 type Props = {
-  isAuth: types.IsAuth,
+  authenticated: boolean,
   profile: types.Profile,
-  cartItems: Array<types.OrderProduct>
+  cartItems: Array<types.CartItem>
 };
 
-const toolbar = ({isAuth, profile, cartItems}: Props) => (
+const toolbar = ({authenticated, profile, cartItems}: Props) => (
  <Menu inverted fixed='top'>
    <Container>
      <Menu.Item position='left'>
        <Image src={bakeryLogo} alt='sugarRush' size='tiny'/>
      </Menu.Item>
      
-     <Menu.Item as={NavigationItems} isAuth={isAuth}/>
+     <Menu.Item as={NavigationItems} />
      
      <Menu.Menu position='right'>
-       <Menu.Item as={CartModal} cartItems={cartItems} isAuth={isAuth} />
-       <Menu.Item as={DropDownAuth} isAuth={isAuth} profile={profile} />
+       <Menu.Item as={CartModal} cartItems={cartItems} authenticated={authenticated} />
+       <Menu.Item as={DropDownAuth} authenticated={authenticated} profile={profile} />
      </Menu.Menu>
    
    </Container>

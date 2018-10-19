@@ -4,35 +4,14 @@ import { toastr } from 'react-redux-toastr';
 import moment from 'moment';
 
 import * as actionTypes from './actionTypes';
+import * as types from '../../Types/index';
 
 
-type UpdatePassword = {
-  newPassword1: string
-};
-
-type UpdateEmail = {
-  newEmail: string
-};
-
-type UpdateUserProfile = {
-  isLoaded: boolean,
-  isEmpty: boolean,
-  dob: number,
-  displayName: string,
-  firstName: string,
-  lastName: string
-};
-
-type ResetPasswordEmail = {
-  email: string,
-};
-
-export const updatePassword = (creds: UpdatePassword) => {
-  return async (dispatch: Function, getState: Function, { getFirebase }: Function) => {
+export const updatePassword = (creds: {newPassword1: string}): types.AuthThunkAction => {
+  return async (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
     const user = firebase.auth().currentUser;
     try {
-      dispatch({ type: actionTypes.UPDATE_PASSWORD });
       await user.updatePassword(creds.newPassword1);
       await dispatch(reset('changePassword'));
       toastr.success('Success', 'Your password has been updated')
@@ -44,8 +23,8 @@ export const updatePassword = (creds: UpdatePassword) => {
   }
 };
 
-export const updateEmail = (creds: UpdateEmail) => {
-  return async (dispatch: Function, getState: Function, { getFirebase }: Function) => {
+export const updateEmail = (creds: {newEmail: string}): types.AuthThunkAction => {
+  return async (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
     const user = firebase.auth().currentUser;
     try {
@@ -64,7 +43,7 @@ export const updateEmail = (creds: UpdateEmail) => {
   }
 };
 
-export const updateUserProfile = (user: UpdateUserProfile) => {
+export const updateUserProfile = (user: types.UpdateUserProfileValues) => {
   return async (dispatch: Function, getState: Function, { getFirebase }: Function) => {
     const firebase = getFirebase();
     const { isLoaded, isEmpty, ...restUser } = user;
@@ -84,8 +63,8 @@ export const updateUserProfile = (user: UpdateUserProfile) => {
   }
 };
 
-export const resetPasswordEmail = (email: ResetPasswordEmail )=> {
-  return async (dispatch: Function, getState: Function, { getFirebase }: Function) => {
+export const resetPasswordEmail = (email: {email: string} ): types.AuthThunkAction => {
+  return async (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
     const auth = firebase.auth();
     try {

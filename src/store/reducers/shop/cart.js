@@ -1,31 +1,14 @@
 // @flow
 import * as actionTypes from '../../actions/actionTypes';
+import * as types from '../../../Types/index'
 
 
-type State = {
-  cartItems: Array<{
-    id: string,
-    quantity: number
-  }>,
-  totalPrice: number
-};
-
-type Action = {
-  type: string,
-  id: string,
-  label: string,
-  price: number,
-  photoURL: string,
-  onStock: number,
-  quantity: number
-};
-
-const initialState: State = {
+const initialState: types.CartState = {
   cartItems: [],
   totalPrice: 0
 };
 
-const addToCart = (state, action) => {
+const addToCart = (state: types.CartState, action: types.AddToCart): types.CartState => {
   
   let cartItemIndex = state.cartItems.findIndex(cartItem => cartItem.id === action.id);
   
@@ -50,7 +33,7 @@ const addToCart = (state, action) => {
   };
 };
 
-const removeFromCart = (state, action) => {
+const removeFromCart = (state: types.CartState, action: types.RemoveFromCart): types.CartState => {
   let cartItemIndex = state.cartItems.findIndex(cartItem => cartItem.id === action.id);
   
   return {
@@ -63,7 +46,7 @@ const removeFromCart = (state, action) => {
   }
 };
 
-const incrementQuantity = (state, action) => {
+const incrementQuantity = (state: types.CartState, action: types.IncrementQuantity): types.CartState => {
   
   let cartItemIndex = state.cartItems.findIndex(cartItem => cartItem.id === action.id);
   
@@ -81,7 +64,7 @@ const incrementQuantity = (state, action) => {
   
 };
 
-const decrementQuantity = (state, action) => {
+const decrementQuantity = (state: types.CartState, action: types.DecrementQuantity): types.CartState => {
   
   let cartItemIndex = state.cartItems.findIndex(cartItem => cartItem.id === action.id);
   
@@ -99,14 +82,14 @@ const decrementQuantity = (state, action) => {
   
 };
 
-const logout = (state, action) => {
+const logout = (state: types.CartState, action): types.CartState => {
   return {
     cartItems: [],
     totalPrice: 0
   }
 };
 
-const reducer = (state: State = initialState, action: Action): State => {
+const reducer = (state: types.CartState = initialState, action: types.CartAction): types.CartState => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
       return addToCart(state, action);

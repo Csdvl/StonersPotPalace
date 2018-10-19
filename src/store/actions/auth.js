@@ -2,12 +2,15 @@
 import { SubmissionError } from 'redux-form';
 
 import * as actionTypes from './actionTypes';
+import * as types from '../../Types/index';
 
 
-export const authLogin = (creds: Object )=> {
-  return async (dispatch: Function, getState: Function, { getFirebase }: Function) => {
+type Creds = {email: string, password: string};
+
+export const authLogin = (creds: Creds ): types.AuthThunkAction => {
+  return async (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
-    
+    console.log(creds);
     try {
       await firebase.auth().signInWithEmailAndPassword(creds.email, creds.password);
       
@@ -20,8 +23,8 @@ export const authLogin = (creds: Object )=> {
   }
 };
 
-export const authRegister = (user: Object) =>
- async (dispatch: Function, getState: Function, {getFirebase, getFirestore}: Function) => {
+export const authRegister = (user: Creds): types.AuthThunkAction =>
+ async (dispatch, getState, {getFirebase, getFirestore}) => {
   const firebase = getFirebase();
   const firestore = getFirestore();
   
@@ -47,8 +50,8 @@ export const authRegister = (user: Object) =>
   }
  };
 
-export const socialAuth = (selectedProvider: string)=> {
- return async (dispatch: Function, getState: Function, {getFirebase, getFirestore}: Function) => {
+export const socialAuth = (selectedProvider: string): types.AuthThunkAction=> {
+ return async (dispatch, getState, {getFirebase, getFirestore}) => {
    const firebase = getFirebase();
    const firestore = getFirestore();
    

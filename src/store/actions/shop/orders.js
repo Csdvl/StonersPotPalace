@@ -1,14 +1,15 @@
 // @flow
 import * as actionTypes from '../actionTypes';
+import * as types from '../../../Types/index';
 import firebase from '../../../firebase';
 
-const fetchOrders = orders => ({
+const fetchOrders = (orders): types.FetchOrdersInit => ({
   type: actionTypes.FETCH_ORDERS,
   orders
 });
 
-export const fetchOrdersInit = () => {
-  return async (dispatch: Function) => {
+export const fetchOrdersInit = (): types.OrdersThunkAction => {
+  return async (dispatch) => {
     
     const user = firebase.auth().currentUser;
     const firestore = firebase.firestore();

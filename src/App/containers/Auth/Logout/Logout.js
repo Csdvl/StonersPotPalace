@@ -9,7 +9,7 @@ import * as types from '../../../../Types/index';
 
 
 type Props = {
-  onLogout: types.AuthLogout,
+  onLogout: () => types.AuthLogout,
   firebase: {
     logout: Function
   }

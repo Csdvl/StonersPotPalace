@@ -22,17 +22,17 @@ import ResetPassword from './containers/Auth/PasswordResetEmail/PasswordResetEma
 
 
 type Props = {
-  initProducts: types.InitProducts,
+  initProducts: () => types.InitProducts,
   isAuth: types.IsAuth,
-  updateUserProfile: types.UpdateUserProfile,
+  updateUserProfile: SyntheticEvent<HTMLElement> => void,
   profile: types.Profile,
-  orders: types.Orders,
-  fetchOrdersInit: types.FetchOrdersInit,
+  orders: Array<types.Order>,
+  fetchOrdersInit: () => types.FetchOrdersInit,
   providerId: string,
-  updatePassword: types.UpdatePassword,
-  updateEmail: types.UpdateEmail,
-  addToCart: types.AddToCart,
-  resetPasswordEmail: types.ResetPasswordEmail,
+  updatePassword: SyntheticEvent<HTMLElement> => void,
+  updateEmail: SyntheticEvent<HTMLElement> => void,
+  addToCart: (string, string, string, number, number) => types.AddToCart,
+  resetPasswordEmail: SyntheticEvent<HTMLElement> => void,
   products: Array<Object>
 };
 

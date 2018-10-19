@@ -8,7 +8,7 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 
 
 type ShopItemListTypes = {
-  addToCart: types.AddToCart,
+  addToCart: (string, string, string, number, number) => types.AddToCart,
   products: Array<types.Product>
 };
 

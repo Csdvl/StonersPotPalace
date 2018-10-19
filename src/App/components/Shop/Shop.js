@@ -9,7 +9,7 @@ import ShopFilter from './ShopFilter/ShopFilter';
 
 type Shop = {
   products: Array<types.ShopItemCard>,
-  addToCart: types.AddToCart
+  addToCart: (string, string, string, number, number) => types.AddToCart
 };
 
 const shop = ({ products, addToCart }: Shop) => {

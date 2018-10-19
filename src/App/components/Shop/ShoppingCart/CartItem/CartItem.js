@@ -6,10 +6,10 @@ import * as types from '../../../../../Types/index';
 
 
 type Props = {
-  onClickMinus: types.DecrementQuantity,
-  onClickPlus: types.IncrementQuantity,
-  removeFromCart: types.RemoveFromCart,
-} & types.OrderProduct;
+  onClickMinus: (string, number) => types.DecrementQuantity,
+  onClickPlus: (string, number) => types.IncrementQuantity,
+  removeFromCart: (string, number, number) => types.RemoveFromCart,
+} & types.CartItem;
 
 const cartItem = ({ photoURL, label, price, quantity, onStock, onClickMinus, onClickPlus, removeFromCart }: Props) => {
   return (

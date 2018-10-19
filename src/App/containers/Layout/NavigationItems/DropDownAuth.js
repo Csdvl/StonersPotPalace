@@ -7,11 +7,11 @@ import * as types from '../../../../Types/index';
 
 
 type Props = {
-  isAuth: types.IsAuth,
+  authenticated: boolean,
   profile: types.Profile
 };
 
-const DropDownAuth = ({ isAuth, profile }: Props) => {
+const DropDownAuth = ({ authenticated, profile }: Props) => {
   const dda = (
    <Menu.Item position="right">
      <Dropdown pointing="top right" text={profile.displayName || 'Tell us about you'}>
@@ -27,7 +27,7 @@ const DropDownAuth = ({ isAuth, profile }: Props) => {
   
   return (
    <div>
-     {isAuth ? dda : <Menu.Item as={NavLink} to="/auth" name='My Account'/>}
+     {authenticated ? dda : <Menu.Item as={NavLink} to="/auth" name='My Account'/>}
    </div>
   
   );

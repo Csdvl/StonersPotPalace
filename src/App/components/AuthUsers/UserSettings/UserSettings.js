@@ -11,8 +11,8 @@ import ChangeEmail from './ChangeEmail/ChangeEmail';
 
 type Props = {
   providerId: string,
-  updatePassword: types.UpdatePassword,
-  updateEmail: types.UpdateEmail
+  updatePassword: SyntheticEvent<HTMLElement> => void,
+  updateEmail: SyntheticEvent<HTMLElement> => void
 };
 
 class UserSettings extends Component<Props> {

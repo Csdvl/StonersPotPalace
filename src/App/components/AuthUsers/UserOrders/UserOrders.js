@@ -9,8 +9,8 @@ import Spinner from '../../UI/Spinner/Spinner';
 
 
 type Props = {
-  fetchOrdersInit: types.FetchOrdersInit,
-  orders: types.Orders,
+  fetchOrdersInit: () => types.FetchOrdersInit,
+  orders: Array<types.Order>,
 };
 
 class userOrders extends Component <Props> {

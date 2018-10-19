@@ -15,9 +15,9 @@ type State = {
 };
 
 type Props = {
-  orderPlaced: types.OrderPlaced,
+  orderPlaced: (Object, Array<types.CartItem>, number) => types.OrderPlaced,
   profile: types.Profile,
-  cartItems: Array<types.OrderProduct>,
+  cartItems: Array<types.CartItem>,
   totalPrice: number
 };
 

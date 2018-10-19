@@ -10,7 +10,7 @@ import { required, matchPassword } from '../../../../../shared/validation';
 
 
 type Props = {
-  updatePassword: types.UpdatePassword,
+  updatePassword: SyntheticEvent<HTMLElement> => void,
   providerId: string,
 } & FormProps;
 

@@ -22,6 +22,6 @@ export type OrdersAction = FetchOrdersInit | types.AuthLogout;
 
 type GetState = () => OrdersState;
 type PromiseAction = Promise<OrdersAction>;
-export type OrdersThunkAction = (dispatch: Dispatch, getState: GetState) => any;
 type Dispatch = (action: OrdersAction | OrdersThunkAction | PromiseAction | Array<OrdersAction>) => any;
+export type OrdersThunkAction = (dispatch: Dispatch, getState: GetState) => any;
 

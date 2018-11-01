@@ -2,12 +2,12 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBMzDEx-FbiElwQmCC69vWuAWOCmHeLZ4U",
-  authDomain: "stonerspotpalace-s4w20.firebaseapp.com",
-  databaseURL: "https://stonerspotpalace-s4w20.firebaseio.com",
-  projectId: "stonerspotpalace-s4w20",
-  storageBucket: "stonerspotpalace-s4w20.appspot.com",
-  messagingSenderId: "433819605376"
+  apiKey: "AIzaSyCAodW0nupJlfP6SXu3uExyNxlurh3S_Zo",
+  authDomain: "stonerspotpalacetest.firebaseapp.com",
+  databaseURL: "https://stonerspotpalacetest.firebaseio.com",
+  projectId: "stonerspotpalacetest",
+  storageBucket: "stonerspotpalacetest.appspot.com",
+  messagingSenderId: "917187432986"
 };
 firebase.initializeApp(firebaseConfig);
 

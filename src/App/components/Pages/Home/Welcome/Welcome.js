@@ -8,7 +8,7 @@ type State = {
 };
 
 const config = {
-  hovered: { scale: 1.75 },
+  hovered: { scale: 1.66 },
   idle: { scale: 1 }
 };
 

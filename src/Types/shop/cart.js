@@ -37,6 +37,6 @@ export type CartAction = AddToCart | RemoveFromCart | IncrementQuantity | Decrem
 
 type GetState = () => CartState;
 type PromiseAction = Promise<CartAction>;
-export type CartThunkAction = (dispatch: Dispatch, getState: GetState, getFirestore: Function, getFirebase: Function) => any;
 type Dispatch = (action: CartAction | CartThunkAction | PromiseAction | Array<CartAction>) => any;
+export type CartThunkAction = (dispatch: Dispatch, getState: GetState, getFirestore: Function, getFirebase: Function) => any;
 

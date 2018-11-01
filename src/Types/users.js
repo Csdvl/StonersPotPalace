@@ -30,8 +30,8 @@ export type ContactFormValues = {
 
 
 type GetState = () => Object;
-export type AuthThunkAction = (dispatch: Dispatch, getState: GetState, getFirestore: Function, getFirebase: Function) => any;
 type Dispatch = (action: AuthThunkAction | any) => any;
+export type AuthThunkAction = (dispatch: Dispatch, getState: GetState, getFirestore: Function, getFirebase: Function) => any;
 
 //USERS
 

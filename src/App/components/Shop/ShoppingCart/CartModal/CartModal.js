@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Button, Modal, Segment, Label, Divider, Container } from 'semantic-ui-react'
+import { Button, Modal, Segment, Label, Divider } from 'semantic-ui-react'
 import { NavLink, Link } from 'react-router-dom';
 
 import * as types from '../../../../../Types/index';

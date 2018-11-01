@@ -3,7 +3,6 @@ import { SubmissionError, reset } from 'redux-form';
 import { toastr } from 'react-redux-toastr';
 import moment from 'moment';
 
-import * as actionTypes from './actionTypes';
 import * as types from '../../Types/index';
 
 

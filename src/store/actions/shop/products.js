@@ -2,7 +2,6 @@
 import * as actionTypes from '../actionTypes';
 import * as types from '../../../Types/index';
 import firebase from '../../../firebase';
-import { toastr } from 'react-redux-toastr';
 
 
 const fetchProducts = (products: Array<types.Product> ): types.InitProducts=> {

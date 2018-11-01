@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Label, Input, TextArea, Select, Radio, Checkbox, Form, Grid } from 'semantic-ui-react';
+import { Label, Input, TextArea, Select, Radio, Checkbox, Form } from 'semantic-ui-react';
 
 import moment from "moment/moment";
 import DatePicker from 'react-datepicker';

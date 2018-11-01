@@ -15,7 +15,7 @@ const locations = () => {
       img: Loc1,
       name: 'De Bevoir Estate',
       address: '420 Bakers Street, London, N1 5TN',
-      timetable: 'M-F: 10:00 - 22:00,' + 'S-S: 08:00 - 24:00',
+      timetable: 'M-F: 10:00 - 22:00, S-S: 08:00 - 24:00',
       contactNumber: '07506272144'
     },
     
@@ -23,7 +23,7 @@ const locations = () => {
       img: Loc2,
       name: 'Stepney Green',
       address: '007 Master Wankers Road, London, E1 3DP',
-      timetable: 'M-F: 10:00 - 22:00,' + 'S-S: 08:00 - 24:00',
+      timetable: 'M-F: 10:00 - 22:00, S-S: 08:00 - 24:00',
       contactNumber: '07377653838'
     },
     
@@ -31,13 +31,14 @@ const locations = () => {
       img: Loc3,
       name: 'Coolest Place on Earth(witch is flat...duh!)',
       address: '69 King of the Hill, London, N1 6AH',
-      timetable: 'M-F: 10:00 - 22:00,' + 'S-S: 08:00 - 24:00',
+      timetable: 'M-F: 10:00 - 22:00, S-S: 08:00 - 24:00',
       contactNumber: '07597557942'
     },
   ];
   
   const locations = locationList.map(location => (
    <Location
+    key={location.name}
     img={location.img}
     name={location.name}
     address={location.address}
@@ -47,7 +48,7 @@ const locations = () => {
   ));
   
   return (
-   <Segment size='huge' inverted>
+   <Segment size='huge' inverted={true}>
      <Header>Our shops</Header>
      <Card.Group itemsPerRow={2} >
        {locations}

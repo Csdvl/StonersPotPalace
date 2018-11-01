@@ -2,7 +2,6 @@
 
 
 
-export type InitProducts = {type: 'FETCH_PRODUCTS', products: Array<Product>};
 
 export type Product = {
   id: string,
@@ -14,6 +13,8 @@ export type Product = {
   delivery: boolean,
   description: string
 };
+
+export type InitProducts = {type: 'FETCH_PRODUCTS', products: Array<Product>};
 
 export type ShopItemCard = {
   label: string,
@@ -30,5 +31,5 @@ export type ProductsState = Array<Product>;
 
 type GetState = () => ProductsState;
 type PromiseAction = Promise<ProductsAction>;
-export type ProductsThunkAction = (dispatch: Dispatch, getState: GetState) => any;
 type Dispatch = (action: ProductsAction | ProductsThunkAction | PromiseAction | Array<ProductsAction>) => any;
+export type ProductsThunkAction = (dispatch: Dispatch, getState: GetState) => any;

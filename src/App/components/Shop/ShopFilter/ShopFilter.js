@@ -8,7 +8,7 @@ import {ShopFilters} from '../../../../store/actions/shop/products';
 
 const shopFilter = () => {
     return (
-     <Segment text>
+     <Segment>
        <Label content="Show:"/>
        <FilterLink filter={ShopFilters.SHOW_ALL}>
          All

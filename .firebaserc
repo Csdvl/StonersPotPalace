@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "stonerspotpalace-s4w20"
+    "production": "stonerspotpalace-s4w20",
+    "staging":"stonerspotpalacetest"
   }
 }

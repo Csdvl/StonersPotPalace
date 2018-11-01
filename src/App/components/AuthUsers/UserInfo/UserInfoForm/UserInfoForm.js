@@ -6,7 +6,6 @@ import type { FormProps } from 'redux-form/lib/types'
 import capitalize from 'capitalize';
 import moment from 'moment';
 
-import * as types from '../../../../../Types/index';
 import Input from '../../../UI/Input/input';
 import {
   required,

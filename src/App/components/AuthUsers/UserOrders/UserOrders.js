@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import {Component} from 'react';
-import { Item, Label } from 'semantic-ui-react';
+import { Item} from 'semantic-ui-react';
 
 import * as types from '../../../../Types/index';
 import UserOrder from './UserOrder/UserOrder';

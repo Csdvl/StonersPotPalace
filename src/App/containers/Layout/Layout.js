@@ -36,7 +36,7 @@ class Layout extends Component<Props> {
          </Grid.Column>
        </Grid>
        <Divider hidden/>
-       <footer>Footer Copyright @ pula mea || mangiare mi il cazzo</footer>
+       <footer>something something... small print...</footer>
      </Aux>
     );
   }

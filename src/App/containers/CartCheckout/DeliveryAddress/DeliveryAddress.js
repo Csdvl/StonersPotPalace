@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Divider, Segment, Header, Card, Accordion, Icon, Button, Form, Grid } from 'semantic-ui-react';
+import {  Segment, Header, Button, Form, Grid } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps} from 'redux-form/lib/types';
 
@@ -18,42 +18,13 @@ type Props = {
 } & FormProps;
 
 class DeliveryAddress extends Component<Props, State> {
-  state = { activeIndex: -1 };
-  
-  handleClick = (e, titleProps) => {
-    const { index } = titleProps;
-    const { activeIndex } = this.state;
-    const newIndex = activeIndex === index ? -1 : index;
-    
-    this.setState({ activeIndex: newIndex })
-  };
   
   render() {
-    const { activeIndex } = this.state;
-    const { profile, handleSubmit, onSubmit } = this.props;
+    const { handleSubmit, invalid, pristine, submitting } = this.props;
     
     return (
      <Segment size='big'>
        <Header content='Delivery Address'/>
-       
-       {/*<Card>*/}
-         {/*<Card.Content>*/}
-           {/*<Card.Header>{profile.displayName}</Card.Header>*/}
-           {/*<Card.Description>Country: {profile.country}</Card.Description>*/}
-           {/*<Card.Description>City: {profile.city}</Card.Description>*/}
-           {/*<Card.Description>Address: {profile.address}</Card.Description>*/}
-           {/*<Card.Description>Post Code: {profile.postcode}</Card.Description>*/}
-         {/*</Card.Content>*/}
-       {/*</Card>*/}
-       
-       {/*<Divider horizontal>OR</Divider>*/}
-       
-       {/*<Accordion>*/}
-         {/*<Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>*/}
-           {/*<Icon name='dropdown'/>*/}
-           {/*Add a New Address*/}
-         {/*</Accordion.Title>*/}
-         {/*<Accordion.Content active={activeIndex === 0}>*/}
            <Segment inverted>
              <Grid centered>
                <Form onSubmit={handleSubmit}>
@@ -87,8 +58,8 @@ class DeliveryAddress extends Component<Props, State> {
                  />
                  
                  <Button
-                  // disabled={invalid || submitting || pristine}
-                  // loading={submitting}
+                  disabled={invalid || submitting || pristine}
+                  loading={submitting}
                   type='submit'
                   content='Next'
                   style={{ marginTop: '10px', marginBottom: '10px' }}
@@ -98,8 +69,6 @@ class DeliveryAddress extends Component<Props, State> {
                </Form>
              </Grid>
            </Segment>
-         {/*</Accordion.Content>*/}
-       {/*</Accordion>*/}
      
      </Segment>
     );

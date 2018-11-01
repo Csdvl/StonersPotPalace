@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Container, Button, Header, Divider } from 'semantic-ui-react';
+import { Container, Header, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../../store/actions/index';

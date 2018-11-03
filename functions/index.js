@@ -4,7 +4,9 @@ const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
 const db = admin.firestore();
-
+exports.test123 = functions.https.onRequest((req, res) => {
+  res.status(200);
+});
 exports.decrementProductsQuantity = functions.firestore.document('orders/{id}').onCreate(cart => {
   const cartData = cart.data();
   const cartItems = cartData.products;

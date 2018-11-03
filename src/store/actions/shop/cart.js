@@ -1,5 +1,6 @@
 // @flow
 import { toastr } from 'react-redux-toastr';
+import { push } from 'connected-react-router'
 import * as actionTypes from "../actionTypes";
 import * as types from '../../../Types/index';
 
@@ -17,7 +18,7 @@ export const addToCart = (id: string, photoURL: string, label: string, price: nu
   return async (dispatch) => {
     try {
       await dispatch(addToCartUnsafe(id, photoURL, label, price, onStock));
-      toastr.success('Success !', 'You\'ve added an item :)')
+      toastr.success('Success !', 'You\'ve added an item :)');
     } catch (e) {
       console.log(e)
     }
@@ -84,7 +85,6 @@ export const orderPlaced = ( values: types.OrderPlacedDetail, cartItems: Array<t
   return async (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore();
     const user = getFirebase().auth().currentUser;
-    console.log('Values:', values);
     const newOrder = {
       deliveryInstructions: values.deliveryInstructions,
       city: values.city,
@@ -107,8 +107,10 @@ export const orderPlaced = ( values: types.OrderPlacedDetail, cartItems: Array<t
     
     
     try {
-      dispatch(orderNow(values, cartItems, totalPrice));
+      dispatch(push('/'));
       await firestore.add('orders', newOrder);
+      dispatch(orderNow(values, cartItems, totalPrice));
+      toastr.success('Success !', 'You have placed the order');
     } catch (e) {
       console.log(e)
     }

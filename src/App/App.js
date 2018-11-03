@@ -49,8 +49,6 @@ class App extends Component<Props> {
     const { isAuth, updateUserProfile, profile, orders, fetchOrdersInit, providerId, updatePassword, updateEmail, products, addToCart, resetPasswordEmail } = this.props;
     const authenticated = isAuth.isLoaded && !isAuth.isEmpty;
     
-    console.log('isA ME:', orders);
-    
     let routes = (
      <Switch>
        <Route exact path="/" component={Home}/>

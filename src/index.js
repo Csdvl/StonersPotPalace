@@ -4,6 +4,8 @@ import 'semantic-ui-css/semantic.min.css';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 
 import { BrowserRouter } from 'react-router-dom';
+import {routerMiddleware, ConnectedRouter} from 'connected-react-router';
+import { createBrowserHistory } from 'history';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
 import { createStore, applyMiddleware } from 'redux';
@@ -27,7 +29,9 @@ const rrfConfig = {
   updateProfileOnLogin: false
 };
 
-const middlewares = [ thunk.withExtraArgument({ getFirebase, getFirestore }) ];
+const history = createBrowserHistory();
+
+const middlewares = [ thunk.withExtraArgument({ getFirebase, getFirestore }), routerMiddleware(history) ];
 const middlewareEnhancer = applyMiddleware(...middlewares);
 
 const storeEnhancers = [ middlewareEnhancer ];
@@ -38,12 +42,13 @@ const composedEnhancer = composeWithDevTools(
  reduxFirestore(firebase)
 );
 
-const store = createStore(reducer, {}, composedEnhancer);
+const store = createStore(reducer(history), {}, composedEnhancer);
 
 
 const app = (
  <Provider store={store}>
    <BrowserRouter>
+     <ConnectedRouter history={history} >
      <ScrollToTop>
        <App/>
        <ReduxToastr
@@ -52,6 +57,7 @@ const app = (
         transitionOut='fadeOut'
        />
      </ScrollToTop>
+     </ConnectedRouter>
    </BrowserRouter>
  </Provider>
 );

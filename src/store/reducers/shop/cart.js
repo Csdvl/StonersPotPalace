@@ -89,6 +89,13 @@ const logout = (state: types.CartState, action): types.CartState => {
   }
 };
 
+const orderPlaced = (state, action) => {
+  return {
+    cartItems: [],
+    totalPrice: 0
+  }
+};
+
 const reducer = (state: types.CartState = initialState, action: types.CartAction): types.CartState => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
@@ -101,6 +108,8 @@ const reducer = (state: types.CartState = initialState, action: types.CartAction
       return incrementQuantity(state, action);
     case actionTypes.AUTH_LOGOUT:
       return logout(state, action);
+    case actionTypes.ORDER_PLACED:
+      return orderPlaced(state, action);
     default:
       return state
   }

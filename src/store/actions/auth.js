@@ -10,12 +10,10 @@ type Creds = {email: string, password: string};
 export const authLogin = (creds: Creds ): types.AuthThunkAction => {
   return async (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
-    console.log(creds);
     try {
       await firebase.auth().signInWithEmailAndPassword(creds.email, creds.password);
       
     } catch (error) {
-      console.log(error);
       throw new SubmissionError({
         _error: error.message
       })

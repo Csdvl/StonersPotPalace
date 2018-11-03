@@ -110,7 +110,7 @@ export const orderPlaced = ( values: types.OrderPlacedDetail, cartItems: Array<t
       dispatch(push('/'));
       await firestore.add('orders', newOrder);
       dispatch(orderNow(values, cartItems, totalPrice));
-      toastr.success('Success !', 'You have placed the order');
+      toastr.success('Success !', 'You have successfully placed the order');
     } catch (e) {
       console.log(e)
     }

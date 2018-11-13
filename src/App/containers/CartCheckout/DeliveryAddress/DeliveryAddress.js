@@ -5,6 +5,8 @@ import { Field, reduxForm } from 'redux-form';
 import type { FormProps} from 'redux-form/lib/types';
 
 import * as types from '../../../../Types/index';
+import {required} from '../../../../shared/validation';
+
 import Input from "../../../components/UI/Input/input";
 
 
@@ -34,6 +36,7 @@ class DeliveryAddress extends Component<Props, State> {
                   type="text"
                   label="Country"
                   inputtype="text"
+                  validate={[required]}
                  />
                  <Field
                   name="city"
@@ -41,6 +44,7 @@ class DeliveryAddress extends Component<Props, State> {
                   type="text"
                   label="City"
                   inputtype="text"
+                  validate={[required]}
                  />
                  <Field
                   name="address"
@@ -48,6 +52,7 @@ class DeliveryAddress extends Component<Props, State> {
                   type="text"
                   label="Address"
                   inputtype="textarea"
+                  validate={[required]}
                  />
                  <Field
                   name="postcode"
@@ -55,11 +60,12 @@ class DeliveryAddress extends Component<Props, State> {
                   type="text"
                   label="Post Code"
                   inputtype="text"
+                  validate={[required]}
                  />
                  
                  <Button
-                  // disabled={invalid || submitting || pristine}
-                  // loading={submitting}
+                  disabled={invalid || submitting || pristine}
+                  loading={submitting}
                   type='submit'
                   content='Next'
                   style={{ marginTop: '10px', marginBottom: '10px' }}

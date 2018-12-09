@@ -23,6 +23,7 @@ const addToCart = (state: types.CartState, action: types.AddToCart): types.CartS
       {
         id: action.id,
         quantity: 1,
+        name: action.name,
         label: action.label,
         price: action.price,
         photoURL: action.photoURL,

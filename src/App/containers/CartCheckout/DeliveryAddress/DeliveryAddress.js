@@ -89,6 +89,7 @@ class DeliveryAddress extends Component<Props, State> {
                  <Button
                   // disabled={invalid || submitting || pristine}
                   // loading={submitting}
+                  data-test='next'
                   type='submit'
                   content='Next'
                   style={{ marginTop: '10px', marginBottom: '10px' }}

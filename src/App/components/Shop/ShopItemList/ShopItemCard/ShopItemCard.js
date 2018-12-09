@@ -10,7 +10,7 @@ type Props = {
   addToCartClicked: (string, string, string, number, number) => types.AddToCart
 } & types.ShopItemCard ;
 
-const shopItemCard = ({ label, onStock, delivery, price, photoURL, description, addToCartClicked }: Props) => {
+const shopItemCard = ({ label, name, onStock, delivery, price, photoURL, description, addToCartClicked }: Props) => {
   let color = 'green';
   if ( onStock < 11 ) {
     color = 'yellow'
@@ -43,6 +43,7 @@ const shopItemCard = ({ label, onStock, delivery, price, photoURL, description, 
        </Card.Description>
        <Divider/>
        <Button
+        data-test={name}
         disabled={onStock < 1}
         onClick={addToCartClicked}
         size='huge'

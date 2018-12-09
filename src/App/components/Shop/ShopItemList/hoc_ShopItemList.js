@@ -25,7 +25,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addToCart: (id, photoURL, label, price, onStock) => dispatch(addToCart(id, photoURL, label, price, onStock))
+  addToCart: (id, photoURL, name, label, price, onStock) => dispatch(addToCart(id, photoURL, name, label, price, onStock))
 });
 // $FlowFixMe: suppressing this error until we can refactor
 export default connect(

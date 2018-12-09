@@ -105,7 +105,7 @@ const userInfoForm = ({ invalid, submitting, pristine, handleSubmit, updateUserP
                 maxDate={moment().subtract(1, 'years')}
                 showYearDropdown
                 showMonthDropdown
-                validate={[ required ]}
+                // validate={[ required ]}
                />
                
                <Field

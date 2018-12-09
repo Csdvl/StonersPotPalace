@@ -11,7 +11,7 @@ type Props = {
   removeFromCart: (string, number, number) => types.RemoveFromCart,
 } & types.CartItem;
 
-const cartItem = ({ photoURL, label, price, quantity, onStock, onClickMinus, onClickPlus, removeFromCart }: Props) => {
+const cartItem = ({ photoURL, label, name, price, quantity, onStock, onClickMinus, onClickPlus, removeFromCart }: Props) => {
   return (
    <Segment size="small" textAlign='center'>
      <Item.Group>
@@ -24,22 +24,25 @@ const cartItem = ({ photoURL, label, price, quantity, onStock, onClickMinus, onC
              {quantity}
            </Label></Item.Content>
            <Button type="button"
+                   data-test={`plus${name}`}
                    onClick={onClickPlus}
                    content="+"
                    color='green'
                    disabled={quantity === onStock}/>
            <Button type="button"
+                   data-test={`minus${name}`}
                    onClick={onClickMinus}
                    content="-"
                    color='red'
                    disabled={quantity < 2}/>
            
            <Button type="button"
+                   data-test={`remove${name}`}
                    onClick={removeFromCart}
                    attached="bottom"
                    icon="trash alternate"
                    color='black'
-                   />
+           />
          </Item.Content>
        </Item>
      </Item.Group>

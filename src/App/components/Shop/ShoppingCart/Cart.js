@@ -22,11 +22,12 @@ class Cart extends Component<Props> {
     const { cartItems, decrementQuantity, incrementQuantity, removeFromCart, totalPrice } = this.props;
     
     const shoppingCartItems = (cartItems.map(cartItem => {
-       const { id, label, price, onStock, quantity, photoURL } = cartItem;
+       const { id, label, name, price, onStock, quantity, photoURL } = cartItem;
        return (
         <CartItem
          key={id}
          id={id}
+         name={name}
          label={label}
          price={price}
          photoURL={photoURL}

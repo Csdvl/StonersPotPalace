@@ -4,19 +4,20 @@ import * as actionTypes from "../actionTypes";
 import * as types from '../../../Types/index';
 
 
-const addToCartUnsafe = (id: string, photoURL: string, label: string, price: number, onStock:number): types.AddToCart => ({
+const addToCartUnsafe = (id: string, photoURL: string, name: string, label: string, price: number, onStock:number): types.AddToCart => ({
   type: actionTypes.ADD_TO_CART,
   id,
   photoURL,
+  name,
   label,
   price,
   onStock
 });
 
-export const addToCart = (id: string, photoURL: string, label: string, price: number, onStock:number): types.CartThunkAction => {
+export const addToCart = (id: string, photoURL: string, name: string, label: string, price: number, onStock:number): types.CartThunkAction => {
   return async (dispatch) => {
     try {
-      await dispatch(addToCartUnsafe(id, photoURL, label, price, onStock));
+      await dispatch(addToCartUnsafe(id, photoURL, name, label, price, onStock));
       toastr.success('Success !', 'You\'ve added an item :)')
     } catch (e) {
       console.log(e)
@@ -109,6 +110,7 @@ export const orderPlaced = ( values: types.OrderPlacedDetail, cartItems: Array<t
     try {
       dispatch(orderNow(values, cartItems, totalPrice));
       await firestore.add('orders', newOrder);
+      toastr.success('Success !', 'You\'re order is being prepared :)')
     } catch (e) {
       console.log(e)
     }

@@ -28,7 +28,7 @@ class CartModal extends Component<Props, State> {
     const content = cartItems.length === 0 ? null : cartItems.length;
     
     return (
-     <Modal trigger={<Button onClick={this.handleOpen} icon="shopping basket" content={content}/>}
+     <Modal trigger={<Button onClick={this.handleOpen} data-test='basket' icon="shopping basket" content={content}/>}
             open={modalOpen}
             onClose={this.handleClose}>
        <Modal.Header><Segment textAlign='center'>Shopping Basket</Segment></Modal.Header>

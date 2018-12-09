@@ -38,6 +38,7 @@ class DeliveryInstructions extends Component<Props> {
              <Button
               // disabled={invalid || submitting || pristine}
               // loading={submitting}
+              data-test='next'
               content='Next'
               style={{ marginTop: '10px', marginBottom: '10px' }}
               color='teal'

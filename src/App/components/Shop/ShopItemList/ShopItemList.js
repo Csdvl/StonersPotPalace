@@ -19,13 +19,14 @@ const ShopItemList = ({ products, addToCart }: ShopItemListTypes) => {
     shopItems = products.map(product => (
      <ShopItemCard
       key={product.id}
+      name={product.name}
       label={product.label}
       price={product.price}
       onStock={product.onStock}
       photoURL={product.photoURL}
       delivery={product.delivery}
       description={product.description}
-      addToCartClicked={() => addToCart(product.id, product.photoURL, product.label, product.price, product.onStock)}
+      addToCartClicked={() => addToCart(product.id, product.photoURL, product.name, product.label, product.price, product.onStock)}
      />
     ));
   }

@@ -16,7 +16,7 @@ const DropDownAuth = ({ authenticated, profile }: Props) => {
    <Menu.Item position="right">
      <Dropdown pointing="top right" text={profile.displayName || 'Tell us about you'}>
        <Dropdown.Menu>
-         <Dropdown.Item as={NavLink} to='/user' text="My Details" icon="user"/>
+         <Dropdown.Item as={NavLink} to='/user' data-test="details" text="My Details" icon="user"/>
          <Dropdown.Item as={NavLink} to='/account' text="Account Settings" icon="settings"/>
          <Dropdown.Item as={NavLink} to='/orders' text="My orders" icon="shop"/>
          <Dropdown.Item as={NavLink} to='/logout' text="Sign Out" icon="power"/>

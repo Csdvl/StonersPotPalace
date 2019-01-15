@@ -104,7 +104,7 @@ const input = ({ meta, inputtype, label, input: { onChange, value, ...restInput 
   
   return (
      <Form.Field style={{ marginTop: '10px' }} >
-       <Label style={{ marginRight: '10px', marginBottom: '10px' }} color='orange' size='large'>{label}</Label>
+       <Label style={{ marginRight: '10px', marginBottom: '10px' }} color='orange' size='large' data-test={label}>{label}</Label>
        {inputElement}
        {(meta.error && meta.touched && !meta.active) && (
         <Label color='red' style={{ marginLeft: '10px', marginTop: '10px' }} size='large'>{meta.error}</Label>)}

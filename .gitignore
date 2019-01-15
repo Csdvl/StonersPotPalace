@@ -24,3 +24,14 @@ functions/node_modules/**
 .idea/inspectionProfiles/
 functions/etc/
 .firebase_DBS
+/cypress/config.json
+.firebase/
+.flowconfig
+cypress.json
+cypress/fixtures/
+cypress/integration/examples/
+cypress/plugins/
+cypress/support/
+flow-typed/
+serviceAccount.json
+!/cypress/config.json

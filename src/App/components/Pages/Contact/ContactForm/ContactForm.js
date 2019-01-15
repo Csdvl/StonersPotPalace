@@ -40,8 +40,8 @@ class ContactForm extends Component<Props> {
     
     return (
      <Segment size='huge'>
-       <Header content='Contact Form' size='large'/>
-       <Header content="Send us your thoughts on anything and we'll do our best to answer"/>
+       <Header content='Contact Form' size='large' data-test='contactForm'/>
+       <Header content="Send us your thoughts on anything and we'll do our best to answer" data-test='formSubHeader'/>
        <Segment inverted>
          <Grid centered>
            <Form onSubmit={handleSubmit(submit)}>
@@ -53,7 +53,8 @@ class ContactForm extends Component<Props> {
               label="First Name"
               inputtype="text"
               normalize={capitalize}
-              validate={[ required, nameLenght, isAlphabet ]}/>
+              validate={[ required, nameLenght, isAlphabet ]}
+             data-test="firstName"/>
              }
              {!((!isEmpty && isLoaded) && (lastName)) &&
              < Field
@@ -63,7 +64,8 @@ class ContactForm extends Component<Props> {
               label="Last Name"
               inputtype="text"
               normalize={capitalize}
-              validate={[ required, nameLenght, isAlphabet ]}/>
+              validate={[ required, nameLenght, isAlphabet ]}
+              data-test="lastName"/>
              }
              {!((!isEmpty && isLoaded) && (email)) &&
              <Field
@@ -73,7 +75,7 @@ class ContactForm extends Component<Props> {
               label="E-mail address"
               inputtype="text"
               validate={[ required, emailVal ]}
-             />
+              data-test="email"/>
              }
              {!((!isEmpty && isLoaded) && (phoneNumber)) &&
              <Field
@@ -83,7 +85,7 @@ class ContactForm extends Component<Props> {
               label="Phone Number"
               inputtype="text"
               validate={[ required, number, phoneNumberVal ]}
-             />
+              data-test="phoneNumber"/>
              }
              <Field
               name="subject"
@@ -92,7 +94,7 @@ class ContactForm extends Component<Props> {
               label="Subject"
               inputtype="text"
               validate={[ required ]}
-             />
+              data-test="subject"/>
              
              <Field
               name="message"
@@ -101,7 +103,7 @@ class ContactForm extends Component<Props> {
               label="Message"
               inputtype="textarea"
               validate={[ required ]}
-             />
+              data-test="message"/>
              
              <Field
               name="contactMethod"
@@ -111,11 +113,12 @@ class ContactForm extends Component<Props> {
               inputtype="select"
               options={options}
               validate={[ required ]}
-             />
+              data-test="method"/>
              
              <Button
               disabled={invalid || submitting || pristine}
               loading={submitting}
+              type='submit'
               content='Submit Information'
               style={{ marginTop: '10px', marginBottom: '10px' }}
               color='teal'

@@ -1,5 +1,5 @@
 // @flow
-import { SubmissionError } from 'redux-form';
+import { SubmissionError, reset } from 'redux-form';
 import { toastr } from 'react-redux-toastr';
 
 import * as types from '../../Types/index';
@@ -40,7 +40,7 @@ export const contactSubmitUnauthenticated = (values: types.ContactFormValues): t
       };
       
       await firestore.add('contacts', contact);
-      
+      await dispatch(reset('contactForm'));
     } catch (error) {
       throw new SubmissionError({
         _error: error.message

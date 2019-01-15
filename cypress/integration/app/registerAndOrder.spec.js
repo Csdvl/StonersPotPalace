@@ -1,15 +1,5 @@
-import faker from 'faker';
+import {fakeUser} from '../../support/utils';
 
-const fakeUser = {
-  email: faker.internet.email(),
-  password: faker.internet.password(),
-  firstName: faker.name.firstName(),
-  lastName: faker.name.lastName(),
-  address: faker.address.streetAddress(),
-  city: faker.address.city(),
-  county: faker.address.country(),
-  paragraph: faker.lorem.paragraph(),
-};
 
 describe('Register an account, fill personal details and place an order', () => {
   
@@ -18,10 +8,10 @@ describe('Register an account, fill personal details and place an order', () => 
     cy.visit('/');
   });
   
-  it.skip('Registers an account and fills in personal details', () => {
+  it('Registers an account and fills in personal details', () => {
     cy.get('[href="/auth"]').click();
     
-    cy.get('input[name="email"]').type(fakeUser.email);
+    cy.get('input[name="email"]').type(fakeUser.email).should('have.value', fakeUser.email);
     cy.get('input[name="password"]').type(fakeUser.password);
     cy.get('input[name="passwordConfirm"]').type(fakeUser.password);
     

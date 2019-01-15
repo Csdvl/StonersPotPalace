@@ -1,0 +1,19 @@
+export const contactForm = {
+  header: '[data-test=contactForm]',
+  subHeader: '[data-test=formSubHeader]',
+  firstNameLabel: '[data-test="First Name"]',
+  firstNameInput:'[data-test=firstName] > input',
+  lastNameLabel:'[data-test="Last Name"]',
+  lastNameInput:'[data-test=lastName] > input',
+  emailLabel:'[data-test="E-mail address"]',
+  emailInput:'[data-test=email] > input',
+  phoneNumberLabel:'[data-test="Phone Number"]',
+  phoneNumberInput:'[data-test=phoneNumber] > input',
+  subjectLabel:'[data-test=Subject]',
+  subjectInput:'[data-test=subject] > input',
+  messageLabel:'[data-test=Message]',
+  messageInput:'[data-test=message]',
+  methodLabel:'[data-test="Preferred method of contact"]',
+  methodInput:'[data-test=method]',
+  button: '[type="submit"]'
+};

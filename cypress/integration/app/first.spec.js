@@ -1,4 +1,4 @@
-import { contactForm } from '../Selectors/selectors';
+import { contactForm } from '../../support/Selectors/selectors';
 import {fakeUser} from '../../support/utils';
 
 
@@ -23,7 +23,10 @@ describe('Contact Form Test', () => {
   
   context('Un Authenthicated', () => {
     before(() => {
-      cy.visit('/contact')
+      cy.visit('/contact');
+      cy.clearCookies();
+      cy.clearLocalStorage();
+      indexedDB.deleteDatabase('firebaseLocalStorageDb');
     });
     it('fills the contact UNAUTH form', () => {
       cy.url().should('include', '/contact');

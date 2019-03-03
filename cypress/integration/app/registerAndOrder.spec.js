@@ -3,8 +3,11 @@ import {fakeUser} from '../../support/utils';
 
 describe('Register an account, fill personal details and place an order', () => {
   
-  it('Visits the website', () => {
+  before(() => {
     cy.server();
+    cy.clearCookies();
+    cy.clearLocalStorage();
+    indexedDB.deleteDatabase('firebaseLocalStorageDb');
     cy.visit('/');
   });
   

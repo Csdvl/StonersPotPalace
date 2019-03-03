@@ -9,7 +9,7 @@ cache:
     - ~/.cache
 
 install:
-  - npm ci
+  - npm i
 
 before_script:
   ## runs the 'start' script which

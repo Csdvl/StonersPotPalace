@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="+ Cypress &#10;+test for contact form">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="+ Cypress &#10;+ Travis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/Selectors/selectors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/app/first.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/app/first.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/app/registerAndOrder.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/app/registerAndOrder.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +22,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cypress/integration/app/registerAndOrder.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state relative-caret-position="368">
+              <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -72,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="851">
               <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
@@ -131,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Types/shop/cart.js" />
         <option value="$PROJECT_DIR$/src/App/components/AuthUsers/UserOrders/UserOrders.js" />
         <option value="$PROJECT_DIR$/src/Types/shop/products.js" />
         <option value="$PROJECT_DIR$/src/store/actions/users.js" />
@@ -182,6 +185,7 @@
         <option value="$PROJECT_DIR$/cypress/integration/app/registerAndOrder.spec.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -210,30 +214,6 @@
             <path>
               <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,7 +494,7 @@
       <workItem from="1547545226259" duration="9915000" />
       <workItem from="1547891875837" duration="618000" />
       <workItem from="1547895169421" duration="150000" />
-      <workItem from="1551636667246" duration="4868000" />
+      <workItem from="1551636667246" duration="6422000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST !!!1!">
       <created>1531773730498</created>
@@ -656,11 +636,25 @@
       <option name="project" value="LOCAL" />
       <updated>1551637189700</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="+ Cypress &#10;+test for contact form">
+      <created>1551642078186</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1551642078186</updated>
+    </task>
+    <task id="LOCAL-00022" summary="+ Cypress &#10;+ Travis">
+      <created>1551642412942</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1551642412942</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1107439000" />
+    <option name="totallyTimeSpent" value="1108993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,10 +671,10 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.54698795" visible="true" weight="0.2373512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.45301205" side_tool="true" visible="true" weight="0.2373512" />
+      <window_info id="npm" order="2" sideWeight="0.45301205" side_tool="true" weight="0.2373512" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32649574" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2905983" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2905983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -783,19 +777,10 @@
     <MESSAGE value="!!! Flow to the Project ALL OVER" />
     <MESSAGE value="+ Cypress &#10;+ register and order spec files" />
     <MESSAGE value="+ Cypress &#10;+test for contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Cypress &#10;+test for contact form" />
+    <MESSAGE value="+ Cypress &#10;+ Travis" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Cypress &#10;+ Travis" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/components/Shop/Shop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#9#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/components/Shop/ShopItemList/hoc_ShopItemList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1092,13 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/app/registerAndOrder.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cypress.env.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1122,8 +1100,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="851">
           <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cypress/integration/app/registerAndOrder.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="+ Cypress &#10;+ Travis">
+    <list default="true" id="82d409e2-8ee0-4a4c-8f5a-817f72a7c99e" name="Default" comment="+ Cypress &#10;+ Travis2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="455">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -494,7 +494,7 @@
       <workItem from="1547545226259" duration="9915000" />
       <workItem from="1547891875837" duration="618000" />
       <workItem from="1547895169421" duration="150000" />
-      <workItem from="1551636667246" duration="6422000" />
+      <workItem from="1551636667246" duration="7764000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST !!!1!">
       <created>1531773730498</created>
@@ -650,11 +650,25 @@
       <option name="project" value="LOCAL" />
       <updated>1551642412942</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="+ Cypress &#10;+ Travis2">
+      <created>1551643914880</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1551643914880</updated>
+    </task>
+    <task id="LOCAL-00024" summary="+ Cypress &#10;+ Travis2">
+      <created>1551644218707</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1551644218707</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1108993000" />
+    <option name="totallyTimeSpent" value="1110335000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,7 +792,8 @@
     <MESSAGE value="+ Cypress &#10;+ register and order spec files" />
     <MESSAGE value="+ Cypress &#10;+test for contact form" />
     <MESSAGE value="+ Cypress &#10;+ Travis" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Cypress &#10;+ Travis" />
+    <MESSAGE value="+ Cypress &#10;+ Travis2" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Cypress &#10;+ Travis2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App/components/Shop/ShopItemList/hoc_ShopItemList.js">
@@ -1091,13 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="851">
@@ -1112,10 +1120,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="455">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>

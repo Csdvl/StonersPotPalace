@@ -12,7 +12,7 @@ addons:
   chrome: stable
 
 before_install:
-  - npm i -g firebase-tools
+  - npm i -g firebase-tools@'latest'
   - npm cache verify
 
 install:
